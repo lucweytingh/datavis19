@@ -1,7 +1,4 @@
-import pandas
+from init import *
 
-import numpy as np
 
-data = pandas.read_csv("foodprices.csv",     encoding='latin-1')
-
-print(data.mode()["cm_id"])
+print(ph.filter(ph.filter(pd_data, 'country_id', 1),'item_id',145)['price'])
