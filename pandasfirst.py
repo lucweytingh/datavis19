@@ -2,6 +2,6 @@ import pandas
 
 import numpy as np
 
-data = pandas.read_csv("foodprices.csv",     encoding='latin-1')
+data = pandas.read_csv("data.csv",     encoding='latin-1')
 
-print(data.mode()["cm_id"])
+print(data.mode()["country_id"])
