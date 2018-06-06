@@ -2,7 +2,7 @@ from helpers import *
 import datetime
 
 def filter(self, params):
-  for key, val in params.items()
+  for key, val in params.items():
     self = self.loc[self[key] == val]
   return self
 
