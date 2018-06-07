@@ -2,7 +2,6 @@ from init import *
 
 def plot_data(data, columns, axes = None, blacklist = []):
   results = data.dict_from_columns(columns, axes, blacklist)
-  print(results)
   for market, items in results.items():
     plt.clf()
     for item, dic in items.items():

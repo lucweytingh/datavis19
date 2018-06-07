@@ -9,6 +9,7 @@ import pandas_helpers as ph
 pd.core.frame.DataFrame.filter = ph.filter
 pd.core.frame.DataFrame.get_list = ph.get_list
 pd.core.frame.DataFrame.dict_from_columns = ph.dict_from_columns
+pd.core.frame.DataFrame.sum_of_difference = ph.sum_of_difference
 
 
 def init_data(filename = "data.csv"):

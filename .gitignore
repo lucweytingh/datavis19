@@ -2,6 +2,7 @@
 data.csv
 data/*
 run.py
+jeroen.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
