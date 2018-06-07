@@ -1,5 +1,6 @@
 from init import *
 # exchange csv source = https://www.bis.org/statistics/xrusd.htm
+ex_data = pd.read_csv('exchange.csv', encoding='latin-1')
 
 
 # columns: country_id,country_name,city_id,city_name,market_id,market_name,item_id,item_name,cur_id,cur_name,pt_id,pt_name,unit_id,unit_name,month,year,price,source

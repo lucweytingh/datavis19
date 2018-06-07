@@ -2,6 +2,8 @@
 data.csv
 data/*
 run.py
+region_data.csv
+exchange.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
