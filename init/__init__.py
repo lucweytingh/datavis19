@@ -14,5 +14,8 @@ pd.core.frame.DataFrame.dict_from_columns = ph.dict_from_columns
 def init_data(filename = "data.csv"):
   return pd.read_csv(filename, encoding='latin-1')
 
+ex_data = pd.read_csv('../exchange.csv', encoding='latin-1')
+
+
 
 pd_data = init_data()
