@@ -1,6 +1,6 @@
 from init import *
 # exchange csv source = https://www.bis.org/statistics/xrusd.htm
-ex_data = pd.read_csv('../exchange.csv', encoding='latin-1')
+ex_data = pd.read_csv('exchange.csv', encoding='latin-1')
 
 
 # columns: country_id,country_name,city_id,city_name,market_id,market_name,item_id,item_name,cur_id,cur_name,pt_id,pt_name,unit_id,unit_name,month,year,price,source
@@ -28,6 +28,7 @@ def ex_date_format(years,month_s,month_e):
       result.append(ex_month_range(years[i], 1, 12))
   return [x for y in result for x in y]
 
+
 def prices_month_range(year, fr, to):
   result = []
   for i in range(fr, to+1):
@@ -47,20 +48,26 @@ def prices_date_format(years, month_s, month_e):
   return [x for y in result for x in y]
 
 
-# print(prices_date_format([1999,2000,2001,2002], 3, 5))
 
-# convert 'mm-yyyy' to (mm, yyyy)
+# convert 'yyyy-mm' to (mm, yyyy)
 def totuple_format(form):
-  return (int(form[:2]), int(form[3:]))
+  #print(form)
+  return (int(form[5:]), int(form[:4]))
 
-# make a dictionary with dates and their dollar exchange values
-def currency_dictionary_maker(currency, dates, stattype = "Average of observations through period"):
+
+
+
+# make a dictionary with dates and their dollar exchange values d
+# dates = ['2007-05', '2007-06', '2007-07']
+# currency = "IDR"
+def currency_list_maker(currency, dates, stattype = "Average of observations through period"):
     tuples = []
     months = ex_data.filter({'CURRENCY': currency, "Collection": stattype, 'Frequency': 'Monthly'})
     for date in dates:
-        tuples.append((totuple_format(date), months[date].unique()[0]))
+      tuples.append((totuple_format(date), months[date].unique()[0]))
     return tuples
   
+
 
 # find the items both countries have
 def shared_items(country1,country2):
@@ -89,17 +96,28 @@ def shared_months(country1,country2, item):
     return sharedyears, month_s, month_e
 
 
-def convert_curr(exchange, currency):
-  return [x/y for x in currency for y in exchange]
+currency_list = [((5, 2007), 8827.727122), ((6, 2007), 8985.048179000001), ((7, 2007), 9070.863109)]
+prices_list =  [((5, 2007), 8732), ((6, 2007), 9106)]
+
+def convert_curr(currency_list, prices_list):
+  dollarlist = []
+  for price in prices_list:
+    for currency in currency_list:
+      if price[0] == currency [0]:
+        dollarlist.append((price[0],int(price[1]) / int(currency[1])))
+  return dollarlist
+
+#print(convert_curr(currency_list,prices_list))
+
+#country = 'Afghanistan' , item = 'Rice', dates = [(4,2007),(5,2007)]
 
 
 
-
-
-dates = [(1, 2012), (2, 2012), (3, 2012), (4, 2012), (5, 2012), (6, 2012), (7, 2012), (8, 2012), (9, 2012), (10, 2012), (11, 2012), (12, 2012), (1, 2013), (2, 2013), (3, 2013), (4, 2013), (5, 2013), (6, 2013), (7, 2013), (8, 2013), (9, 2013), (10, 2013), (11, 2013), (12, 2013), (1, 2014)]
+dates = [(4,2007),(5,2007)]
 country = "Indonesia"
 item = 'Eggs'
 
+# dates = tuples format :[(4,2007),(5,2007)], country = country name, item = for example rice
 def find_prices(dates,country,item):
     prices = []
     for date in dates:
@@ -107,22 +125,13 @@ def find_prices(dates,country,item):
         if len(pricedata.unique()) == 1:
             prices.append((date,int(pricedata.unique())))
     return prices
-    
-print(find_prices(dates,country,item))
 
+
+
+print(len(list(pd_data["country_name"].unique())))
 
  
 
 
 
 
-
-
-
-
-# price_diff('Indonesia','Philippines')
-
-# print(pd_data.filter({'country_name' : 'Indonesia', 'item_id': 84})["item_id"])
-# print(pd_data.filter({'country_name' : 'Indonesia'})["item_id"].unique())
-
-#print(price_diff("mais","Philippines","Indonesia",265.325)) 
