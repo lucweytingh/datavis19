@@ -1,5 +1,5 @@
 from init import *
-import exchange_finder
+# exchange csv source = https://www.bis.org/statistics/xrusd.htm
 ex_data = pd.read_csv('../exchange.csv', encoding='latin-1')
 
 
@@ -47,7 +47,22 @@ def prices_date_format(years, month_s, month_e):
   return [x for y in result for x in y]
 
 
+# print(prices_date_format([1999,2000,2001,2002], 3, 5))
 
+# convert 'mm-yyyy' to (mm, yyyy)
+def totuple_format(form):
+  return (int(form[:2]), int(form[3:]))
+
+# make a dictionary with dates and their dollar exchange values
+def currency_dictionary_maker(currency, dates, stattype = "Average of observations through period"):
+    tuples = []
+    months = ex_data.filter({'CURRENCY': currency, "Collection": stattype, 'Frequency': 'Monthly'})
+    for date in dates:
+        tuples.append((totuple_format(date), months[date].unique()[0]))
+    return tuples
+  
+
+# find the items both countries have
 def shared_items(country1,country2):
   items_c1 = pd_data.filter({'country_name' : country1})["item_name"].unique()
   items_c2 = pd_data.filter({'country_name' : country2})["item_name"].unique()
@@ -96,7 +111,7 @@ def find_prices(dates,country,item):
 print(find_prices(dates,country,item))
 
 
-
+ 
 
 
 
@@ -110,4 +125,4 @@ print(find_prices(dates,country,item))
 # print(pd_data.filter({'country_name' : 'Indonesia', 'item_id': 84})["item_id"])
 # print(pd_data.filter({'country_name' : 'Indonesia'})["item_id"].unique())
 
-#print(price_diff("mais","Philippines","Indonesia",265.325))
+#print(price_diff("mais","Philippines","Indonesia",265.325)) 
