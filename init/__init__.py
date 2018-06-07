@@ -15,7 +15,7 @@ pd.core.frame.DataFrame.sum_of_difference = ph.sum_of_difference
 def init_data(filename = "data.csv"):
   return pd.read_csv(filename, encoding='latin-1')
 
-ex_data = pd.read_csv('../exchange.csv', encoding='latin-1')
+# ex_data = pd.read_csv('../exchange.csv', encoding='latin-1')
 
 
 
