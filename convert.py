@@ -247,14 +247,14 @@ conversions = {
   },
 }
 
-pd_data = pd_data.filter({ 'country_name': 'Afghanistan', 'city_name': "Fayzabad" })
+def convert_units(pd_data):
+  for index, row in pd_data.iterrows():
+    if row['unit_id'] in conversions.keys():
+      values = conversions[row['unit_id']]
+      pd_data.set_value(index, 'unit_id', values['new_id'])
+      pd_data.set_value(index, 'unit_name', values['new_name'])
+      pd_data.set_value(index, 'price', row['price'] * values['multiplier'])
 
-print(pd_data)
-
-for index, row in pd_data.iterrows():
-  values = conversions[row['unit_id']]
-  pd_data.set_value(index, 'unit_id', values['new_id'])
-  pd_data.set_value(index, 'unit_name', values['new_name'])
-  pd_data.set_value(index, 'price', row['price'] * values['multiplier'])
-
-print(pd_data)
+if __name__ == "__main__":
+  convert_units(pd_data)
+  pd_data.to_csv('data/unit_norm_data.csv', encoding='latin-1', index=False)

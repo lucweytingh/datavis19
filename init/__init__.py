@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import datetime
+import os.path
 
 from helpers import *
 
@@ -13,7 +14,10 @@ pd.core.frame.DataFrame.sum_of_difference = ph.sum_of_difference
 
 
 def init_data(filename = "data/region_data.csv"):
-  return pd.read_csv(filename, encoding='latin-1')
+  if os.path.isfile(filename):
+    return pd.read_csv(filename, encoding='latin-1')
+  else:
+    return None
 
 ex_data = init_data('data/exchange.csv')
 pd_data = init_data()
