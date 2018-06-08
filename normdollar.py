@@ -42,9 +42,10 @@ def makenormcolumn():
     with open("newcolumn.txt", "w") as f:
         for s in normlist:
             f.write(str(s) +"\n")
+
     pd_data['Price USD'] = normlist
     pd_data.to_csv('datanorm.csv', encoding='utf-8', index=False)
-    
+
 
 print(pd_data)
 
@@ -57,6 +58,9 @@ def convert_curr(currency_list, prices_list):
 
 #print(convert_curr(currency_list,prices_list)
 makenormcolumn()
+
+
+
 
 
 

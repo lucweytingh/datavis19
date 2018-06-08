@@ -6,11 +6,16 @@ def filter(self, params):
     self = self.loc[self[key] == val]
   return self
 
-
-def filter(self, params):
-  for key, val in params.items():
-    self = self.loc[self[key] == val]
-  return self
+def sum_of_difference(self, column):
+  sum = 0
+  prevrow = None
+  none_class = None.__class__
+  for index, row in self.iterrows():
+    if not index == 0:
+      if not (row.__class__ == none_class or prevrow.__class__ == none_class):
+        sum += abs(row[column] - prevrow[column])
+    prevrow = row
+  return sum
 
 def dict_from_columns(self, columns, results = None, blacklist = []):
   if results == None: results = ['price', 'date']
