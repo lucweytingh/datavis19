@@ -25,7 +25,7 @@ def datemaker(country):
     years = pd_data.filter({'country_name':country})['year'].tolist()
     return list(zip(months,years))
     
-data = pd.read_csv('../region_data.csv')
+
 
 def makenormcolumn():
     normlist = []
@@ -43,7 +43,7 @@ def makenormcolumn():
     with open("newcolumn.txt", "w") as f:
         for s in normlist:
             f.write(str(s) +"\n")
-    data['Price USD'] = normlist
+    ex_data['Price USD'] = normlist
     
 
 
