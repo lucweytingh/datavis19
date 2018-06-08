@@ -25,7 +25,6 @@ def datemaker(country):
     years = pd_data.filter({'country_name':country})['year'].tolist()
     return list(zip(months,years))
     
-data = pd.read_csv('../region_data.csv')
 
 def makenormcolumn():
     normlist = []
@@ -43,19 +42,11 @@ def makenormcolumn():
     with open("newcolumn.txt", "w") as f:
         for s in normlist:
             f.write(str(s) +"\n")
-    data['Price USD'] = normlist
+    pd_data['Price USD'] = normlist
+    pd_data.to_csv('datanorm.csv', encoding='utf-8', index=False)
     
 
-
-
-                
-
-        
-        
-currency_list = [((5, 2007), 8827.727122), ((6, 2007), 8985.048179000001)]
-prices_list =  [((5, 2007), 8732), ((6, 2007), 9106)]
-
-
+print(pd_data)
 
 def convert_curr(currency_list, prices_list):
   dollarlist = []
