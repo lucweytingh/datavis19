@@ -1,6 +1,6 @@
 from init import *
 
-dic = {'Afghanistan': 1, 'Algeria': 2, 'Armenia': 3, 'Azerbaijan': 3, 'Bangladesh': 4,
+dic_region_id = {'Afghanistan': 1, 'Algeria': 2, 'Armenia': 3, 'Azerbaijan': 3, 'Bangladesh': 4,
        'Benin': 5, 'Bhutan': 4, 'Bolivia': 6, 'Burkina Faso': 5, 'Burundi': 5, 'Cambodia': 7,
        'Cameroon': 5, 'Cape Verde': 5, 'Central African Republic': 5, 'Chad': 5,
        'Colombia': 6, 'Congo': 5, 'Costa Rica': 6, "Cote d'Ivoire": 5,
@@ -17,32 +17,27 @@ dic = {'Afghanistan': 1, 'Algeria': 2, 'Armenia': 3, 'Azerbaijan': 3, 'Banglades
        'United Republic of Tanzania':5, 'Yemen':2, 'Zambia':5, 'Zimbabwe':5,
        'State of Palestine':2, 'Sudan':5, 'Egypt':2, 'South Sudan':5}
 
-lis = ['Afghanistan', 'Algeria', 'Armenia', 'Azerbaijan', 'Bangladesh',
-       'Benin', 'Bhutan', 'Bolivia', 'Burkina Faso', 'Burundi', 'Cambodia',
-       'Cameroon', 'Cape Verde', 'Central African Republic', 'Chad',
-       'Colombia', 'Congo', 'Costa Rica', "Cote d'Ivoire",
-       'Democratic Republic of the Congo', 'Djibouti', 'El Salvador',
-       'Ethiopia', 'Gambia', 'Georgia', 'Ghana', 'Guatemala',
-       'Guinea-Bissau', 'Guinea', 'Haiti', 'Honduras', 'India',
-       'Indonesia', 'Iran  (Islamic Republic of)', 'Iraq', 'Jordan',
-       'Kenya', 'Kyrgyzstan', "Lao People's Democratic Republic",
-       'Lebanon', 'Lesotho', 'Liberia', 'Madagascar', 'Malawi', 'Mali',
-       'Mauritania', 'Mozambique', 'Myanmar', 'Nepal', 'Niger', 'Nigeria',
-       'Pakistan', 'Panama', 'Peru', 'Philippines', 'Rwanda', 'Senegal',
-       'Sri Lanka', 'Swaziland', 'Syrian Arab Republic', 'Tajikistan',
-       'Timor-Leste', 'Turkey', 'Uganda', 'Ukraine',
-       'United Republic of Tanzania', 'Yemen', 'Zambia', 'Zimbabwe',
-       'State of Palestine', 'Sudan', 'Egypt', 'South Sudan']
 
-total = []
-for country in lis:
-    amount = pd_data.filter({'country_name':country})['country_id'].count()
-    add = []
-    for i in range(amount):
-        add.append(dic[country])     
-    total = total + add
+dic_id_name = {1: "South Asia", 2:"Middle East & North Africa", 3:"Europe & Central Asia", 
+        4:"South Asia", 5:"Sub-Saharan Africa", 6:"Latin America & Caribbean", 7:"East Asia & Pacific"}
 
-pd_data['region_id'] = total
 
-pd_data.to_csv('region_data.csv', encoding='utf-8', index=False)
+def addregions(dic_region_id, dic_id_name):
+    region_id = []
+    region_name = []
+    for country, region in dic_region_id.items():
+        amount = pd_data.filter({'country_name':country})['country_id'].count()
+        addregion_id, addregion_name = [], []
 
+        for i in range(amount):
+            addregion_id.append(region)  
+            addregion_name.append(dic_id_name[region])   
+        region_id = region_id + addregion_id
+        region_name = region_name + addregion_name
+
+    pd_data['region_id'] = region_id
+    pd_data['region_name'] = region_name
+
+    pd_data.to_csv('region_data.csv', encoding='utf-8', index=False)
+
+addregions(dic_region_id, dic_id_name)
