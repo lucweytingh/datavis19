@@ -4,20 +4,30 @@ import matplotlib.pyplot as plt
 import datetime
 import os.path
 
-from helpers import *
+import os
+import sys
+sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/../..'))
 
-import pandas_helpers as ph
+import datavis19.config as config
+
+from datavis19.helpers import *
+
+import datavis19.pandas_helpers as ph
 pd.core.frame.DataFrame.filter = ph.filter
 pd.core.frame.DataFrame.get_list = ph.get_list
 pd.core.frame.DataFrame.dict_from_columns = ph.dict_from_columns
 pd.core.frame.DataFrame.sum_of_difference = ph.sum_of_difference
 
 
-def init_data(filename = "data/region_data.csv"):
+def init_data(filename):
   if os.path.isfile(filename):
-    return pd.read_csv(filename, encoding='latin-1')
+    if filename == "data.csv":
+      encoding = "latin-1"
+    else:
+      encoding = "utf-8"
+    return pd.read_csv(filename, encoding=encoding)
   else:
     return None
 
 ex_data = init_data('data/exchange.csv')
-pd_data = init_data()
+pd_data = init_data(config.PD_DATA_FILENAME)
