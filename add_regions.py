@@ -1,4 +1,4 @@
-from init import *
+pd_data = pd.read_csv('data.csv', encoding='latin-1')
 
 dic_region_id = {'Afghanistan': 1, 'Algeria': 2, 'Armenia': 3, 'Azerbaijan': 3, 'Bangladesh': 4,
        'Benin': 5, 'Bhutan': 4, 'Bolivia': 6, 'Burkina Faso': 5, 'Burundi': 5, 'Cambodia': 7,
