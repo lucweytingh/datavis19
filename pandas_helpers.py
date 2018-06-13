@@ -47,7 +47,12 @@ def dict_from_columns(self, columns, results = None, blacklist = []):
 def get_row_values(row, columns, blacklist):
   values = []
   for column in columns:
-      column_value = row[column]
+      if column == 'date':
+        # custom result for custom 'date' field
+        column_value = datetime.datetime(row['year'], row['month'], 1)
+      else:
+        column_value = row[column]
+
       if column_value in blacklist: return False
       values.append(column_value)
   return values
