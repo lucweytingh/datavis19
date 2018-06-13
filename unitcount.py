@@ -8,7 +8,7 @@ def unitcounter():
         print(" :  ",end="")
         print(len(inst))
         
-inst =  pd_data.filter({"unit_name": "Sack", "item_name" : "Charcoal"}).get_list('unit_name')       
+inst =  pd_data.filter({"unit_name": "KG"}).get_list('unit_name')       
 print(len(inst))
 
 # print(pd_data.filter({"unit_name": 'eggs'})["item_name"])

@@ -31,3 +31,4 @@ def init_data(filename):
 
 ex_data = init_data('data/exchange.csv')
 pd_data = init_data(config.PD_DATA_FILENAME)
+und_data = init_data('data/prevalence-of-undernourishment.csv')
