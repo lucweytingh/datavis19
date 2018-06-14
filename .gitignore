@@ -5,6 +5,8 @@ run.py
 jeroen.py
 region_data.csv
 exchange.csv
+test.py
+testdata.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
