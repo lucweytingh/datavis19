@@ -80,6 +80,11 @@ for market, market_results in results.items():
 
 relative_item_data.sort(key=lambda x: x['correlation'], reverse=True)
 
+# save as json
+import json
+with open('data.txt', 'w') as f:
+  json.dump(relative_item_data, f, ensure_ascii=False)
+
 print("Largest positive correlations:")
 for corr in relative_item_data[:9]:
   plot_by_market(pd_data.filter({ 'market_name': corr['market'], 'item_name': [corr['item1'], corr['item2']] }))
