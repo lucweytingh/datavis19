@@ -3,7 +3,10 @@ import datetime
 
 def filter(self, params):
   for key, val in params.items():
-    self = self.loc[self[key] == val]
+    if val.__class__ == [].__class__:
+      self = self.loc[self[key].isin(val)]
+    else:
+      self = self.loc[self[key] == val]
   return self
 
 def sum_of_difference(self, column):
