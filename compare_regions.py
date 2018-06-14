@@ -1,8 +1,11 @@
 from init import *
 
-# finds the most common item in a region
-def most_common_item(region_id):
-    region = pd_data.filter({'region_id':region_id})
+# finds the most common item in a region or overall
+def most_common_item(region_id=None):
+    if region_id == None:
+        region = pd_data
+    else:
+        region = pd_data.filter({'region_id':region_id})
     options = region['item_name'].unique()
     result_count = 0
     result_item = ""
@@ -14,36 +17,31 @@ def most_common_item(region_id):
     return result_item
 
 
-def main():
-    all_regions_dic = {}
-    for region_id in pd_data['region_id'].unique():
-        region = pd_data.filter({'region_id':region_id})
+def compare(region_id = None, item = None):
+    all_dic = {}
+    if item == None:
         item = most_common_item(region_id)
-        region_dic = {}
-        for index, row in region.filter({'item_name':item}).iterrows():
-            if (row['month'], row['year']) not in region_dic:
-                region_dic[(row['month'], row['year'])] = [row['price_usd']]
+    if region_id == None:
+        evaluate_name = 'region_name'
+    else:
+        evaluate_name = 'country_name'
+    for data_item in pd_data[evaluate_name].unique():
+        data = pd_data.filter({evaluate_name:data_item})
+        data_dic = {}
+        for index, row in data.filter({'item_name':item}).iterrows():
+            if (row['month'], row['year']) not in data_dic:
+                data_dic[(row['month'], row['year'])] = [row['price_usd']]
             else:
-                region_dic[(row['month'], row['year'])].append(row['price_usd'])
-        dates = {}
-        for month, year in region_dic:
-            dates[(month, year)] = sum(region_dic[(month,year)]) / len(region_dic[(month,year)])
-        
-        all_regions_dic[region_id] = dates
-    print(all_regions_dic)
+                data_dic[(row['month'], row['year'])].append(row['price_usd'])
+        average = {}
+        for month, year in data_dic:
+            average[(month, year)] = sum(data_dic[(month,year)]) / len(data_dic[(month,year)])
+        all_dic[data_item] = average
+    return all_dic
 
 
-
-
-
-        # sum = 0
-        # for price in region['price_usd']:
-        #     sum += price
-        # print(region_id)
-        # print(sum / len(region))
-
-
-
+def main():
+    print(compare())
 
 
 if __name__ == "__main__":
