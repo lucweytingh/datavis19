@@ -1,8 +1,9 @@
 from init import *
 
-
+# countries that were redefinable/ had different names in the 2 .csv's
 exceptions = {'Congo' : 'Democratic Republic of the Congo', 'Bhutan': 'South Asia', 'Burundi':'South Asia', 'Timor-Leste': 'Timor', 'Sudan': 'Middle East & North Africa', 'South Sudan': 'Middle East & North Africa', 'Syrian Arab Republic': 'Middle East & North Africa'}
 
+# countries about which there was no data in the prevalence of undernourishment file
 nodata = ['Ukraine', 'State of Palestine']
 
 def makeundercolumn(pd_data, und_data):
