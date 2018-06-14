@@ -9,7 +9,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
 from datavis19.init import *
 
 # make sure to load original data file
-pd_data = init_data("data.csv")
+pd_data = init_data("data/data.csv")
 
 # import all data cleaning scripts
 from add_regions import *
