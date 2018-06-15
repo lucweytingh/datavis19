@@ -29,7 +29,7 @@ from plot import *
 
 # pd_data = pd_data.filter({ 'country_name': 'Haiti' })
 
-markets = list(set(pd_data['market_name']))
+markets = list(set(pd_data['market_id']))
 items = list(set(pd_data['item_name']))
 
 # markets = ['Medellin']
@@ -39,7 +39,7 @@ pd_data_copy = pd_data
 results = {}
 
 for market in markets:
-  pd_data_market = pd_data.filter({ 'market_name': market })
+  pd_data_market = pd_data.filter({ 'market_id': market })
   items = list(set(pd_data_market['item_name']))
   for item in items:
     pd_data_item = pd_data_market.filter({ 'item_name': item })
@@ -50,7 +50,6 @@ for market in markets:
       set_default(results, market, [])
 
       results[market].append({
-        'market': market,
         'name': item,
         'dates_and_prices': [(date, price) for date, price in zip(dates, list(pd_data_item['price']))],
         'dates': dates
@@ -72,7 +71,7 @@ for market, market_results in results.items():
         corrcoef = np.corrcoef(item_prices, item2_prices)[0][1]
         if not np.isnan(corrcoef):
           relative_item_data.append({
-            'market': market,
+            'market_id': market,
             'item1': item['name'],
             'item2': item2['name'],
             'correlation': corrcoef
@@ -80,13 +79,18 @@ for market, market_results in results.items():
 
 relative_item_data.sort(key=lambda x: x['correlation'], reverse=True)
 
+# save as json
+import json
+with open('data/correlations.txt', 'w') as f:
+  json.dump(relative_item_data, f, ensure_ascii=False)
+
 print("Largest positive correlations:")
 for corr in relative_item_data[:9]:
-  plot_by_market(pd_data.filter({ 'market_name': corr['market'], 'item_name': [corr['item1'], corr['item2']] }))
+  plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }))
   print(f"C: {corr['correlation']}, {corr['item1']} and {corr['item2']}")
 print("")
 print("Largest negative correlations:")
 for corr in reversed(relative_item_data[-9:]):
-  plot_by_market(pd_data.filter({ 'market_name': corr['market'], 'item_name': [corr['item1'], corr['item2']] }))
+  plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }))
   print(f"C: {corr['correlation']}, {corr['item1']} and {corr['item2']}")
 
