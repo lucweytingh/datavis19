@@ -1,3 +1,4 @@
+
 def totuple_format(form):
   return (int(form[5:]), int(form[:4]))
 

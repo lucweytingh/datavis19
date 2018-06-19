@@ -2,6 +2,9 @@ remove_dict = {
   "unit_name": [
     "USD/LCU", "Packet", "Month", "kWh", "Package", "Course", "Cuartilla", "MT", "Sack"
   ]
+  "item_name": [
+    "Wage (qualified labour)", "Wage (non-qualified labour)"
+  ]
 }
 
 def remove_rows(pd_data, remove_dict):
