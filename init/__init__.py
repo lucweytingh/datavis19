@@ -3,6 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import datetime
 import os.path
+import random
+
+import json
 
 import os
 import sys
@@ -27,6 +30,13 @@ def init_data(filename):
     else:
       encoding = "utf-8"
     return pd.read_csv(filename, encoding=encoding, low_memory = False)
+  else:
+    return None
+
+def init_json(filename):
+  if os.path.isfile(filename):
+    with open(filename) as json_data:
+      return json.load(json_data)
   else:
     return None
 
