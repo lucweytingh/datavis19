@@ -14,6 +14,7 @@ sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/../..'))
 import datavis19.config as config
 
 from datavis19.helpers import *
+import bokeh
 
 import datavis19.pandas_helpers as ph
 pd.core.frame.DataFrame.filter = ph.filter
@@ -28,7 +29,7 @@ def init_data(filename):
       encoding = "latin-1"
     else:
       encoding = "utf-8"
-    return pd.read_csv(filename, encoding=encoding)
+    return pd.read_csv(filename, encoding=encoding, low_memory = False)
   else:
     return None
 

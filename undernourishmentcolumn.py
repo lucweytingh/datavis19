@@ -6,6 +6,8 @@ exceptions = {'Congo' : 'Democratic Republic of the Congo', 'Bhutan': 'South Asi
 # countries about which there was no data in the prevalence of undernourishment file
 nodata = ['Ukraine', 'State of Palestine']
 
+print(pd_data)
+
 def makeundercolumn(pd_data, und_data):
     outp = []
     countries = pd_data['country_name'].unique()

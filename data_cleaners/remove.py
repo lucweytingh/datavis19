@@ -10,7 +10,7 @@ remove_dict = {
 def remove_rows(pd_data, remove_dict):
   for column, values in remove_dict.items():
     for value in values:
-      pd_data = pd_data[pd_data.unit_name != value]
+      pd_data = pd_data[pd_data.unit_name != value
   return pd_data
 
 if __name__ == "__main__":
