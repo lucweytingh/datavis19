@@ -1,7 +1,7 @@
 remove_dict = {
   "unit_name": [
     "USD/LCU", "Packet", "Month", "kWh", "Package", "Course", "Cuartilla", "MT", "Sack"
-  ]
+  ],
   "item_name": [
     "Wage (qualified labour)", "Wage (non-qualified labour)"
   ]
@@ -10,7 +10,10 @@ remove_dict = {
 def remove_rows(pd_data, remove_dict):
   for column, values in remove_dict.items():
     for value in values:
-      pd_data = pd_data[pd_data.unit_name != value
+      if column == "unit_name":
+        pd_data = pd_data[pd_data.unit_name != value]
+      elif column == "item_name":
+        pd_data = pd_data[pd_data.item_name != value]
   return pd_data
 
 if __name__ == "__main__":

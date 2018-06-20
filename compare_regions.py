@@ -1,14 +1,16 @@
 from init import *
-
+# regions: 0: the world, 1: South Asia, 2: Middle East & North Africa,
+#          3: 
 
 def main():
-    data, item = compare(6)
-    plot1 = figure(x_axis_type="datetime", title="Average food price of " + item.lower())
+    data, item, region = compare(0, 'Wage (non-qualified labour)')
+    plot1 = figure(x_axis_type="datetime", title="Average food price of " + item.lower() + ' in ' + region)
     legend = []
     for name in data:
-        date_values = sort_dates(data[name])
-        dates, values = split_date_and_values(date_values)
-        legend.append((name, [add_to_plot(plot1, name, dates, values)]))
+        if data[name] != []:
+            date_values = sort_dates(data[name])
+            dates, values = split_date_and_values(date_values)
+            legend.append((name, [add_to_plot(plot1, name, dates, values)]))
     plot(plot1, legend)
 
 def add_to_plot(plot, name, dates, values):
@@ -84,11 +86,19 @@ def compare(region_id = None, item = None):
     if item == None:
         item = most_common_item(region_id)
     if region_id == None:
+        region_name = 'the world'
         evaluate_name= 'region_name'
         unique = pd_data[evaluate_name].unique()
     else:
         evaluate_name = 'country_name'
-        unique = pd_data.filter({'region_id':region_id})[evaluate_name].unique()
+        region_name = ''
+        if region_id == 0:
+            region_name = 'the world'
+            unique = pd_data[evaluate_name].unique()
+        else:
+            for name in pd_data.filter({'region_id':region_id})['region_name'].unique():
+                region_name = name
+            unique = pd_data.filter({'region_id':region_id})[evaluate_name].unique()
     for data_item in unique:
         data = pd_data.filter({evaluate_name:data_item})
         data_dic = {}
@@ -101,7 +111,7 @@ def compare(region_id = None, item = None):
         for month, year in data_dic:
             average.append(((month, year), sum(data_dic[(month,year)]) / len(data_dic[(month,year)])))
         all_dic[data_item] = average
-    return all_dic, item
+    return all_dic, item, region_name
 
 
 if __name__ == "__main__":
