@@ -10,7 +10,7 @@ from bokeh.models import Legend
 
 def main_plot(): 
     data, item, region = compare(None, None)
-    plot1 = figure(x_axis_type="datetime", title="Average food price of " + item.lower() + ' in ' + region)
+    plot1 = figure(x_axis_type="datetime", title="Average price of " + item.lower() + ' in ' + region)
     legend = []
     for name in data:
         if data[name] != []:
@@ -21,8 +21,8 @@ def main_plot():
 
 def main_correlation():
     interesting_items = ['Petrol', 'Sugar', 'Oil (sunflower)', 'Wheat', 'Beans', 'Tomatoes'] # all: pd_data['item_name'].unique()
-    regions = [None, 1, 2, 3, 4, 5, 6]
-    correlation(regions, interesting_items, 4)
+    regions = [0]
+    correlation(regions, interesting_items, 2)
 
 # plot the top given amount of pos & neg correlations of given items in given regions
 def correlation(regions, items, amount):
@@ -50,15 +50,15 @@ def correlation(regions, items, amount):
 def plot_results(data_sets, corr_list):
     for corr in corr_list:
         data = find_data_set(corr[0], data_sets)
-        plot1 = figure(x_axis_type="datetime", title="Average food price of " + corr[0][0].lower() + ' in ' + corr[0][1] + ':' + ' a correlation of ' + str(corr[1][1]))
+        plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(corr[1][1]))
         legend = []
-        colors = ['#e6194b', '#0082c8']
+        colors = ['#e6194b', '#0082c8', '#911eb4', '#3cb44b', '#46f0f0']
         count = 0
         for name in data:
             if name in corr[1][0]:
                 if data[name] != []:
                     dates, values = split_date_and_values(data[name])
-                    if corr[0][1] == 'all countries of the world':
+                    if corr[0][1] != 'the world':
                         region = pd_data.filter({'country_name':name})['region_name'].unique()[0]
                         legend.append((name + ' (' + region + ')', [add_to_plot(plot1, name, dates, values, colors[count])]))
                     else:    
@@ -82,11 +82,11 @@ def n_correlations(n_lines):
     return n_lines - 1 + n_correlations(n_lines-1)
 
 def insert_if_hilow(win_list, input_list, item_name, region_name, max_length):
-    if max_length > len(win_list):
-        min = 0
-    else:
-        min = len(win_list) - max_length
     if input_list == []:
+        if max_length >= len(win_list):
+            min = 0
+        else:
+            min = len(win_list) - max_length
         return win_list[:max_length], win_list[min:][::-1]
     if win_list == []:
         win_list = [((item_name, region_name), input_list[0])]
@@ -101,6 +101,10 @@ def insert_if_hilow(win_list, input_list, item_name, region_name, max_length):
                 win_list.append(((item_name, region_name), input_list[0]))
                 del(input_list[0])
                 break
+    if max_length >= len(win_list):
+        min = 0
+    else:
+        min = len(win_list) - max_length
     return win_list[:max_length], win_list[min:][::-1]
 
 
