@@ -3,7 +3,7 @@ remove_dict = {
     "USD/LCU", "Packet", "Month", "kWh", "Package", "Course", "Cuartilla", "MT", "Sack"
   ],
   "item_name": [
-    "Wage (qualified labour)", "Wage (non-qualified labour)"
+    "Wage (qualified labour)", "Wage (non-qualified labour)", "Sheep"
   ]
 }
 
