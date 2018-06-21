@@ -21,7 +21,7 @@ def main_plot():
 
 def main_correlation():
     interesting_items = ['Petrol', 'Sugar', 'Oil (sunflower)', 'Wheat', 'Beans', 'Tomatoes'] # all: pd_data['item_name'].unique()
-    regions = [0]
+    regions = [None, 1]
     correlation(regions, interesting_items, 2)
 
 # plot the top given amount of pos & neg correlations of given items in given regions
