@@ -11,7 +11,7 @@ def plot_data(data, columns, axes = None, title_appendix = None, blacklist = [])
         else:
           title = "{0}, {1} - {2}".format(country, market, title_appendix)
         plt.title(title)
-        plt.plot(dic["date"], dic["price"], label=item)
+        plt.plot(dic["date"], dic["price_usd"], label=item)
       plt.legend(loc='upper right')
       plt.show()
 
