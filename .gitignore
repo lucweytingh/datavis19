@@ -7,7 +7,7 @@ region_data.csv
 exchange.csv
 test.py
 testdata.csv
-# charts/*
+charts/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
