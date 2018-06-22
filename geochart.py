@@ -1,8 +1,15 @@
 import os
 import webbrowser
 
-def plot_geochart(name, data):
+def plot_geochart(name, data, options = {}):
   f = open("charts/{0}.html".format(name),'w')
+
+  options.update({
+    'library': {
+      'datalessRegionColor': '#f5f5f5',
+      'defaultColor': '#f5f5f5'
+    }
+  })
 
   content = """<html>
   <head>
@@ -13,10 +20,10 @@ def plot_geochart(name, data):
     <div id="{0}" style="width: 100%; height: auto"></div>
 
     <script>
-      new Chartkick.GeoChart("{0}", {1})
+      new Chartkick.GeoChart("{0}", {1}, {2})
     </script>
   </body>
-  </html>""".format(name, data)
+  </html>""".format(name, data, options)
 
   f.write(content)
   f.close()
