@@ -1,6 +1,10 @@
 import os
 import webbrowser
 
+import imgkit
+
+from helpers import *
+
 def plot_geochart(name, data, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
@@ -17,7 +21,7 @@ def plot_geochart(name, data, options = {}):
     <script src="../chartkick.js"></script>
   </head>
   <body>
-    <div id="{0}" style="width: 100%; height: auto"></div>
+    <div id="{0}" style="width: 80%; height: auto; min-width: 1000px"></div>
 
     <script>
       new Chartkick.GeoChart("{0}", {1}, {2})
@@ -34,18 +38,9 @@ def plot_geochart(name, data, options = {}):
 
 
 def html_to_png(filename, name):
-  import GrabzItClient
-  from GrabzIt import GrabzItImageOptions
-
-  # Create the GrabzItClient class
-  # Replace "APPLICATION KEY", "APPLICATION SECRET" with the values from your account!
-  grabzIt = GrabzItClient.GrabzItClient("ZjMyZjM5ZDFiOGUxNGE5ZGI5ZGIxN2YwOGE4NWM3MzQ=", "dj9PPz8/Pz9LPz8AGGwncz8/Sj5IG2VjPyw/Uj8pPz8=")
-
-  options = GrabzItImageOptions.GrabzItImageOptions()
-  options.format = "png"
-
-  GrabzIt.FileToImage(filename, options)
-  # Then call the Save or SaveTo method
-
-  filepath = os.path.abspath(os.path.dirname(__file__)) + "/charts/gif/" + name + ".jpg"
-  grabzIt.SaveTo(filepath) 
+  options = {
+    'format': 'png',
+    'encoding': "UTF-8"
+  }
+  create_dir('charts/gif')
+  imgkit.from_file(filename, 'charts/gif/' + name, options)

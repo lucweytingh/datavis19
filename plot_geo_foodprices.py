@@ -7,11 +7,9 @@ def main():
 
     data = avg_price_country(item, (1,2010))
 
-    filename = plot_geochart('price of ' + item.lower(), [[z[0], i_sqrt(z[1], 10)] for z in data])
-    html_to_png(filename, 'price of ' + item.lower())
+    filename = plot_geochart('price_of_' + item.lower(), [[z[0], i_sqrt(z[1], 10)] for z in data])
+    html_to_png(filename, 'price_of_' + item.lower() + '.png')
 
-
-    
 def avg_price_country(item_name, date):
     data = pd_data.filter({'item_name':item_name, 'month':date[0],'year':date[1]})
     prices = data.get_list('price_usd')
@@ -25,7 +23,7 @@ def avg_price_country(item_name, date):
                 prices[i] += prices[j]
                 rem_list.append(j)
     countries = rem_indeces(countries, rem_list)
-    prices = rem_indeces(prices, rem_list)  
+    prices = rem_indeces(prices, rem_list)
     country_prices = []
     for i in range(len(countries)):
         country_prices.append([countries[i], prices[i]])
