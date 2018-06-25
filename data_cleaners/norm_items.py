@@ -80,7 +80,7 @@ items = {'Bread': 'Bread', 'Wheat': 'Wheat', 'Rice (low quality)': 'Rice', 'Wage
        'Oil (vegetable, local)': 'Oil (vegetable)', 'Sugar (brown, imported)': 'Sugar (brown)',
        'Sugar (brown, local)': 'Sugar (brown)', 'Groundnuts (Mix)':'Groundnuts', 'Beans (butter)':'Beans',
        'Groundnuts (large, shelled)':'Groundnuts', 'Groundnuts (small, shelled)':'Groundnuts',
-       'Beans (catarino)':'Catarino', 'Maize meal (white, without bran) ':' Maize meal',
+       'Beans (catarino)':'Catarino', 'Maize meal (white, without bran) ':'Maize meal',
        'Beans (magnum)':'Beans', 'Maize meal (white, with bran)':'Maize meal',
        'Rice (high quality)':'Rice', 'Chickpeas (local)':'Chickpeas', 'Oil (mixed, imported)':'Oil (mixed)',
        'Cowpeas (white)':'Cowpeas (white)', 'Cowpeas (brown)':'Cowpeas (brown)', 'Sorghum (brown)':'Sorghum',

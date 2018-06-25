@@ -27,53 +27,47 @@ def pearson_def(x, y):
 from init import *
 from plot import *
 
-# pd_data = pd_data.filter({ 'country_name': 'Haiti' })
-
 markets = list(set(pd_data['market_id']))
 items = list(set(pd_data['item_name']))
 
-# markets = ['Medellin']
-
-pd_data_copy = pd_data
-
-results = {}
-
-for market in markets:
-  pd_data_market = pd_data.filter({ 'market_id': market })
-  items = list(set(pd_data_market['item_name']))
-  for item in items:
-    pd_data_item = pd_data_market.filter({ 'item_name': item })
-
-    if not pd_data_item.empty:
-      dates = [datetime.datetime(year, month, 1) for year, month in zip(pd_data_item['year'], pd_data_item['month'])]
-
-      set_default(results, market, [])
-
-      results[market].append({
-        'name': item,
-        'dates_and_prices': [(date, price) for date, price in zip(dates, list(pd_data_item['price']))],
-        'dates': dates
-      })
+results = pd_data.dict_from_columns(['market_id', 'item_name'], ['date', 'avg_price_per_date'])
 
 relative_item_data = []
 
 for market, market_results in results.items():
+  market_results = list(market_results.items())
   for i in range(len(market_results)):
-    item = market_results[i]
+    item_data = market_results[i]
     rest = market_results[i+1:]
 
-    for item2 in rest:
-      dates = set(item['dates']).intersection(set(item2['dates']))
-      item_prices  = [dandp[1] for dandp in item['dates_and_prices']  if dandp[0] in dates]
-      item2_prices = [dandp[1] for dandp in item2['dates_and_prices'] if dandp[0] in dates]
+    for item2_data in rest:
+      item_name = item_data[0]
+      item = item_data[1]
+      item2_name = item2_data[0]
+      item2 = item2_data[1]
+
+      item_dates = item['date']
+      item2_dates = item2['date']
+      dates = [date for date in item_dates if date in item2_dates]
+      item_prices  = [dandp[1] for dandp in item['avg_price_per_date']  if dandp[0] in dates]
+      item2_prices = [dandp[1] for dandp in item2['avg_price_per_date'] if dandp[0] in dates]
+
+      if len(item_prices) != len(item2_prices) and len(item_prices) <= 5:
+        print("dates:")
+        print(dates)
+        print("item1:")
+        print(item['avg_price_per_date'])
+        print("item2:")
+        print(item2['avg_price_per_date'])
+        print("Date: {0}, item1: {1}, item2: {2}".format(len(dates), len(item_prices), len(item2_prices)))
 
       if len(item_prices) >= 12 and len(item_prices) == len(item2_prices):
         corrcoef = np.corrcoef(item_prices, item2_prices)[0][1]
         if not np.isnan(corrcoef):
           relative_item_data.append({
             'market_id': market,
-            'item1': item['name'],
-            'item2': item2['name'],
+            'item1': item_name,
+            'item2': item2_name,
             'correlation': corrcoef
           })
 
@@ -93,4 +87,3 @@ print("Largest negative correlations:")
 for corr in reversed(relative_item_data[-9:]):
   plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }))
   print(f"C: {corr['correlation']}, {corr['item1']} and {corr['item2']}")
-

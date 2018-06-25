@@ -1,6 +1,8 @@
 from functools import reduce  # forward compatibility for Python 3
 import operator
 
+from math import sqrt
+
 def get_from_dict(dictionary, keys_list):
   return reduce(operator.getitem, keys_list, dictionary)
 
@@ -14,7 +16,7 @@ def set_default(dictionary, values, default):
   else:
     if values not in dictionary.keys():
       dictionary[values] = default
-    
 
-
-  
+def i_sqrt(n, i):
+  if i == 0: return n
+  return sqrt(i_sqrt(n, i - 1))

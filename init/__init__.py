@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import datetime
 import os.path
 import random
+import math
 
 import json
 
@@ -18,14 +19,23 @@ import bokeh
 
 import datavis19.pandas_helpers as ph
 pd.core.frame.DataFrame.filter = ph.filter
+pd.core.frame.DataFrame.split = ph.split
 pd.core.frame.DataFrame.get_list = ph.get_list
 pd.core.frame.DataFrame.dict_from_columns = ph.dict_from_columns
 pd.core.frame.DataFrame.sum_of_difference = ph.sum_of_difference
 
 
+from halo import Halo
+
+spinner = Halo(text="Spinnin' around", spinner="dots")
+
+def start_spinner(spinner_text):
+  spinner = Halo(text=spinner_text, spinner='dots')
+  spinner.start()
+
 def init_data(filename):
   if os.path.isfile(filename):
-    if filename == "data.csv":
+    if filename == "data.csv" or filename == "../data/data.csv":
       encoding = "latin-1"
     else:
       encoding = "utf-8"
