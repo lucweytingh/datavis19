@@ -30,46 +30,48 @@ from plot import *
 markets = list(set(pd_data['market_id']))
 items = list(set(pd_data['item_name']))
 
-results = pd_data.dict_from_columns(['market_id', 'item_name'], ['date', 'avg_price_per_date'])
+results = pd_data.dict_from_columns(['country_name', 'market_id', 'item_name'], ['date', 'avg_price_per_date'])
 
 relative_item_data = []
 
-for market, market_results in results.items():
-  market_results = list(market_results.items())
-  for i in range(len(market_results)):
-    item_data = market_results[i]
-    rest = market_results[i+1:]
+for country_name, country_results in results.items():
+  for market, market_results in country_results.items():
+    market_results = list(market_results.items())
+    for i in range(len(market_results)):
+      item_data = market_results[i]
+      rest = market_results[i+1:]
 
-    for item2_data in rest:
-      item_name = item_data[0]
-      item = item_data[1]
-      item2_name = item2_data[0]
-      item2 = item2_data[1]
+      for item2_data in rest:
+        item_name = item_data[0]
+        item = item_data[1]
+        item2_name = item2_data[0]
+        item2 = item2_data[1]
 
-      item_dates = item['date']
-      item2_dates = item2['date']
-      dates = [date for date in item_dates if date in item2_dates]
-      item_prices  = [dandp[1] for dandp in item['avg_price_per_date']  if dandp[0] in dates]
-      item2_prices = [dandp[1] for dandp in item2['avg_price_per_date'] if dandp[0] in dates]
+        item_dates = item['date']
+        item2_dates = item2['date']
+        dates = [date for date in item_dates if date in item2_dates]
+        item_prices  = [dandp[1] for dandp in item['avg_price_per_date']  if dandp[0] in dates]
+        item2_prices = [dandp[1] for dandp in item2['avg_price_per_date'] if dandp[0] in dates]
 
-      if len(item_prices) != len(item2_prices) and len(item_prices) <= 5:
-        print("dates:")
-        print(dates)
-        print("item1:")
-        print(item['avg_price_per_date'])
-        print("item2:")
-        print(item2['avg_price_per_date'])
-        print("Date: {0}, item1: {1}, item2: {2}".format(len(dates), len(item_prices), len(item2_prices)))
+        if len(item_prices) != len(item2_prices) and len(item_prices) <= 5:
+          print("dates:")
+          print(dates)
+          print("item1:")
+          print(item['avg_price_per_date'])
+          print("item2:")
+          print(item2['avg_price_per_date'])
+          print("Date: {0}, item1: {1}, item2: {2}".format(len(dates), len(item_prices), len(item2_prices)))
 
-      if len(item_prices) >= 12 and len(item_prices) == len(item2_prices):
-        corrcoef = np.corrcoef(item_prices, item2_prices)[0][1]
-        if not np.isnan(corrcoef):
-          relative_item_data.append({
-            'market_id': market,
-            'item1': item_name,
-            'item2': item2_name,
-            'correlation': corrcoef
-          })
+        if len(item_prices) >= 12 and len(item_prices) == len(item2_prices):
+          corrcoef = np.corrcoef(item_prices, item2_prices)[0][1]
+          if not np.isnan(corrcoef):
+            relative_item_data.append({
+              'country_name': country_name,
+              'market_id': market,
+              'item1': item_name,
+              'item2': item2_name,
+              'correlation': corrcoef
+            })
 
 relative_item_data.sort(key=lambda x: x['correlation'], reverse=True)
 
