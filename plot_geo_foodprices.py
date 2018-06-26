@@ -3,16 +3,11 @@ from geochart import *
 
 def main():
     # item, date = item_and_data_in_common()
-    item = 'Wheat'
+    item = 'Rice'
 
-    # data = avg_price_country(item, (1,2010))
 
     avg_price_visual(item)
-
-    # p
     
-
-
 def avg_price_visual(item_name):
     data = pd_data.filter({'item_name':item_name})
     years = list(set(data['year'].unique()))
@@ -20,9 +15,16 @@ def avg_price_visual(item_name):
     end_month = list(set(data.filter({'year':years[-1]})['month'].unique()))[-1]
     data_r = data_range(years, begin_month, end_month)
     all_data = []
+    curr_year = 0
     for date in data_r:
-        all_data.append([[x[0], i_sqrt(x[1], 10)] for x in avg_price_visual(item_name, date)])
-    plot_geochart('Average_price_of_' + item_name.lower(), all_data)
+        if date[1] != curr_year:
+            # if curr_year != 0:
+                # spinner.succeed()
+            # start_spinner('Retrieving data for ' + str(date[1]) + '...')
+            print('Retrieving data for the year ' + str(date[1]))
+            curr_year = date[1]
+        all_data.append([[x[0], i_sqrt(x[1], 10)] for x in avg_price_country(item_name, date)])
+    plot_geochart('average_price_of_' + item_name.lower(), all_data, {'framerate':4})
 
 
 def data_range(years, begin_month, end_month):
@@ -56,7 +58,8 @@ def avg_price_country(item_name, date):
     prices = rem_indeces(prices, rem_list)
     country_prices = []
     for i in range(len(countries)):
-        country_prices.append([countries[i], prices[i]])
+        if not np.isnan(prices[i]):
+            country_prices.append([countries[i], prices[i]])
     return [[z[0], z[1] / occurrence_dic[z[0]]] for z in country_prices]
 
 # delete all indeces from input list given in an indeces list
