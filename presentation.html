@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Food prices - datavis19</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="chartkick.js"></script>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="section dark-bg">
+      <h1 class="white text-center title" style="margin-top: 40px; margin-bottom: 10px">Food prices all over the globe</h1>
+      <p class="white text-center">Some small introduction. But where did the chess pieces really go?</p>
+
+      <div id="chart-container-volatility" style="width: 80%; height: auto; min-width: 1000px; position: relative; margin-left: auto; margin-right: auto"></div>
+
+    <script>
+      var options = {'labels': ['2012', '2013', '2014'], 'label_prepend': 'Year: ', 'library': {'datalessRegionColor': '#f5f5f5', 'defaultColor': '#f5f5f5'}};
+
+      function render_chart(index, data) {
+        var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>')
+        $newChart.appendTo('#chart-container-volatility');
+        new Chartkick.GeoChart("chart-" + String(index), data, options);
+        setTimeout(function() { $newChart.css("z-index", index); }, 100);
+        return $newChart;
+      }
+
+      render_chart(0, [['Afghanistan', 5.451762045764935], ['Algeria', 0.24480861057222897], ['Armenia', 0.15574085466112794], ['Azerbaijan', 0.039111317009321], ['Bangladesh', 0.027109521326183172], ['Benin', 0.05290083068778323], ['Bhutan', 0.04807347084783716], ['Bolivia', 0.0499361934806208], ['Burkina Faso', 0.02272942511024886], ['Burundi', 0.05200812929686041], ['Cambodia', 0.07683179017945005], ['Cameroon', 0.07906990993770957], ['Cape Verde', 0.03910145134791838], ['Central African Republic', 0.25603448351175984], ['Chad', 0.17909409456926992], ['Colombia', 0.18560229585870522], ['Congo', 0.3766406092190523], ["Cote d'Ivoire", 0.0834488583353887], ['Democratic Republic of the Congo', 0.21341982564224807], ['Djibouti', 0.03815978082907376], ['Egypt', 0.1427341426899759], ['El Salvador', 0.07835434876389584], ['Ethiopia', 0.08143275599279524], ['Gambia', 0.10626436660745985], ['Georgia', 0.045395634730132244], ['Ghana', 3.8070776003012607], ['Guatemala', 0.06519401838063224], ['Guinea-Bissau', 0.09850211608878758], ['Haiti', 0.28641289846334816], ['India', 0.046570525167371625], ['Indonesia', 0.13004520670769504], ['Iran  (Islamic Republic of)', 0.1335352985426966], ['Iraq', 0.06971485707193184], ['Jordan', 14.461277844040378], ['Kenya', 0.04755830735825581], ['Kyrgyzstan', 0.10742095579079329], ["Lao People's Democratic Republic", 0.07430618455796492], ['Lebanon', 0.3265753371087339], ['Lesotho', 0.05529449555225416], ['Liberia', 0.8244212696397196], ['Madagascar', 0.06086402430107554], ['Malawi', 0.08708674136743533], ['Mali', 0.027980655481583523], ['Mauritania', 0.05014991464855883], ['Mozambique', 0.10239838910437424], ['Myanmar', 11.655285769086298], ['Nepal', 0.020857454503145564], ['Niger', 0.04304875062338448], ['Nigeria', 0.21000217310949776], ['Pakistan', 0.04070805411961563], ['Peru', 0.035458610137697646], ['Philippines', 0.1334871240165406], ['Rwanda', 0.29973833050876253], ['Senegal', 0.03131421026203454], ['Sri Lanka', 0.03446938503684106], ['State of Palestine', 0.30603206110816833], ['Sudan', 0.05020932627381398], ['Swaziland', 0.05931642724703113], ['Tajikistan', 0.07118603750613697], ['Timor-Leste', 0.20599675925925878], ['Turkey', 0.4693287895548425], ['Uganda', 0.06047264402477273], ['Ukraine', 0.10995917566824542], ['United Republic of Tanzania', 0.051113477868391585], ['Yemen', 0.15213629731442796], ['Zambia', 0.15991687303036534], ['Zimbabwe', 0.2170282519567649]]);
+
+
+      $(function() {
+        $play = $('<div class="play" style="display: inline-block; text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
+        $play.appendTo('.header');
+        var framerate = 2;
+        var interval = 1000 / framerate;
+
+        var states = [[['Afghanistan', 5.451762045764935], ['Algeria', 0.24480861057222897], ['Armenia', 0.15574085466112794], ['Azerbaijan', 0.039111317009321], ['Bangladesh', 0.027109521326183172], ['Benin', 0.05290083068778323], ['Bhutan', 0.04807347084783716], ['Bolivia', 0.0499361934806208], ['Burkina Faso', 0.02272942511024886], ['Burundi', 0.05200812929686041], ['Cambodia', 0.07683179017945005], ['Cameroon', 0.07906990993770957], ['Cape Verde', 0.03910145134791838], ['Central African Republic', 0.25603448351175984], ['Chad', 0.17909409456926992], ['Colombia', 0.18560229585870522], ['Congo', 0.3766406092190523], ["Cote d'Ivoire", 0.0834488583353887], ['Democratic Republic of the Congo', 0.21341982564224807], ['Djibouti', 0.03815978082907376], ['Egypt', 0.1427341426899759], ['El Salvador', 0.07835434876389584], ['Ethiopia', 0.08143275599279524], ['Gambia', 0.10626436660745985], ['Georgia', 0.045395634730132244], ['Ghana', 3.8070776003012607], ['Guatemala', 0.06519401838063224], ['Guinea-Bissau', 0.09850211608878758], ['Haiti', 0.28641289846334816], ['India', 0.046570525167371625], ['Indonesia', 0.13004520670769504], ['Iran  (Islamic Republic of)', 0.1335352985426966], ['Iraq', 0.06971485707193184], ['Jordan', 14.461277844040378], ['Kenya', 0.04755830735825581], ['Kyrgyzstan', 0.10742095579079329], ["Lao People's Democratic Republic", 0.07430618455796492], ['Lebanon', 0.3265753371087339], ['Lesotho', 0.05529449555225416], ['Liberia', 0.8244212696397196], ['Madagascar', 0.06086402430107554], ['Malawi', 0.08708674136743533], ['Mali', 0.027980655481583523], ['Mauritania', 0.05014991464855883], ['Mozambique', 0.10239838910437424], ['Myanmar', 11.655285769086298], ['Nepal', 0.020857454503145564], ['Niger', 0.04304875062338448], ['Nigeria', 0.21000217310949776], ['Pakistan', 0.04070805411961563], ['Peru', 0.035458610137697646], ['Philippines', 0.1334871240165406], ['Rwanda', 0.29973833050876253], ['Senegal', 0.03131421026203454], ['Sri Lanka', 0.03446938503684106], ['State of Palestine', 0.30603206110816833], ['Sudan', 0.05020932627381398], ['Swaziland', 0.05931642724703113], ['Tajikistan', 0.07118603750613697], ['Timor-Leste', 0.20599675925925878], ['Turkey', 0.4693287895548425], ['Uganda', 0.06047264402477273], ['Ukraine', 0.10995917566824542], ['United Republic of Tanzania', 0.051113477868391585], ['Yemen', 0.15213629731442796], ['Zambia', 0.15991687303036534], ['Zimbabwe', 0.2170282519567649]], [['Bangladesh', 0.027109521326183172], ['Benin', 0.05290083068778323], ['Bhutan', 0.04807347084783716], ['Bolivia', 0.0499361934806208], ['Burkina Faso', 0.02272942511024886], ['Burundi', 0.05200812929686041], ['Cambodia', 0.07683179017945005], ['Cameroon', 0.07906990993770957], ['Cape Verde', 0.03910145134791838], ['Central African Republic', 0.25603448351175984], ['Chad', 0.17909409456926992], ['Colombia', 0.18560229585870522], ['Congo', 0.3766406092190523], ["Cote d'Ivoire", 0.0834488583353887], ['Democratic Republic of the Congo', 0.21341982564224807], ['Djibouti', 0.03815978082907376], ['Egypt', 0.1427341426899759], ['El Salvador', 0.07835434876389584], ['Ethiopia', 0.08143275599279524], ['Gambia', 0.10626436660745985], ['Georgia', 0.045395634730132244], ['Ghana', 3.8070776003012607], ['Guatemala', 0.06519401838063224], ['Guinea-Bissau', 0.09850211608878758], ['Haiti', 0.28641289846334816], ['India', 0.046570525167371625], ['Indonesia', 0.13004520670769504], ['Iran  (Islamic Republic of)', 0.1335352985426966], ['Iraq', 0.06971485707193184], ['Jordan', 14.461277844040378], ['Kenya', 0.04755830735825581], ['Kyrgyzstan', 0.10742095579079329], ["Lao People's Democratic Republic", 0.07430618455796492], ['Lebanon', 0.3265753371087339], ['Lesotho', 0.05529449555225416], ['Liberia', 0.8244212696397196], ['Madagascar', 0.06086402430107554], ['Malawi', 0.08708674136743533], ['Mali', 0.027980655481583523], ['Mauritania', 0.05014991464855883], ['Mozambique', 0.10239838910437424], ['Myanmar', 11.655285769086298], ['Nepal', 0.020857454503145564], ['Niger', 0.04304875062338448], ['Nigeria', 0.21000217310949776], ['Pakistan', 0.04070805411961563], ['Peru', 0.035458610137697646], ['Philippines', 0.1334871240165406], ['Rwanda', 0.29973833050876253], ['Senegal', 0.03131421026203454], ['Sri Lanka', 0.03446938503684106], ['State of Palestine', 0.30603206110816833], ['Sudan', 0.05020932627381398], ['Swaziland', 0.05931642724703113], ['Tajikistan', 0.07118603750613697], ['Timor-Leste', 0.20599675925925878], ['Turkey', 0.4693287895548425], ['Uganda', 0.06047264402477273], ['Ukraine', 0.10995917566824542], ['United Republic of Tanzania', 0.051113477868391585], ['Yemen', 0.15213629731442796], ['Zambia', 0.15991687303036534], ['Zimbabwe', 0.2170282519567649]], [['Cambodia', 0.07683179017945005], ['Cameroon', 0.07906990993770957], ['Cape Verde', 0.03910145134791838], ['Central African Republic', 0.25603448351175984], ['Chad', 0.17909409456926992], ['Colombia', 0.18560229585870522], ['Congo', 0.3766406092190523], ["Cote d'Ivoire", 0.0834488583353887], ['Democratic Republic of the Congo', 0.21341982564224807], ['Djibouti', 0.03815978082907376], ['Egypt', 0.1427341426899759], ['El Salvador', 0.07835434876389584], ['Ethiopia', 0.08143275599279524], ['Gambia', 0.10626436660745985], ['Georgia', 0.045395634730132244], ['Ghana', 3.8070776003012607], ['Guatemala', 0.06519401838063224], ['Guinea-Bissau', 0.09850211608878758], ['Haiti', 0.28641289846334816], ['India', 0.046570525167371625], ['Indonesia', 0.13004520670769504], ['Iran  (Islamic Republic of)', 0.1335352985426966], ['Iraq', 0.06971485707193184], ['Jordan', 14.461277844040378], ['Kenya', 0.04755830735825581], ['Kyrgyzstan', 0.10742095579079329], ["Lao People's Democratic Republic", 0.07430618455796492], ['Lebanon', 0.3265753371087339], ['Lesotho', 0.05529449555225416], ['Liberia', 0.8244212696397196], ['Madagascar', 0.06086402430107554], ['Malawi', 0.08708674136743533], ['Mali', 0.027980655481583523], ['Mauritania', 0.05014991464855883], ['Mozambique', 0.10239838910437424], ['Myanmar', 11.655285769086298], ['Nepal', 0.020857454503145564], ['Niger', 0.04304875062338448], ['Nigeria', 0.21000217310949776], ['Pakistan', 0.04070805411961563], ['Peru', 0.035458610137697646], ['Philippines', 0.1334871240165406], ['Rwanda', 0.29973833050876253], ['Senegal', 0.03131421026203454], ['Sri Lanka', 0.03446938503684106], ['State of Palestine', 0.30603206110816833], ['Sudan', 0.05020932627381398], ['Swaziland', 0.05931642724703113], ['Tajikistan', 0.07118603750613697], ['Timor-Leste', 0.20599675925925878], ['Turkey', 0.4693287895548425], ['Uganda', 0.06047264402477273], ['Ukraine', 0.10995917566824542], ['United Republic of Tanzania', 0.051113477868391585], ['Yemen', 0.15213629731442796], ['Zambia', 0.15991687303036534], ['Zimbabwe', 0.2170282519567649]]];
+        var index = 1;
+
+        var intervalObj;
+        var playing = false;
+
+        var labels = ['2012', '2013', '2014'];
+        var labelPrepend = "Year: ";
+        if (labels.length > 0) {
+          $label = $('<h3 style="display: inline-block">' + labelPrepend + labels[0] + '</h3>');
+          $label.prependTo('.header');
+        }
+
+        function update_label(index) {
+          if (labels.length > 0) {
+            $label.text(labelPrepend + String(labels[index % labels.length]));
+          }
+        }
+
+        function cleanup_chart($chart) {
+          setTimeout(function() { if (playing) { $chart.remove() } }, interval * 7);
+        }
+
+        function update_data() {
+          var state = states[index % states.length];
+          var $newChart = render_chart(index, state);
+          cleanup_chart($newChart);
+          update_label(index);
+          index++;
+        }
+
+        $play.click(function() {
+          if (playing) {
+            clearInterval(intervalObj);
+            $play.text("Play");
+            playing = false;
+          } else {
+            intervalObj = setInterval(update_data, interval);
+            $play.text("Pause");
+            playing = true;
+          }
+        });
+      });
+
+    </script>
+    </div>
+  </body>
+</html>

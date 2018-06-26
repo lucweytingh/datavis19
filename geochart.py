@@ -1,12 +1,6 @@
 import os
 import webbrowser
 
-<<<<<<< HEAD
-#import imgkit
-=======
-# import imgkit
->>>>>>> 113b832d12e16c817de7b28fe2b957ab466f62cc
-
 from helpers import *
 
 def plot_geochart(name, data, options = {}):
@@ -94,13 +88,14 @@ def plot_geochart(name, data, options = {}):
   </head>
   <body>
     <div style="width: 100%; height: 40px" class="header"></div>
-    <div id="chart-container" style="width: 80%; height: auto; min-width: 1000px; position: relative"></div>
+    <div id="chart-container-{0}" style="width: 80%; height: auto; min-width: 1000px; position: relative"></div>
 
     <script>
       var options = {2};
 
       function render_chart(index, data) {{
-        var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>').appendTo('#chart-container');
+        var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>')
+        $newChart.appendTo('#chart-container-{0}');
         new Chartkick.GeoChart("chart-" + String(index), data, options);
         setTimeout(function() {{ $newChart.css("z-index", index); }}, 100);
         return $newChart;
