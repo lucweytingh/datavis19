@@ -1,7 +1,11 @@
 import os
 import webbrowser
 
+<<<<<<< HEAD
+#import imgkit
+=======
 # import imgkit
+>>>>>>> 113b832d12e16c817de7b28fe2b957ab466f62cc
 
 from helpers import *
 
