@@ -1,7 +1,7 @@
 from geochart import *
 from init import *
 
-blacklist = ['IDA only','Pacific island small states']
+blacklist = ['IDA only','Pacific island small states', 'Other small states', 'Small states', 'Middle income', 'Middle East & North Africa (excluding high income)','Low income']
 
 def datayear(year):
     reslist = []
@@ -12,13 +12,12 @@ def datayear(year):
 
 #print(datayear(1999))
 
-years = range(1992,2015)
+years = range(1991,2015)
 data = []
 for year in years:
     data.append(datayear(year))
 
-print(data)
 
-plot_geochart("undernourishment_"+ str(year), data)
+plot_geochart("undernourishment_geochart", data, {"labels":list(range(1991,2015))})
 
 

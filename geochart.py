@@ -1,7 +1,7 @@
 import os
 import webbrowser
 
-import imgkit
+#import imgkit
 
 from helpers import *
 
@@ -85,10 +85,10 @@ def plot_geochart(name, data, options = {}):
   return filename
 
 
-def html_to_png(filename, name):
-  options = {
-    'format': 'png',
-    'encoding': "UTF-8"
-  }
-  create_dir('charts/gif')
-  imgkit.from_file(filename, 'charts/gif/' + name, options)
+# def html_to_png(filename, name):
+#   options = {
+#     'format': 'png',
+#     'encoding': "UTF-8"
+#   }
+#   create_dir('charts/gif')
+#   imgkit.from_file(filename, 'charts/gif/' + name, options)
