@@ -1,5 +1,6 @@
 from functools import reduce  # forward compatibility for Python 3
 import operator
+import os
 
 from math import sqrt
 
@@ -20,3 +21,7 @@ def set_default(dictionary, values, default):
 def i_sqrt(n, i):
   if i == 0: return n
   return sqrt(i_sqrt(n, i - 1))
+
+def create_dir(directory):
+  if not os.path.exists(directory):
+    os.makedirs(directory)
