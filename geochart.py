@@ -9,6 +9,8 @@ def plot_geochart(name, data, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
   dynamic_data = len(data[0]) > 2
+  labels = options["labels"] if "labels" in options.keys() else []
+  label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
   framerate = options["framerate"] if "framerate" in options.keys() else 2
 
   options.update({
@@ -22,8 +24,8 @@ def plot_geochart(name, data, options = {}):
     initial_data = data[0]
     dynamic_js = """
       $(function() {{
-        $play = $('<div class="play" style="text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
-        $play.appendTo('body');
+        $play = $('<div class="play" style="display: inline-block; text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
+        $play.appendTo('.header');
         var framerate = {1};
         var interval = 1000 / framerate;
 
@@ -33,9 +35,28 @@ def plot_geochart(name, data, options = {}):
         var intervalObj;
         var playing = false;
 
+        var labels = {2};
+        var labelPrepend = "{3}";
+        if (labels.length > 0) {{
+          $label = $('<h3 style="display: inline-block">' + labelPrepend + labels[0] + '</h3>');
+          $label.prependTo('.header');
+        }}
+
+        function update_label(index) {{
+          if (labels.length > 0) {{
+            $label.text(labelPrepend + String(labels[index % labels.length]));
+          }}
+        }}
+
+        function cleanup_chart($chart) {{
+          setTimeout(function() {{ if (playing) {{ $chart.remove() }} }}, interval * 7);
+        }}
+
         function update_data() {{
           var state = states[index % states.length];
-          chart.updateData(state);
+          var $newChart = render_chart(index, state);
+          cleanup_chart($newChart);
+          update_label(index);
           index++;
         }}
 
@@ -51,7 +72,7 @@ def plot_geochart(name, data, options = {}):
           }}
         }});
       }});
-    """.format(data, framerate)
+    """.format(data, framerate, labels, label_prepend)
   else:
     initial_data = data
     dynamic_js = ""
@@ -68,10 +89,20 @@ def plot_geochart(name, data, options = {}):
     crossorigin="anonymous"></script>
   </head>
   <body>
-    <div id="{0}" style="width: 80%; height: auto; min-width: 1000px"></div>
+    <div style="width: 100%; height: 40px" class="header"></div>
+    <div id="chart-container" style="width: 80%; height: auto; min-width: 1000px; position: relative"></div>
 
     <script>
-      var chart = new Chartkick.GeoChart("{0}", {1}, {2});
+      var options = {2};
+
+      function render_chart(index, data) {{
+        var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>').appendTo('#chart-container');
+        new Chartkick.GeoChart("chart-" + String(index), data, options);
+        setTimeout(function() {{ $newChart.css("z-index", index); }}, 100);
+        return $newChart;
+      }}
+
+      render_chart(0, {1});
 
       {3}
     </script>
