@@ -232,7 +232,7 @@ def biggestcorrelator(limit):
     #     dnext = input('continue?: ')  
 
 
-biggestcorrelator(60)
+#biggestcorrelator(60)
 
 def undernourishmentdict(country):
     data = pd_data.filter({'country_name' : country})
@@ -291,3 +291,4 @@ def avg_items():
     return totprods/len(countries)
 
 
+print(len(und_data["Entity"].unique()))
