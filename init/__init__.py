@@ -27,7 +27,7 @@ pd.core.frame.DataFrame.sum_of_difference = ph.sum_of_difference
 
 from halo import Halo
 
-spinner = Halo(text="Spinnin' around", spinner="dots")
+spinner = Halo(text="", spinner="dots")
 
 def start_spinner(spinner_text):
   spinner = Halo(text=spinner_text, spinner='dots')
