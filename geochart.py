@@ -5,7 +5,7 @@ from helpers import *
 def plot_geochart(name, data, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
-  dynamic_data = len(data[0]) > 2
+  dynamic_data = len(data) > 1
   labels = options["labels"] if "labels" in options.keys() else []
   label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
   framerate = options["framerate"] if "framerate" in options.keys() else 2

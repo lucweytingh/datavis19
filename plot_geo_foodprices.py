@@ -3,7 +3,7 @@ from geochart import *
 
 def main():
     # item, date = item_and_data_in_common()
-    item = 'Rice'
+    item = 'Tomatoes'
 
 
     avg_price_visual(item)
@@ -24,7 +24,16 @@ def avg_price_visual(item_name):
             print('Retrieving data for the year ' + str(date[1]))
             curr_year = date[1]
         all_data.append([[x[0], i_sqrt(x[1], 10)] for x in avg_price_country(item_name, date)])
-    plot_geochart('average_price_of_' + item_name.lower(), all_data, {'framerate':4})
+    min_value, max_value = 10, 0
+
+    for date in all_data:
+        for item in date:
+            if item[1] > max_value:
+                max_value = item[1]
+            if item[1] < min_value:
+                min_value = item[1]
+    labels = [str(x[0]) + ', ' + str(x[1]) for x in data_r]
+    plot_geochart('average_price_of_' + item_name.lower(), all_data, {'framerate':3, 'labels':labels, 'label_prepend': 'Average price of ' + item_name.lower() + ', date: ', 'min':min_value, 'max':max_value})
 
 
 def data_range(years, begin_month, end_month):
