@@ -9,6 +9,9 @@ def plot_geochart(name, data, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
   dynamic_data = len(data[0]) > 2
+  labels = options["labels"] if "labels" in options.keys() else []
+  label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
+  framerate = options["framerate"] if "framerate" in options.keys() else 2
 
   options.update({
     'library': {
@@ -23,7 +26,7 @@ def plot_geochart(name, data, options = {}):
       $(function() {{
         $play = $('<div class="play" style="text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
         $play.appendTo('body');
-        var framerate = 0.3;
+        var framerate = {1};
         var interval = 1000 / framerate;
 
         var states = {0};
@@ -32,9 +35,23 @@ def plot_geochart(name, data, options = {}):
         var intervalObj;
         var playing = false;
 
+        var labels = {2};
+        var labelPrepend = "{3}";
+        if (labels.length > 0) {{
+          $label = $('<h3>' + labelPrepend + labels[0] + '</h3>');
+          $label.prependTo('body');
+        }}
+
+        function update_label(index) {{
+          if (labels.length > 0) {{
+            $label.text(labelPrepend + String(labels[index % labels.length]));
+          }}
+        }}
+
         function update_data() {{
           var state = states[index % states.length];
           chart.updateData(state);
+          update_label(index);
           index++;
         }}
 
@@ -50,7 +67,7 @@ def plot_geochart(name, data, options = {}):
           }}
         }});
       }});
-    """.format(data)
+    """.format(data, framerate, labels, label_prepend)
   else:
     initial_data = data
     dynamic_js = ""
