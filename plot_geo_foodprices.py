@@ -5,11 +5,41 @@ def main():
     # item, date = item_and_data_in_common()
     item = 'Wheat'
 
-    data = avg_price_country(item, (1,2010))
+    # data = avg_price_country(item, (1,2010))
 
-    filename = plot_geochart('price_of_' + item.lower(), [[z[0], i_sqrt(z[1], 10)] for z in data])
-    html_to_png(filename, 'price_of_' + item.lower() + '.png')
+    avg_price_visual(item)
 
+    # p
+    
+
+
+def avg_price_visual(item_name):
+    data = pd_data.filter({'item_name':item_name})
+    years = list(set(data['year'].unique()))
+    begin_month = list(set(data.filter({'year':years[0]})['month'].unique()))[0]
+    end_month = list(set(data.filter({'year':years[-1]})['month'].unique()))[-1]
+    data_r = data_range(years, begin_month, end_month)
+    all_data = []
+    for date in data_r:
+        all_data.append([[x[0], i_sqrt(x[1], 10)] for x in avg_price_visual(item_name, date)])
+    plot_geochart('Average_price_of_' + item_name.lower(), all_data)
+
+
+def data_range(years, begin_month, end_month):
+    result = []
+    years_len = len(years)
+    for i in range(years_len):
+        if i == 0:
+            for j in range(begin_month, 13):
+                result.append((j, years[i]))
+        elif i == years_len - 1:
+            for j in range(1, end_month + 1):
+                result.append((j, years[i]))
+        else:
+            for j in range(1, 13):
+                result.append((j, years[i]))
+    return result
+    
 def avg_price_country(item_name, date):
     data = pd_data.filter({'item_name':item_name, 'month':date[0],'year':date[1]})
     prices = data.get_list('price_usd')
