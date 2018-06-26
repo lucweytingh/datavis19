@@ -2,10 +2,9 @@ import os
 import webbrowser
 from helpers import *
 
-def plot_geochart(name, data, options = {}):
+def plot_geochart(name, data, animated, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
-  dynamic_data = len(data) > 1
   labels = options["labels"] if "labels" in options.keys() else []
   label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
   framerate = options["framerate"] if "framerate" in options.keys() else 2
@@ -13,16 +12,17 @@ def plot_geochart(name, data, options = {}):
   if "library" not in options.keys():
     options["library"] = {}
   options["library"].update({
+    'backgroundColor': { 'fill': 'transparent' },
     'datalessRegionColor': '#f5f5f5',
     'defaultColor': '#f5f5f5'
   })
 
-  if dynamic_data:
+  if animated:
     initial_data = data[0]
     dynamic_js = """
       $(function() {{
-        $play = $('<div class="play" style="display: inline-block; text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
-        $play.appendTo('.header');
+        $play = $('<a class="play" style="display: inline-block; text-align: center; width: auto; padding: 5px 10px; border-radius: 3px; border: 1px solid #ccc; background: #fff">Play</a>');
+        $play.appendTo($header);
         var framerate = {1};
         var interval = 1000 / framerate;
         var states = {0};
@@ -33,7 +33,7 @@ def plot_geochart(name, data, options = {}):
         var labelPrepend = "{3}";
         if (labels.length > 0) {{
           $label = $('<h3 style="display: inline-block">' + labelPrepend + labels[0] + '</h3>');
-          $label.prependTo('.header');
+          $label.prependTo($header);
         }}
         function update_label(index) {{
           if (labels.length > 0) {{
@@ -77,14 +77,21 @@ def plot_geochart(name, data, options = {}):
     crossorigin="anonymous"></script>
   </head>
   <body>
-    <div style="width: 100%; height: 40px" class="header"></div>
-    <div id="chart-container-{0}" style="width: 80%; height: auto; min-width: 1000px; position: relative"></div>
+    <div class="chart-wrapper" id="{0}">
+      <div style="width: 100%; height: 40px" class="header"></div>
+      <div class="chart-container" style="width: 100%; height: auto; position: relative"></div>
+    </div>
 
     <script>
+      var $wrapper = $('#{0}');
+      var $header = $wrapper.find('.header');
+      var $container = $wrapper.find('.chart-container');
       var options = {2};
+
       function render_chart(index, data) {{
         var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>')
-        $newChart.appendTo('#chart-container-{0}');
+        $newChart.appendTo($container);
+
         new Chartkick.GeoChart("chart-" + String(index), data, options);
         setTimeout(function() {{ $newChart.css("z-index", index); }}, 100);
         return $newChart;
