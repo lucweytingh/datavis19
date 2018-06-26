@@ -9,6 +9,7 @@ def plot_geochart(name, data, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
   dynamic_data = len(data[0]) > 2
+  framerate = options["framerate"] if "framerate" in options.keys() else 2
 
   options.update({
     'library': {
@@ -23,7 +24,7 @@ def plot_geochart(name, data, options = {}):
       $(function() {{
         $play = $('<div class="play" style="text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
         $play.appendTo('body');
-        var framerate = 0.3;
+        var framerate = {1};
         var interval = 1000 / framerate;
 
         var states = {0};
@@ -50,7 +51,7 @@ def plot_geochart(name, data, options = {}):
           }}
         }});
       }});
-    """.format(data)
+    """.format(data, framerate)
   else:
     initial_data = data
     dynamic_js = ""
