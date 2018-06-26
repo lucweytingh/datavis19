@@ -179,6 +179,7 @@ def undernourishmentplotteryear(country):
     legend.append(('name',[add_to_plot_undernourish(plot1,'name',dates,data)]))
     plotundernourishment(plot1,legend)
 
+print(coeff('Afghanistan', 60))
 
 def produce_result(country,limit,item = None):
     coeff(country,limit)
@@ -289,6 +290,3 @@ def avg_items():
         
         totprods += productsnum
     return totprods/len(countries)
-
-
-print(len(und_data["Entity"].unique()))

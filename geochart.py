@@ -1,12 +1,5 @@
 import os
 import webbrowser
-
-<<<<<<< HEAD
-#import imgkit
-=======
-# import imgkit
->>>>>>> 113b832d12e16c817de7b28fe2b957ab466f62cc
-
 from helpers import *
 
 def plot_geochart(name, data, options = {}):
@@ -17,11 +10,11 @@ def plot_geochart(name, data, options = {}):
   label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
   framerate = options["framerate"] if "framerate" in options.keys() else 2
 
-  options.update({
-    'library': {
-      'datalessRegionColor': '#f5f5f5',
-      'defaultColor': '#f5f5f5'
-    }
+  if "library" not in options.keys():
+    options["library"] = {}
+  options["library"].update({
+    'datalessRegionColor': '#f5f5f5',
+    'defaultColor': '#f5f5f5'
   })
 
   if dynamic_data:
@@ -32,30 +25,24 @@ def plot_geochart(name, data, options = {}):
         $play.appendTo('.header');
         var framerate = {1};
         var interval = 1000 / framerate;
-
         var states = {0};
         var index = 1;
-
         var intervalObj;
         var playing = false;
-
         var labels = {2};
         var labelPrepend = "{3}";
         if (labels.length > 0) {{
           $label = $('<h3 style="display: inline-block">' + labelPrepend + labels[0] + '</h3>');
           $label.prependTo('.header');
         }}
-
         function update_label(index) {{
           if (labels.length > 0) {{
             $label.text(labelPrepend + String(labels[index % labels.length]));
           }}
         }}
-
         function cleanup_chart($chart) {{
           setTimeout(function() {{ if (playing) {{ $chart.remove() }} }}, interval * 7);
         }}
-
         function update_data() {{
           var state = states[index % states.length];
           var $newChart = render_chart(index, state);
@@ -63,7 +50,6 @@ def plot_geochart(name, data, options = {}):
           update_label(index);
           index++;
         }}
-
         $play.click(function() {{
           if (playing) {{
             clearInterval(intervalObj);
@@ -85,8 +71,6 @@ def plot_geochart(name, data, options = {}):
   <head>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="../chartkick.js"></script>
-
-
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -95,19 +79,15 @@ def plot_geochart(name, data, options = {}):
   <body>
     <div style="width: 100%; height: 40px" class="header"></div>
     <div id="chart-container" style="width: 80%; height: auto; min-width: 1000px; position: relative"></div>
-
     <script>
       var options = {2};
-
       function render_chart(index, data) {{
         var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>').appendTo('#chart-container');
         new Chartkick.GeoChart("chart-" + String(index), data, options);
         setTimeout(function() {{ $newChart.css("z-index", index); }}, 100);
         return $newChart;
       }}
-
       render_chart(0, {1});
-
       {3}
     </script>
   </body>
