@@ -20,3 +20,5 @@ def plot_by_item(data, title_appendix = None, blacklist = []):
 
 def plot_by_market(data, title_appendix = None, blacklist = []):
   plot_data(data, ['country_name', 'market_name', 'item_name'], None, title_appendix, blacklist)
+
+plot_by_item(pd_data)
