@@ -8,55 +8,12 @@ from bokeh.models import Legend
 # 3: Europe & Central Asia, 4: Sub-Saharan Africa,
 # 5: Latin America & Caribbean, 6: East Asia & Pacific
 
-def main_plot():
-    data, item, region = compare(None, None)
-    plot1 = figure(x_axis_type="datetime", title="Average price of " + item.lower() + ' in ' + region, sizing_mode='stretch_both')
-    legend = []
-    colors = ['#5c88e0', '#5add70']
-    i = 0
-    for name in data:
-        if data[name] != []:
-            dates, values = split_date_and_values(data[name])
-            legend.append((name, [add_to_plot(plot1, dates, values, colors[i])]))
-            i += 1
-    if len(legend) > 1:
-        plot(plot1, legend)
 
 def main_correlation_plot():
     items = ['Tomatoes']# pd_data['item_name'].unique()
     regions = [None]
     correlation(regions, items, 1)
 
-def main_correlation_raw():
-    items = pd_data['item_name'].unique()
-    compare_to_global(items)
-
-
-def compare_to_global(items):
-    global_data = gather_data([0], items)
-    item_amount = len(items)
-    points_for_regions = 0
-    points_for_global = 0
-
-    for item_data in global_data:
-        highest, lowest = find_top_corr([item_data], 5)
-        for item in highest:
-            index = item[1][0].find(' and ')
-            if same_region(item[1][0][:index], item[1][0][index + 5:]):
-                points_for_regions += 1
-            else:
-                points_for_global += 1
-
-    print('points for global ', points_for_global)
-    print('points for regions ', points_for_regions)
-
-    if points_for_global > points_for_regions:
-        print("There does not seem to be a significant relation between countries in the same region.")
-    else:
-        print("It seems that there is a significant relation between countries in the same region.")
-
-def same_region(country1, country2):
-    return pd_data.filter({'country_name':country2})['region_name'].unique()[0] == pd_data.filter({'country_name':country1})['region_name'].unique()[0]
 
 
 # plot the top given amount of pos & neg correlations of given items in given regions
@@ -68,8 +25,7 @@ def correlation(regions, items, amount):
     print("")
     print("Finding top correlation..")
     top_corr_high, top_corr_low = find_top_corr(data_sets, amount)
-    plot_results(data_sets, top_corr_high + top_corr_low)
-
+    plot_results(data_sets, top_corr_low)
 
 
 def gather_data(regions, items):
@@ -94,7 +50,6 @@ def plot_results(data_sets, corr_list):
     for corr in corr_list:
         data = find_data_set(corr[0], data_sets)
         plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(round(corr[1][1], 2)), sizing_mode='stretch_both')
-        legend = []
         colors = ['#5c88e0', '#5add70']
         count = 0
         for name in data:
@@ -103,11 +58,12 @@ def plot_results(data_sets, corr_list):
                     dates, values = split_date_and_values(data[name])
                     if corr[0][1] != 'the world':
                         region = pd_data.filter({'country_name':name})['region_name'].unique()[0]
-                        legend.append((name + ' (' + region + ')', [add_to_plot(plot1, dates, values, colors[count])]))
+                        plot1.line(datetime(dates), values, color=colors[count], legend=name + ' (' + region + ')')
                     else:
-                        legend.append((name, [add_to_plot(plot1, dates, values, colors[count])]))
+                        plot1.line(datetime(dates), values, color=colors[count], legend=name)
                     count += 1
-        plot(plot1, legend)
+        plot1.legend.location = "top_right"
+        plot(plot1)
 
 def find_data_set(input, data_sets):
     item, region = input[0], input[1]
@@ -186,10 +142,7 @@ def data_in_common(data1, data2):
                 break
     return result1, result2
 
-def add_to_plot(plot, dates, values, color):
-    return plot.line(datetime(dates), values, color=color, line_width=1)
-
-def plot(plot, legend_names):
+def plot(plot):
     plot.toolbar.logo = None
     plot.toolbar_location = None
     plot.title.text_color = "white"
@@ -205,9 +158,8 @@ def plot(plot, legend_names):
     plot.yaxis.axis_line_color = "white"
     plot.yaxis.major_label_text_color = "white"
     plot.yaxis.axis_label_text_color = 'white'
-    legend = Legend(items=legend_names, location=(0, -30))
-    plot.add_layout(legend, 'right')
-
+    # legend = Legend(items=legend_names, location=(-300, -30))
+    # plot.add_layout(legend, 'below')
     show(gridplot([[plot]], sizing_mode='stretch_both'))  # open a browser
 
 # add a zero before number if needed
