@@ -27,7 +27,7 @@ def plot(plot, legend_names):
     legend = Legend(items=legend_names, location=(0, -30))
     plot.add_layout(legend, 'right')
 
-    show(gridplot([[plot]], plot_width=1000, plot_height=600))  # open a browser
+    show(gridplot([[plot]], sizing_mode='stretch_both'))  # open a browser
 
 def add_zero(x):
     if x < 10:
@@ -38,7 +38,7 @@ def add_zero(x):
 def add_to_plot(plot, name, dates, values):
     return plot.line(datetime(dates), values, color='#1982C4')
 
-plot1 = figure(x_axis_type="datetime", title='Cumulatieve rijen door de jaren heen')
+plot1 = figure(x_axis_type="datetime", title='Cumulatieve rijen door de jaren heen', sizing_mode='stretch_both')
 legend = []
 # legend.append(('Aantal',[add_to_plot(plot1,'rowcount',dates,rowcount)]))
 add_to_plot(plot1,'rowcount',dates,rowcount)

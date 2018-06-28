@@ -1,3 +1,53 @@
+function scrollToElem(elem) {
+  elem.scrollIntoView({
+    behavior: 'smooth'
+  });
+}
+
+$section = $('.section').first();
+
+function scrollToSection(direction) {
+  if (direction === 1) {
+    console.log($section.next());
+    if ($section.next().length > 0) {
+      $section = $section.next();
+    }
+  } else {
+    if ($section.prev().length > 0) {
+      $section = $section.prev();
+    }
+  }
+  scrollToElem($section[0]);
+}
+
+$(document).keydown(function(e) {
+  switch(e.which) {
+    case 37: // left
+    console.log("left")
+    scrollToSection(-1);
+    break;
+
+    case 38: // up
+    console.log("up")
+    scrollToSection(-1);
+    break;
+
+    case 39: // right
+    console.log("right")
+    scrollToSection(1);
+    break;
+
+    case 40: // down
+    console.log("down")
+    scrollToSection(1);
+    break;
+
+    default: return; // exit this handler for other keys
+  }
+  e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
+
 var $wrapper = $('#total_rows');
 var $header = $wrapper.find('.header');
 var $container = $wrapper.find('.chart-container');
