@@ -24,7 +24,7 @@ for items, corrs in item_correlations.items():
 
 corrs = [c[2] for c in items_data]
 
-p1 = figure(title="Distributie van de gemiddelde correlatie-coëfficiënt r tussen twee producten",tools="save",plot_width=1000, plot_height=600)
+p1 = figure(title="Distributie van de gemiddelde correlatie-coëfficiënt r tussen twee producten",tools="save", sizing_mode='stretch_both')
 
 hist, edges = np.histogram(corrs, density=False, bins=200)
 

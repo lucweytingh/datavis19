@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>Food prices - datavis19</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="chartkick.js"></script>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <div class="section full dark-bg">
+      <div class="text-center">
+        <h1 class="white title" style="margin-top: 80px; margin-bottom: 10px"><i>Food prices</i> in ontwikkelingslanden</h1>
+        <p class="white">Een onderzoek naar verbanden tussen prijsfluctuaties op verschillende markten. Van welke landen hebben we data?</p>
+      </div>
+
+      <div class="chart-wrapper" id="total_rows">
+        <div style="width: 100%; height: 40px" class="header"></div>
+        <div class="chart-container" style="width: 100%; height: auto; position: relative"></div>
+      </div>
+    </div>
+
+    <div class="section white-bg padded">
+      <div class="text-center">
+        <h1 class="title" style="margin-bottom: 10px">Onze data</h1>
+        <p>Een dataset met 800k rijen van informatie over de prijzen van verschillende producten</p>
+      </div>
+
+      <div class="flex-center">
+        <div class="card">
+          <table class="table table-striped table-bordered table-fat no-margin">
+            <tr>
+              <td>Aantal landen</td><td>70</td>
+            </tr>
+            <tr>
+              <td>Aantal markten</td><td>1505</td>
+            </tr>
+            <tr>
+              <td>Aantal producten</td><td>148</td>
+            </tr>
+            <tr>
+              <td>Span jaren</td><td>1992-2017</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section full">
+      <iframe src="rows.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section pink-bg padded">
+      <div class="text-center">
+        <h1 class="title white" style="margin-bottom: 10px">Onderzoeksvragen</h1>
+      </div>
+
+      <div class="flex-center">
+        <div class="card padded-horizontal">
+          <ol style="list-style: none; padding: 0;">
+            <li><span class="badge yellow-bg white" style="margin-right: 20px">1</span>a. Zijn er food prices die een positieve/negatieve relatie tonen en bestaat deze correlatie door de jaren heen of alleen in een bepaalde periode?<br>
+            <span class="badge white" style="margin-right: 20px">1</span>b. Is het mogelijk om de ingredi&euml;nten van een product te vinden in een ander product?</li><br>
+            <li><span class="badge green-bg white" style="margin-right: 20px">2</span>Laten landen in dezelfde regio's, vergelijkbare prijsverschillen zien? Is hier een verklaring voor te vinden?</li><br>
+            <li><span class="badge blue-bg white" style="margin-right: 20px">3</span>Welke correlaties kunnen worden gevonden tussen de food price data en ondervoeding?</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="section full">
+      <h3 class="hint">1 a. Correlatie tussen prijzen van producten</h3>
+      <iframe src="bokeh_correlations_histogram.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section full yellow-bg">
+      <h3 class="hint white">1 a. Correlatie tussen prijzen van producten</h3>
+      <div class="flex-center" style="height: 100vh">
+        <div class="card">
+          <table class="table table-striped table-bordered no-margin">
+            <caption>Top 20 hoogste positieve gemiddelde correlaties wereldwijd</caption>
+
+            <thead>
+              <tr><td>Product 1</td><td>Product 2</td><td>Som</td><td>Gemiddelde</td></tr>
+            </thead>
+
+            <tbody>
+              <tr><td>Milk</td><td>Sour cream</td><td>25.64</td><td>0.99</td>
+              <tr><td>Sour cream</td><td>Butter</td><td>25.55</td><td>0.98</td>
+              <tr><td>Milk</td><td>Butter</td><td>25.49</td><td>0.98</td>
+              <tr><td>Curd</td><td>Sour cream</td><td>25.47</td><td>0.98</td>
+              <tr><td>Curd</td><td>Milk</td><td>25.46</td><td>0.98</td>
+              <tr><td>Ghee</td><td>Oil (cooking)</td><td>4.87</td><td>0.97</td>
+              <tr><td>Curd</td><td>Butter</td><td>25.24</td><td>0.97</td>
+              <tr><td>Beans</td><td>Catarino</td><td>14.50</td><td>0.97</td>
+              <tr><td>Oil (cotton)</td><td>Oil (vegetable)</td><td>4.83</td><td>0.97</td>
+              <tr><td>Chicken</td><td>Sausage</td><td>24.69</td><td>0.95</td>
+              <tr><td>Buffalo</td><td>Beef</td><td>10.43</td><td>0.95</td>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="section full">
+      <h3 class="hint">Correlatie: 0.9990</h3>
+      <iframe src="beef_and_lamb.html" class="bokeh-iframe"></iframe>
+
+      <div class="seperator yellow-bg"></div>
+    </div>
+
+    <div class="section full">
+      <h3 class="hint">1 b. Detecteren van ingredi&euml;nten</h3>
+      <iframe src="milk_products.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section full green-bg">
+      <h3 class="white hint">2. Regionale correlaties</h3>
+
+    </div>
+
+    <div class="section full blue-bg">
+      <h3 class="white hint">3. Correlatie tussen prijs en ondervoeding</h3>
+
+    </div>
+
+    <div class="section full red-bg">
+      <h3 class="white hint">Extra: tomayto tomahto</h3>
+      <iframe src="tomatoes_national.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section full red-bg">
+      <h3 class="white hint">Extra: tomayto tomahto</h3>
+      <iframe src="tomatoes_regional.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section full dark-bg">
+      <h3 class="right white hint">Extra: conflicten in Zuid Soedan</h3>
+      <div class="grid">
+        <div><iframe src="sudan1.html" class="bokeh-iframe" style="background: #fff; height: 100%; min-height: 50vh"></iframe></div>
+        <div class="span-row-2 flex-center">
+          <div class="text-center">
+            <img src="https://static1.squarespace.com/static/5292fdeae4b007679e7e848a/t/52d6fb93e4b0201eed8bbf7b/1389820820643/the_new_york_times_logo_white%5B1%5D.png" style="width: 300px; height: auto">
+            <p class="white" style="opacity: 0.9; font-style: italic; font-size: 14px">July 8, 2016</p>
+            <h2 class="white" style="font-family: serif"><i>Factional Fighting Breaks Out in South Sudan's Capital</i></h2>
+            <img src="https://www.capitalfm.co.ke/news/files/2016/08/441de77c5ae32b31420dd7bd6294fcb50e41f063.jpg" style="width: 500px; height: auto;">
+            <div style="width: 500px; margin: 0 auto">
+              <p class="white" style="opacity: 0.9; font-style: italic; font-size: 13px; text-align: left">A woman and child pictured at a make-shift camp in the Amuru District of Uganda, which borders war-torn South Sudan, on July 16, 2016 &nbsp;&nbsp;&copy; AFP/File / Isaac Kasamani</p>
+            </div>
+          </div>
+        </div>
+        <div><iframe src="sudan2.html" class="bokeh-iframe" style="background: #fff; height: 100%; min-height: 50vh"></iframe></div>
+      </div>
+    </div>
+
+    <div class="section full dark-bg">
+      <iframe src="sudan2alt.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section full white-bg padded">
+      <h2 class="title text-center">Bronnen</h2>
+
+      <div class="flex-center">
+        <div class="card padded-horizontal" style="max-width: 80%;">
+          <ul>
+            <li>
+              ERS, USDA (2015): Percentage of cunsumer expenditure spent on food that was consumed at home
+              <br><a href="https://www.weforum.org/agenda/2016/12/this-map-shows-how-much-each-country-spends-on-food/">https://www.weforum.org/agenda/2016/12/this-map-shows-how-much-each-country-spends-on-food/</a>
+            </li>
+            <br>
+
+            <li>
+              Rebecca Holmes, Nicola Jones and Steve Wiggins. 2008. Understanding the impact of Food Prices on Children. Plan UK. P3-7
+            </li>
+            <br>
+
+            <li>
+              Prevalence of undernourishment. (2017) food and argiculture organisation. (UN)
+              <br><a href="https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS">https://data.worldbank.org/indicator/SN.ITK.DEFC.ZS</a>
+            </li>
+            <br>
+
+            <li>
+              World Food Programme: foodprices.csv 2017
+              <br><a href="http://vam.wfp.org/sites/data/WFPVAM_FoodPrices_05-12-2017.csv">http://vam.wfp.org/sites/data/WFPVAM_FoodPrices_05-12-2017.csv</a>
+            </li>
+            <br>
+
+            <li>
+              BIS: US dollar exchange rates. 2018.
+              <br><a href="https://www.bis.org/statistics/xrusd.htm">https://www.bis.org/statistics/xrusd.htm</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="presentation.js"></script>
+  </body>
+</html>

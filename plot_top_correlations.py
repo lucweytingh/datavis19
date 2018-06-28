@@ -34,7 +34,7 @@ print(len(items_data))
 print(pos)
 print(neg)
 print(no)
-amount = 50
+amount = 10
 
 print("Top {0} positive correlations sorted by sum of correlations:".format(amount))
 i = 0
@@ -53,7 +53,7 @@ itemsset = []
 for items in sorted(items_data, key=lambda x: x[2], reverse=True):
   if i > amount: break
   itemsset.append(items[0])
-  print("{0} & {1} & {2} & {3}".format(items[0][0], items[0][1], '%.2f' % items[1], '%.2f' % items[2]))
+  print("<tr><td>{0}</td><td>{1}</td><td>{2}</td><td>{3}</td>".format(items[0][0], items[0][1], '%.2f' % items[1], '%.2f' % items[2]))
   i += 1
 [print("({0} en {1})".format(items[0], items[1])) for items in itemsset]
 print("")

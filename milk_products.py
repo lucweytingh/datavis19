@@ -6,15 +6,12 @@ from bokeh.models import Legend
 from bokeh.models import Range1d
 import numpy
 
-rowcount = []
-rowsum = 0
-dates = []
 
-for year, data in pd_data.split('year').items():
-  for month, month_data in data.split('month').items():
-    rowsum += month_data.shape[0]
-    rowcount.append(rowsum)
-    dates.append((month, year))
+# {"country_name": "Tajikistan", "market_id": 303, "item1": "Lamb", "item2": "Beef", "correlation": 0.9990224502367437}
+
+market = pd_data.filter({ 'country_name': 'Ukraine', 'market_name': 'National Average', 'item_name': ['Milk', 'Sour cream', 'Curd', 'Butter']}).dict_from_columns(['market_name', 'item_name'], ['price_usd', 'date'])
+
+print(market)
 
 def datetime(dates):
     format = [str(x[1])+'-'+add_zero(x[0])+'-01' for x in dates]
@@ -23,7 +20,7 @@ def datetime(dates):
 def plot(plot, legend_names):
     plot.grid.grid_line_alpha=0.3
     plot.xaxis.axis_label = 'Datum'
-    plot.yaxis.axis_label = 'Aantal rijen'
+    plot.yaxis.axis_label = 'Prijs (USD)'
     legend = Legend(items=legend_names, location=(0, -30))
     plot.add_layout(legend, 'right')
 
@@ -35,11 +32,17 @@ def add_zero(x):
     else:
         return str(x)
 
-def add_to_plot(plot, name, dates, values):
-    return plot.line(datetime(dates), values, color='#1982C4', line_width=2)
+colors = ['#1982C4', '#37C656', '#FFC014', '#D6262F']
+i = 0
 
-plot1 = figure(x_axis_type="datetime", title='Cumulatieve rijen door de jaren heen', sizing_mode='stretch_both')
+def add_to_plot(plot, name, dates, values):
+  return plot.line(dates, values, color=colors[i], line_width=2)
+
+plot1 = figure(x_axis_type="datetime", title='Prijs van Milk, Sour cream, Curd en Butter in Oekraïne', sizing_mode='stretch_both')
 legend = []
 # legend.append(('Aantal',[add_to_plot(plot1,'rowcount',dates,rowcount)]))
-add_to_plot(plot1,'rowcount',dates,rowcount)
+
+for item, data in market['National Average'].items():
+  legend.append((item,[add_to_plot(plot1,item,data['date'],data['price_usd'])]))
+  i += 1
 plot(plot1,legend)
