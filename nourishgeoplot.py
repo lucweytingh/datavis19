@@ -12,12 +12,11 @@ def datayear(year):
 
 #print(datayear(1999))
 
-years = range(1991,2015)
-data = []
-for year in years:
-    data.append(datayear(year))
+# years = range(1991,2015)
+# data = []
+# for year in years:
+#     data.append(datayear(year))
 
 
-plot_geochart("undernourishment_geochart", data, {"labels":list(range(1991,2015))})
-
-
+# plot_geochart("undernourishment_geochart", data, {"labels":list(range(1991,2015))})
+print(min(und_data["POU"]))

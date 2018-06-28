@@ -207,9 +207,6 @@ def biggestcorrelator(limit):
         obj = ten[i]
         print("<tr><td>" + str(obj[0][1]) + '</td><td>' + str(obj[0][0]) + '</td><td>' + str(obj[1]) + "</td></tr>")
 
-
-biggestcorrelator(60)
-
 def avgundernourishment(corrlist):
     cum = {}
     for corr in corrlist:
@@ -274,3 +271,4 @@ def regionundernourishment():
         i += 1
     plotundernourishment(plot1,legend)
 
+regionundernourishment()
