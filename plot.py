@@ -11,8 +11,10 @@ def plot_data(data, columns, axes = None, title_appendix = None, blacklist = [])
         else:
           title = "{0}, {1} - {2}".format(country, market, title_appendix)
         plt.title(title)
-        plt.plot(dic["date"], dic["price_usd"], label=item)
-      plt.legend(loc='upper right')
+        plt.plot(dic["date"], dic["price"], label=item)
+      plt.xlabel('Date')
+      plt.ylabel('Price (USD)')
+      plt.legend(loc='upper left')
       plt.show()
 
 def plot_by_item(data, title_appendix = None, blacklist = []):
@@ -20,5 +22,3 @@ def plot_by_item(data, title_appendix = None, blacklist = []):
 
 def plot_by_market(data, title_appendix = None, blacklist = []):
   plot_data(data, ['country_name', 'market_name', 'item_name'], None, title_appendix, blacklist)
-
-plot_by_item(pd_data)

@@ -4,11 +4,27 @@ import scipy.special
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, show, output_file
 
-corr_data = init_json('data/correlations.txt')
+corr_data = init_json('data/correlations_usd.txt')
 
-corrs = [c['correlation'] for c in corr_data]
+item_correlations = {}
 
-p1 = figure(title="Distributie van correlatie-coëfficiënten (r) tussen producten",tools="save",plot_width=1000, plot_height=600)
+for c in corr_data:
+  items = (c['item1'], c['item2'])
+  set_default(item_correlations, items, [])
+  if abs(c['correlation']) < 1:
+    item_correlations[items].append(c['correlation'])
+
+items_data = []
+
+
+for items, corrs in item_correlations.items():
+  corrs_sum = sum(corrs)
+  corrs_avg = corrs_sum / len(corrs)
+  items_data.append([items, corrs_sum, corrs_avg])
+
+corrs = [c[2] for c in items_data]
+
+p1 = figure(title="Distributie van de gemiddelde correlatie-coëfficiënt r tussen twee producten",tools="save",plot_width=1000, plot_height=600)
 
 hist, edges = np.histogram(corrs, density=False, bins=200)
 

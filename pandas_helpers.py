@@ -46,9 +46,9 @@ def get_list(self, column):
     return [(date, price) for date, price in zip(self.get_list('date'), self['price'])]
   if column == 'avg_price_per_date':
     result = []
-    for year, months in self.dict_from_columns(['year', 'month'], ['price']).items():
+    for year, months in self.dict_from_columns(['year', 'month'], ['price_usd']).items():
       for month, prices in months.items():
-        p = prices['price']
+        p = prices['price_usd']
         avg = sum(p) / len(p)
         result.append((datetime.datetime(year, month, 1), avg))
     return result
