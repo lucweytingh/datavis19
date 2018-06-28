@@ -1,7 +1,6 @@
 from init import *
 from bokeh.io import show, output_file
 from bokeh.models import ColumnDataSource
-from bokeh.palettes import Spectral6
 from bokeh.plotting import figure
 from bokeh.transform import factor_cmap
 from bokeh.layouts import gridplot
@@ -33,13 +32,13 @@ def plot_by_market(data, title_appendix = None, blacklist = []):
 
 def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
 
-  output_file('charts/' + plot_name.replace(" ", "_").lower() + ".html")
+  output_file(plot_name.replace(" ", "_").lower() + ".html")
 
   source = ColumnDataSource(data=dict(bar_names=bar_names, bar_values=bar_values))
-
+  colors = ['#713e5a','#edc79b','#d57a66','#ca6680', '#484041', '#4C191B']
   p = figure(x_range=bar_names, plot_height=400, plot_width=600, title=plot_name)
   p.vbar(x='bar_names', top='bar_values', width=0.9, source=source,
-        line_color='white', fill_color=factor_cmap('bar_names', palette=Spectral6, factors=bar_names))
+        line_color='white', fill_color=factor_cmap('bar_names', palette=colors, factors=bar_names))
 
   p.toolbar.logo = None
   p.toolbar_location = None
@@ -49,6 +48,16 @@ def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
   p.y_range.start = 0
   p.y_range.end = max(bar_values) * 1.2
   p.yaxis.axis_label = y_axis_name
-  p.xaxis.major_label_orientation = math.pi/4
+  p.title.text_color = "white"
+  p.grid.grid_line_color='white'
+  p.xaxis.axis_label_text_color = 'white'
+  p.xaxis.axis_line_color = "white"
+  p.xaxis.major_label_text_color = "white"
+  p.yaxis.axis_line_color = "white"
+  p.yaxis.major_label_text_color = "white"
+  p.yaxis.axis_label_text_color = 'white'
+  p.grid.grid_line_alpha=0.3
+
+  # p.xaxis.major_label_orientation = math.pi/4
 
   show(gridplot([[p]], sizing_mode='stretch_both'))
