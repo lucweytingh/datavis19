@@ -1,3 +1,7 @@
+import os
+import sys
+from datavis19.init import *
+
 dic_region_id = {'Afghanistan': 1, 'Algeria': 2, 'Armenia': 3, 'Azerbaijan': 3, 'Bangladesh': 1,
        'Benin': 4, 'Bhutan': 1, 'Bolivia': 5, 'Burkina Faso': 4, 'Burundi': 4, 'Cambodia': 6,
        'Cameroon': 4, 'Cape Verde': 4, 'Central African Republic': 4, 'Chad': 4,
@@ -37,9 +41,6 @@ def addregions(pd_data, dic_region_id, dic_id_name):
     pd_data['region_name'] = region_name
 
 if __name__ == "__main__":
-  import os
-  import sys
   sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
-  from datavis19.init import *
   addregions(pd_data, dic_region_id, dic_id_name)
   pd_data.to_csv('data/data_region.csv', encoding='utf-8', index=False)
