@@ -49,3 +49,5 @@ def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
   p.xaxis.major_label_orientation = math.pi/4
 
   show(p)
+
+plot_by_market(pd_data.filter({"country_name": "South Sudan"}))

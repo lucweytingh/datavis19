@@ -12,19 +12,18 @@ dic_id_name = {1: "South Asia", 2:"Middle East & North Africa", 3:"Europe & Cent
 def isNaN(num):
     return num != num
 
-def food_data(country, item):
-    food_data = {}
-    data = pd_data.filter({'country_name':country, 'item_name':item})
-    for index, row in data.iterrows():
-        date = (row["month"],row["year"])
-        if date in food_data.keys():
-            
-            food_data[date][0].append(row['price'])
-        else:
-            food_data[date] = [[row['price']],row['undernourishment']]
-    for key, value in food_data.items():
-        food_data[key][0] = sum(food_data[key][0])/ len(food_data[key][0])
-    return food_data
+# def food_data(country, item):
+#     food_data = {}
+#     data = pd_data.filter({'country_name':country, 'item_name':item})
+#     for index, row in data.iterrows():
+#         date = (row["month"],row["year"])
+#         if date in food_data.keys():
+#             food_data[date][0].append(row['price'])
+#         else:
+#             food_data[date] = [[row['price']],row['undernourishment']]
+#     for key, value in food_data.items():
+#         food_data[key][0] = sum(food_data[key][0])/ len(food_data[key][0])
+#     return food_data
 
 
 def nodata_filter(data):
@@ -111,7 +110,7 @@ def listconverter(dict1,index):
 def split_date_and_values(both):
     return [x[0] for x in both], [x[1] for x in both]
 
-def plotter(country, item = None):
+def country_product_plotter(country, item = None):
     if item == None:
         products = pd_data.filter({'country_name':country})['item_name'].unique()
     else:
@@ -126,7 +125,8 @@ def plotter(country, item = None):
         legend.append((item,[add_to_plot(plot1,item +' ' + country,dates,data)]))
     plot(plot1,legend) 
 
-plotter("South Sudan")
+# country_product_plotter("South Sudan")
+
 def checkEqual2(iterator):
    return len(set(iterator)) <=  1
 
@@ -254,7 +254,7 @@ def regionundernourishment():
     regions = und_data["region"].unique()
     for region in regions:
         print(region)
-        if region == "No Data":
+        if region == "No Data" or region == "No Datastates    ":
             continue
         #print(region)
         countries = und_data.filter({'region': region})["Entity"].unique()
@@ -276,3 +276,5 @@ def regionundernourishment():
         legend.append((regionname,[add_to_plot_undernourish(plot1, regionname,dates,data)]))
     plotundernourishment(plot1,legend)
 
+
+regionundernourishment()

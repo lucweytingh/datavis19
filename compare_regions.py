@@ -2,7 +2,7 @@ from init import *
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, show, output_file
 from bokeh.models import Legend
-import simplejson
+#import simplejson
 
 
 def main():
@@ -17,12 +17,7 @@ def main():
 
 def add_to_plot(plot, name, dates, values):
     return plot.line(datetime(dates), values, color='#'+"%06x" % random.randint(0, 0xFFFFFF))
-        if data[name] != []:
-            dates, values = split_date_and_values(data[name])
-            legend.append((name, [add_to_plot(plot1, dates, values)]))
-    if len(legend) > 1:
-        plot(plot1, legend)
-
+        
 def main_correlation_plot():
     items = ['Tomatoes']# pd_data['item_name'].unique()
     regions = [0]
@@ -308,7 +303,6 @@ def shared_items(country1,country2):
   return [x for x in items_c1 if x in items_c2]
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     from bokeh.layouts import gridplot
     from bokeh.plotting import figure, show, output_file
     from bokeh.models import Legend
@@ -317,7 +311,3 @@ if __name__ == "__main__":
     # dates, values = split_date_and_values(test_dates)
     # print(dates)
     # main()
-=======
-    # main()
-    main_correlation_plot()
->>>>>>> 5c4f0bac92bf9774c49c20eef6d1ff3174040b2f
