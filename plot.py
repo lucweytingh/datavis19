@@ -46,6 +46,7 @@ def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
   p.border_fill_alpha = 0
   p.xgrid.grid_line_color = None
   p.y_range.start = 0
+  p.outline_line_alpha = 0
   p.y_range.end = max(bar_values) * 1.2
   p.yaxis.axis_label = y_axis_name
   p.title.text_color = "white"
