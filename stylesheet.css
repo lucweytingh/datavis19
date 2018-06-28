@@ -101,10 +101,17 @@ p {
   position: absolute;
   top: 10px;
   left: 12px;
-  opacity: 0.8;
   line-height: 1;
   padding: 0;
   width: auto;
+  opacity: 0.6;
+}
+.hint.white {
+  opacity: 0.8;
+}
+.hint.right {
+  left: auto;
+  right: 12px;
 }
 
 .text-center {
