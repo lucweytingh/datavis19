@@ -35,7 +35,7 @@ def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
   output_file(plot_name.replace(" ", "_").lower() + ".html")
 
   source = ColumnDataSource(data=dict(bar_names=bar_names, bar_values=bar_values))
-  colors = ['#713e5a','#edc79b','#d57a66','#ca6680', '#484041', '#4C191B']
+  colors = ['#353535','#9f7e69','#d2bba0','#5b92e5','#9792e3', '#ED6A5A']
   p = figure(x_range=bar_names, plot_height=400, plot_width=600, title=plot_name)
   p.vbar(x='bar_names', top='bar_values', width=0.9, source=source,
         line_color='white', fill_color=factor_cmap('bar_names', palette=colors, factors=bar_names))
