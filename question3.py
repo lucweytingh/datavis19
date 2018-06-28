@@ -188,8 +188,6 @@ def biggestcorrelator(limit):
     print(len(countries))
     for country in countries:
         print(country)
-        if country == 'Myanmar':
-            continue
         counter, countrydict = coeff_country_undernourish(country,limit)
         fcounter += counter
         if counter == 0:
@@ -273,4 +271,6 @@ def regionundernourishment():
         legend.append((regionname,[add_to_plot_undernourish(plot1, regionname,dates,data, colors[i])]))
         i += 1
     plotundernourishment(plot1,legend)
+ 
+regionundernourishment()
 
