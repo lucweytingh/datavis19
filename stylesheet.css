@@ -64,6 +64,9 @@ a {
 .white-bg {
   background-color: #e6e6e6;
 }
+.ultra-dark-bg {
+  background: #0f1a24;
+}
 .dark {
   color: #1C3144;
 }
