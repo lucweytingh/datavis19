@@ -5,7 +5,7 @@ from bokeh.plotting import figure, show, output_file
 from bokeh.models import Legend
 from bokeh.models import Range1d
 import numpy
-
+from compare_regions import *
 dic_id_name = {1: "South Asia", 2:"Middle East & North Africa", 3:"Europe & Central Asia",
             4:"Sub-Saharan Africa", 5:"Latin America & Caribbean", 6:"East Asia & Pacific"}
 
@@ -19,9 +19,9 @@ def food_data(country, item):
         date = (row["month"],row["year"])
         if date in food_data.keys():
             
-            food_data[date][0].append(row['price_usd'])
+            food_data[date][0].append(row['price'])
         else:
-            food_data[date] = [[row['price_usd']],row['undernourishment']]
+            food_data[date] = [[row['price']],row['undernourishment']]
     for key, value in food_data.items():
         food_data[key][0] = sum(food_data[key][0])/ len(food_data[key][0])
     return food_data
@@ -126,6 +126,7 @@ def plotter(country, item = None):
         legend.append((item,[add_to_plot(plot1,item +' ' + country,dates,data)]))
     plot(plot1,legend) 
 
+plotter("South Sudan")
 def checkEqual2(iterator):
    return len(set(iterator)) <=  1
 
@@ -275,4 +276,3 @@ def regionundernourishment():
         legend.append((regionname,[add_to_plot_undernourish(plot1, regionname,dates,data)]))
     plotundernourishment(plot1,legend)
 
-regionundernourishment()
