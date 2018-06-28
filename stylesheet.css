@@ -185,6 +185,14 @@ p {
 }
 
 
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.span-row-2{grid-row: span 2 / auto;}
+
+
+
 /*//////////////////////////////////////////////////////////////////
 [ Table ]*/
 
