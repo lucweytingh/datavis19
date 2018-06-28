@@ -2,6 +2,7 @@ from init import *
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, show, output_file
 from bokeh.models import Legend
+import simplejson
 
 # regions
 # 0: the world, 1: South Asia, 2: Middle East & North Africa,
@@ -15,17 +16,61 @@ def main_plot():
     for name in data:
         if data[name] != []:
             dates, values = split_date_and_values(data[name])
-            legend.append((name, [add_to_plot(plot1, name, dates, values)]))
+            legend.append((name, [add_to_plot(plot1, dates, values)]))
     if len(legend) > 1:
         plot(plot1, legend)
 
-def main_correlation():
-    interesting_items = ['Petrol', 'Sugar', 'Oil (sunflower)', 'Wheat', 'Beans', 'Tomatoes'] # all: pd_data['item_name'].unique()
-    regions = [None, 1]
-    correlation(regions, interesting_items, 2)
+def main_correlation_plot():
+    items = ['Tomatoes']# pd_data['item_name'].unique()
+    regions = [0]
+    correlation(regions, items, 10)
 
+def main_correlation_raw():
+    items = pd_data['item_name'].unique()
+    compare_to_global(items)
+
+
+def compare_to_global(items):
+    global_data = gather_data([0], items)
+    item_amount = len(items)
+    points_for_regions = 0
+    points_for_global = 0
+
+    for item_data in global_data:
+        highest, lowest = find_top_corr([item_data], 5)
+        for item in highest:
+            index = item[1][0].find(' and ')
+            if same_region(item[1][0][:index], item[1][0][index + 5:]):
+                points_for_regions += 1
+            else:
+                points_for_global += 1
+
+    print('points for global ', points_for_global)
+    print('points for regions ', points_for_regions)
+    
+    if points_for_global > points_for_regions:
+        print("There does not seem to be a significant relation between countries in the same region.")
+    else:
+        print("It seems that there is a significant relation between countries in the same region.")
+
+def same_region(country1, country2):
+    return pd_data.filter({'country_name':country2})['region_name'].unique()[0] == pd_data.filter({'country_name':country1})['region_name'].unique()[0]
+
+        
 # plot the top given amount of pos & neg correlations of given items in given regions
 def correlation(regions, items, amount):
+    data_sets = gather_data(regions, items) #simplejson.load(open("data/global_data2.txt")) # gather_data(regions, items)
+    # file1 = open("global_data2.txt", 'w')
+    # simplejson.dump(data_sets, file1)
+    # file1.close()
+    print("")
+    print("Finding top correlation..")
+    top_corr_high, top_corr_low = find_top_corr(data_sets, amount)
+    plot_results(data_sets, top_corr_high + top_corr_low)
+
+
+
+def gather_data(regions, items):
     data_sets = []
     print("")
     print("Gathering data..")
@@ -41,11 +86,7 @@ def correlation(regions, items, amount):
             print("         about " + item + '..')
             data, item, region = compare(i, item)
             data_sets.append([data, item, region])
-
-    print("")
-    print("Finding top correlation..")
-    top_corr_high, top_corr_low = find_top_corr(data_sets, amount)
-    plot_results(data_sets, top_corr_high + top_corr_low)
+    return data_sets
 
 def plot_results(data_sets, corr_list):
     for corr in corr_list:
@@ -60,9 +101,9 @@ def plot_results(data_sets, corr_list):
                     dates, values = split_date_and_values(data[name])
                     if corr[0][1] != 'the world':
                         region = pd_data.filter({'country_name':name})['region_name'].unique()[0]
-                        legend.append((name + ' (' + region + ')', [add_to_plot(plot1, name, dates, values, colors[count])]))
+                        legend.append((name + ' (' + region + ')', [add_to_plot(plot1, dates, values, colors[count])]))
                     else:    
-                        legend.append((name, [add_to_plot(plot1, name, dates, values, colors[count])]))
+                        legend.append((name, [add_to_plot(plot1, dates, values, colors[count])]))
                     count += 1
         plot(plot1, legend)
 
@@ -110,9 +151,8 @@ def insert_if_hilow(win_list, input_list, item_name, region_name, max_length):
 
 # return the  
 def find_top_corr(data_sets, amount):
-    max_amount = len(data_sets)
-    if amount > max_amount:
-        amount = max_amount
+    if amount == None:
+        amount = sys.maxsize
     result_high, result_low = [], []
     for data_set in data_sets:
         corr_list = calc_corr(data_set[0])
@@ -145,7 +185,7 @@ def data_in_common(data1, data2):
     return result1, result2
 
 
-def add_to_plot(plot, name, dates, values, r_color = '#'+"%06x" % random.randint(0, 0xFFFFFF)):
+def add_to_plot(plot, dates, values, r_color = '#'+"%06x" % random.randint(0, 0xFFFFFF)):
     return plot.line(datetime(dates), values, color=r_color)
 
 def plot(plot, legend_names):
@@ -245,7 +285,32 @@ def compare(region_id = None, item = None):
             all_dic[name] = sort_dates(all_dic[name])
     return all_dic, item, region_name
 
+# returns shared years, starting month and end month of certain item
+def shared_months(country1,country2, item):
+  # find all shared years for item
+    years_c1 = pd_data.filter({'item_name': item, 'country_name': country1})['year'].unique()
+    years_c2 = pd_data.filter({'item_name': item, 'country_name': country2})['year'].unique()
+    sharedyears = [x for x in years_c1 if x in years_c2]
+
+    # find shared start month in first year
+    months_c1 = pd_data.filter({'item_name': item, 'country_name': country1, 'year':sharedyears[0]})['month'].unique()
+    months_c2 = pd_data.filter({'item_name': item, 'country_name': country1, 'year':sharedyears[0]})['month'].unique()
+    sharedmonths = [x for x in months_c1 if x in months_c2]
+    month_s = sharedmonths[0]
+
+    # find shared last month in last year
+    months_c1 = pd_data.filter({'item_name': item, 'country_name': country1, 'year':sharedyears[-1]})['month'].unique()
+    months_c2 = pd_data.filter({'item_name': item, 'country_name': country1, 'year':sharedyears[-1]})['month'].unique()
+    sharedmonths = [x for x in months_c1 if x in months_c2]
+    month_e = sharedmonths[-1]
+    return sharedyears, month_s, month_e
+
+# find the items both countries have
+def shared_items(country1,country2):
+  items_c1 = pd_data.filter({'country_name' : country1})["item_name"].unique()
+  items_c2 = pd_data.filter({'country_name' : country2})["item_name"].unique()
+  return [x for x in items_c1 if x in items_c2]
 
 if __name__ == "__main__":
     # main()
-    main_correlation()
+    main_correlation_plot()
