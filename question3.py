@@ -5,26 +5,25 @@ from bokeh.plotting import figure, show, output_file
 from bokeh.models import Legend
 from bokeh.models import Range1d
 import numpy
-
+from compare_regions import *
 dic_id_name = {1: "South Asia", 2:"Middle East & North Africa", 3:"Europe & Central Asia",
             4:"Sub-Saharan Africa", 5:"Latin America & Caribbean", 6:"East Asia & Pacific"}
 
 def isNaN(num):
     return num != num
 
-def food_data(country, item):
-    food_data = {}
-    data = pd_data.filter({'country_name':country, 'item_name':item})
-    for index, row in data.iterrows():
-        date = (row["month"],row["year"])
-        if date in food_data.keys():
-            
-            food_data[date][0].append(row['price_usd'])
-        else:
-            food_data[date] = [[row['price_usd']],row['undernourishment']]
-    for key, value in food_data.items():
-        food_data[key][0] = sum(food_data[key][0])/ len(food_data[key][0])
-    return food_data
+# def food_data(country, item):
+#     food_data = {}
+#     data = pd_data.filter({'country_name':country, 'item_name':item})
+#     for index, row in data.iterrows():
+#         date = (row["month"],row["year"])
+#         if date in food_data.keys():
+#             food_data[date][0].append(row['price'])
+#         else:
+#             food_data[date] = [[row['price']],row['undernourishment']]
+#     for key, value in food_data.items():
+#         food_data[key][0] = sum(food_data[key][0])/ len(food_data[key][0])
+#     return food_data
 
 
 def nodata_filter(data):
@@ -49,20 +48,19 @@ def plot(plot, legend_names):
 
 
 def plotundernourishment(plot, legend_names):
-    
-    plot.y_range = Range1d(0, 100)
     plot.grid.grid_line_alpha=0.3
-    plot.xaxis.axis_label = 'Date'
-    plot.yaxis.axis_label = 'Undernourishment index'
+    plot.xaxis.axis_label = 'Datum'
+    plot.yaxis.axis_label = 'Ondervoedingsindex'
     legend = Legend(items=legend_names, location=(0, -30))
     plot.add_layout(legend, 'right')
-    show(gridplot([[plot]], plot_width=1000, plot_height=600, line_width = 30))  # open a browser
+
+    show(gridplot([[plot]], sizing_mode='stretch_both'))  # open a browser
 
 def add_to_plot(plot,name, dates, values):
     return plot.line(datetime(dates), values, line_width = 2,color='#'+"%06x" % random.randint(0, 0xFFFFFF))
 
-def add_to_plot_undernourish(plot, name, dates, values):
-    return plot.line(datetimeyear(dates), values, line_width = 2, color='#'+"%06x" % random.randint(0, 0xFFFFFF))
+def add_to_plot_undernourish(plot, name, dates, values, color):
+    return plot.line(datetimeyear(dates), values, line_width = 2, color=color)
 
 
 def datetimeyear(dates):
@@ -96,7 +94,7 @@ def sort_dates(dates):
                     if dates[0][0][0] < result[i][0][0]:
                         result.insert(i, dates[0])
                         del(dates[0])
-                        break 
+                        break
                 if i == len(result) - 1:
                     result.append(dates[0])
                     del(dates[0])
@@ -111,7 +109,7 @@ def listconverter(dict1,index):
 def split_date_and_values(both):
     return [x[0] for x in both], [x[1] for x in both]
 
-def plotter(country, item = None):
+def country_product_plotter(country, item = None):
     if item == None:
         products = pd_data.filter({'country_name':country})['item_name'].unique()
     else:
@@ -124,7 +122,9 @@ def plotter(country, item = None):
         print(item)
         dates , data = split_date_and_values(sorteddates)
         legend.append((item,[add_to_plot(plot1,item +' ' + country,dates,data)]))
-    plot(plot1,legend) 
+    plot(plot1,legend)
+
+# country_product_plotter("South Sudan")
 
 def checkEqual2(iterator):
    return len(set(iterator)) <=  1
@@ -149,7 +149,7 @@ def coeff_country_undernourish(country,limit):
             counter += 1
             coeffs[item] = np.corrcoef(itemdata,noudata)[0][1]
     return counter, coeffs
-    
+
 
 # print(coeff_country_undernourish('Afghanistan', 0))
 
@@ -180,39 +180,39 @@ def undernourishmentplotteryear(country):
     plotundernourishment(plot1,legend)
 
 
-def biggestcorrelator(limit):    
+def biggestcorrelator(limit):
     countries = pd_data['country_name'].unique()
     res = []
     fcounter = 0
     zerocounter = 0
     print(len(countries))
     for country in countries:
-        print(country)     
+        print(country)
         if country == 'Myanmar':
-            continue   
+            continue
         counter, countrydict = coeff_country_undernourish(country,limit)
         fcounter += counter
         if counter == 0:
             zerocounter += 1
         for key, value in countrydict.items():
             res.append(((country,key),value))
-    
+
     longenough = fcounter/len(countries)
 
 
     sortedlist = sorted(res,key=lambda x: x[1], reverse=True)
-    return sortedlist    
+    return sortedlist
 
     # ten = sortedlist[:10]
     # for i in range(10):
     #     obj = ten[i]
     #     print(str(obj[0][1]) + ',' + str(obj[0][0]) + ',' + str(obj[1]))
-    
+
     # # for product in sortedlist[:10]:
-    #    plotter(product[0][0],product[0][1])  
+    #    plotter(product[0][0],product[0][1])
     #    undernourishmentplotter(product[0][0])
     #    hey = input('Hey')
-        
+
 
 def avgundernourishment(corrlist):
     cum = {}
@@ -222,14 +222,14 @@ def avgundernourishment(corrlist):
         else:
             cum[corr[0][1]] = [corr[1]]
     print(cum)
-        
+
     cumulative = []
     for key, value in cum.items():
         ans = numpy.count_nonzero(~np.isnan(value))
         cumulative.append((key,numpy.nansum(value)/(ans)))
-    
+
     sortedcumulative = sorted(cumulative,key=lambda x: x[1], reverse=False)
-    
+
     ten = sortedcumulative[:10]
     for i in range(10):
         obj = ten[i]
@@ -248,12 +248,14 @@ def getundernourishment(country):
     return result
 
 def regionundernourishment():
-    plot1 = figure(x_axis_type="datetime", title='region undernourishment')
+    plot1 = figure(x_axis_type="datetime", title='Ondervoedingsindex per regio', sizing_mode='stretch_both')
     legend = []
     regions = und_data["region"].unique()
+    colors = ['#511f8d', '#7eae2b', '#f308cf', '#7a0506', '#6a11cd', '#dfb3b4', '#c2531b', '#3683d0', '#43d7b1', '#c8bf13', '#2afa23', '#60a577', '#aad31d', '#09bdcd', '#d5fdad', '#1ea4a8', '#a7726d', '#4aecb5', '#7d0963', '#2f3d5a']
+    i = 0
     for region in regions:
         print(region)
-        if region == "No Data":
+        if region == "No Data" or region == "No Datastates    ":
             continue
         #print(region)
         countries = und_data.filter({'region': region})["Entity"].unique()
@@ -272,7 +274,9 @@ def regionundernourishment():
         regionname = dic_id_name[int(region)]
         sorteddata = sorted(list(avgregion.items()), key=lambda x: x[0])
         dates , data = split_date_and_values(sorteddata)
-        legend.append((regionname,[add_to_plot_undernourish(plot1, regionname,dates,data)]))
+        legend.append((regionname,[add_to_plot_undernourish(plot1, regionname,dates,data, colors[i])]))
+        i += 1
     plotundernourishment(plot1,legend)
+
 
 regionundernourishment()

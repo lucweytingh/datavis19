@@ -2,24 +2,22 @@ from init import *
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, show, output_file
 from bokeh.models import Legend
-import simplejson
+#import simplejson
 
-# regions
-# 0: the world, 1: South Asia, 2: Middle East & North Africa,
-# 3: Europe & Central Asia, 4: Sub-Saharan Africa,
-# 5: Latin America & Caribbean, 6: East Asia & Pacific
 
-def main_plot(): 
-    data, item, region = compare(None, None)
-    plot1 = figure(x_axis_type="datetime", title="Average price of " + item.lower() + ' in ' + region)
+def main():
+    data, item = compare(6)
+    plot1 = figure(x_axis_type="datetime", title="Average food price of " + item.lower())
     legend = []
     for name in data:
-        if data[name] != []:
-            dates, values = split_date_and_values(data[name])
-            legend.append((name, [add_to_plot(plot1, dates, values)]))
-    if len(legend) > 1:
-        plot(plot1, legend)
+        date_values = sort_dates(data[name])
+        dates, values = split_date_and_values(date_values)
+        legend.append((name, [add_to_plot(plot1, name, dates, values)]))
+    plot(plot1, legend)
 
+def add_to_plot(plot, name, dates, values):
+    return plot.line(datetime(dates), values, color='#'+"%06x" % random.randint(0, 0xFFFFFF))
+        
 def main_correlation_plot():
     items = ['Tomatoes']# pd_data['item_name'].unique()
     regions = [0]
@@ -238,7 +236,7 @@ def sort_dates(dates):
 
 # finds the most common item in a region or overall
 def most_common_item(region_id=None):
-    if region_id == None or region_id == 0:
+    if region_id == None:
         region = pd_data
     else:
         region = pd_data.filter({'region_id':region_id})
@@ -252,23 +250,18 @@ def most_common_item(region_id=None):
             result_item = item
     return result_item
 
+
 # compares regions
 def compare(region_id = None, item = None):
     all_dic = {}
     if item == None:
         item = most_common_item(region_id)
     if region_id == None:
-        region_name = 'the world'
         evaluate_name= 'region_name'
         unique = pd_data[evaluate_name].unique()
     else:
         evaluate_name = 'country_name'
-        if region_id == 0:
-            region_name = 'all countries of the world'
-            unique = pd_data[evaluate_name].unique()
-        else:
-            region_name = pd_data.filter({'region_id':region_id})['region_name'].unique()[0]
-            unique = pd_data.filter({'region_id':region_id})[evaluate_name].unique()
+        unique = pd_data.filter({'region_id':region_id})[evaluate_name].unique()
     for data_item in unique:
         data = pd_data.filter({evaluate_name:data_item})
         data_dic = {}
@@ -281,9 +274,7 @@ def compare(region_id = None, item = None):
         for month, year in data_dic:
             average.append(((month, year), sum(data_dic[(month,year)]) / len(data_dic[(month,year)])))
         all_dic[data_item] = average
-        for name in all_dic:
-            all_dic[name] = sort_dates(all_dic[name])
-    return all_dic, item, region_name
+    return all_dic, item
 
 # returns shared years, starting month and end month of certain item
 def shared_months(country1,country2, item):
@@ -312,5 +303,11 @@ def shared_items(country1,country2):
   return [x for x in items_c1 if x in items_c2]
 
 if __name__ == "__main__":
+    from bokeh.layouts import gridplot
+    from bokeh.plotting import figure, show, output_file
+    from bokeh.models import Legend
+    # test_dates = [((1, 2006), 0.2768810516701759), ((2, 2006), 0.28593047558787704), ((3, 2006), 0.28802077470255943), ((4, 2006), 0.28738613596635715), ((5, 2006), 0.2860767156720411), ((6, 2006), 0.29261475828304473), ((7, 2006), 0.27963102968064624), ((11, 2006), 0.32396098841041737), ((1, 2004), 0.2527255874820858), ((2, 2004), 0.2596318750083353), ((3, 2004), 0.2576683009971368), ((4, 2004), 0.2674213554900618), ((5, 2004), 0.25713157618574906), ((6, 2004), 0.25772099841343993), ((7, 2004), 0.2580106042676619), ((8, 2004), 0.2551941803997591), ((9, 2004), 0.2589134990052946), ((10, 2004), 0.2597369740466546), ((11, 2004), 0.28608626565652484), ((12, 2004), 0.27836322846993933), ((1, 2005), 0.26436998595299055)]
+    # test_dates = sort_dates(test_dates)
+    # dates, values = split_date_and_values(test_dates)
+    # print(dates)
     # main()
-    main_correlation_plot()
