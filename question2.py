@@ -12,7 +12,6 @@ def main():
   # correlation([0], pd_data['item_name'].unique(), 10)
 
   items = pd_data['item_name'].unique()
-  print("milestone 1")
   compare_to_global(items, 0.4)
   
 
