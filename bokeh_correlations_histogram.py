@@ -30,7 +30,7 @@ hist, edges = np.histogram(corrs, density=False, bins=200)
 
 x = np.linspace(-1, 1, 1000)
 
-p1.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:])
+p1.quad(top=hist, bottom=0, left=edges[:-1], right=edges[1:], color='#FFC014')
 
 p1.legend.location = "center_right"
 p1.legend.background_fill_color = "darkgrey"
