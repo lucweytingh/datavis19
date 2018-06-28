@@ -77,15 +77,15 @@ relative_item_data.sort(key=lambda x: x['correlation'], reverse=True)
 
 # save as json
 import json
-with open('data/correlations.txt', 'w') as f:
+with open('data/correlations_usd.txt', 'w') as f:
   json.dump(relative_item_data, f, ensure_ascii=False)
 
-print("Largest positive correlations:")
+print("10 largest positive correlations:")
 for corr in relative_item_data[:9]:
-  plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }))
+  plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }), "C: {0}".format(corr['correlation']))
   print(f"C: {corr['correlation']}, {corr['item1']} and {corr['item2']}")
 print("")
-print("Largest negative correlations:")
+print("10 largest negative correlations:")
 for corr in reversed(relative_item_data[-9:]):
-  plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }))
+  plot_by_market(pd_data.filter({ 'market_id': corr['market_id'], 'item_name': [corr['item1'], corr['item2']] }), "C: {0}".format(corr['correlation']))
   print(f"C: {corr['correlation']}, {corr['item1']} and {corr['item2']}")
