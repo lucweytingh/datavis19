@@ -23,7 +23,7 @@ def main_plot():
 def main_correlation_plot():
     items = ['Tomatoes']# pd_data['item_name'].unique()
     regions = [0]
-    correlation(regions, items, 10)
+    correlation(regions, items, 1)
 
 def main_correlation_raw():
     items = pd_data['item_name'].unique()
@@ -91,7 +91,7 @@ def gather_data(regions, items):
 def plot_results(data_sets, corr_list):
     for corr in corr_list:
         data = find_data_set(corr[0], data_sets)
-        plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(corr[1][1]))
+        plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(round(corr[1][1], 2)))
         legend = []
         colors = ['#e6194b', '#0082c8', '#911eb4', '#3cb44b', '#46f0f0']
         count = 0
