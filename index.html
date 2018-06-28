@@ -19,13 +19,15 @@
   <body>
     <div class="section full dark-bg">
       <div class="text-center">
-        <h1 class="white title" style="margin-top: 80px; margin-bottom: 10px"><i>Food prices</i> in ontwikkelingslanden</h1>
-        <p class="white">Een onderzoek naar verbanden tussen prijsfluctuaties op verschillende markten. Van welke landen hebben we data?</p>
+        <h1 class="white title" style="margin-top: 80px; margin-bottom: 10px">Prijzen van eten en andere producten in ontwikkelingslanden</h1>
+        <p class="white">Een onderzoek naar verbanden tussen prijsfluctuaties op verschillende markten.</p>
       </div>
 
       <div class="chart-wrapper" id="total_rows">
         <div style="width: 100%; height: 40px" class="header"></div>
-        <div class="chart-container" style="width: 100%; height: auto; position: relative"></div>
+        <div class="chart-container" style="width: 100%; height: auto; position: relative">
+          <div id="total-rows-chart" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>
+        </div>
       </div>
     </div>
 
@@ -127,9 +129,18 @@
 
     </div>
 
-    <div class="section full blue-bg">
+    <div class="section full">
+      <h3 class="hint">2. Regionale correlaties</h3>
+      <iframe src="question3.html" class="bokeh-iframe"></iframe>
+    </div>
+
+    <div class="section full blue-bg" style="padding-top: 50px">
       <h3 class="white hint">3. Correlatie tussen prijs en ondervoeding</h3>
 
+      <div class="chart-wrapper" id="undernourishment_geochart" style="padding-bottom: 50px;">
+        <div style="width: 100%; height: 40px" class="header"></div>
+        <div class="chart-container" style="width: 100%; height: 85vh; padding-bottom: 0; position: relative"></div>
+      </div>
     </div>
 
     <div class="section full red-bg">
@@ -202,6 +213,11 @@
             <li>
               The New York Times (2016), Factional Fighting Breaks Out in South Sudan’s Capital
               <br><a href="https://www.nytimes.com/2016/07/09/world/africa/juba-south-sudan-fighting.html">https://www.nytimes.com/2016/07/09/world/africa/juba-south-sudan-fighting.html</a>
+            </li>
+
+            <li>
+              AFP/File / Isaac Kasamani (2016), A woman and child pictured at a make-shift camp in the Amuru District of Uganda, which borders war-torn South Sudan, on July 16, 2016
+              <br><a href="https://www.capitalfm.co.ke/news/files/2016/08/441de77c5ae32b31420dd7bd6294fcb50e41f063.jpg">https://www.capitalfm.co.ke/news/files/2016/08/441de77c5ae32b31420dd7bd6294fcb50e41f063.jpg</a>
             </li>
           </ul>
         </div>
