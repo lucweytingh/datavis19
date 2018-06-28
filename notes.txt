@@ -1,20 +1,7 @@
 notes
 
 balans tussen lang genoeg data maar niet te exclusef dat je trends mist
-
-
-zonder filter met meer dan 2 jaar: 
-
-Correlation 1 is Diesel in Kenya with R 0.981448525177091
-Correlation 2 is Petrol in Kenya with R 0.9719916618128454
-Correlation 3 is Kerosene in Kenya with R 0.9630769830940924
-Correlation 4 is Fish in Congo with R 0.9470318455027332
-Correlation 5 is Petrol in Timor-Leste with R 0.9394166563576801
-Correlation 6 is Sugar in Guinea with R 0.9262655340205594
-Correlation 7 is Sugar in Armenia with R 0.925623229367992
-Correlation 8 is Groundnuts in Congo with R 0.920003607166294
-Correlation 9 is Petrol in Lao People's Democratic Republic with R 0.9189429404024133
-Correlation 10 is Petrol in Ethiopia with R 0.9127306919770617
+d7787u
 
 
 gefilterd op meer dan 2 jaar:
@@ -36,19 +23,19 @@ veel geen data undernourishment of niet genoeg overlappende jaren
 dit limiteerd de data heel veel
 
 
- limiet hoeveel maanden overeekomst - gem hoeveelheid producten - hoeveel landen met niks
-geen - 12.8 - 
-12 - 8.7 - 
-24 - 7.3 - 
-36 - 6.5 -
-48 - 4.8
-60 - 4.07 - 18
-72 - 3.7
-84 - 3.0
-96 - 2.3
-108- 1.9
-120- 1.5
-132- 1.1
+Limiet , gem hoeveelheid producten
+geen , 12.8 , 
+12 , 8.7 , 
+24 , 7.3 , 
+36 , 6.5 ,
+48 , 4.8
+60 , 4.07 , 18
+72 , 3.7
+84 , 3.0
+96 , 2.3
+108, 1.9
+120, 1.5
+132, 1.1
 
 neemt snel af, moet goed balans kiezen
 
@@ -56,16 +43,16 @@ wij kiezen 60, hier krijgen we gelimiteerde hoeveelheid producten maar kan je no
 
 60:
 
-Correlation 1 is Rice in Myanmar with R 0.8520074515710164
-Correlation 2 is Potatoes in Guatemala with R 0.8391747867025576
-Correlation 3 is Maize in Swaziland with R 0.8220903482607177
-Correlation 4 is Oil (palm) in Myanmar with R 0.8192446362041675
-Correlation 5 is Beef in Guatemala with R 0.8187297399280559
-Correlation 6 is Rice in Djibouti with R 0.8176284620226435
-Correlation 7 is Plantains in Guatemala with R 0.7876515570472679
-Correlation 8 is Bananas in Guatemala with R 0.786411433763042
-Correlation 9 is Salt in Myanmar with R 0.7854176298338897
-Correlation 10 is Eggs in Guatemala with R 0.7672750625192984
+Rice , Myanmar , 0.8520074515710164
+Potatoes , Guatemala , 0.8391747867025576
+Maize , Swaziland , 0.8220903482607177
+Oil (palm) , Myanmar , 0.8192446362041675
+Beef , Guatemala , 0.8187297399280559
+Rice , Djibouti , 0.8176284620226435
+Plantains , Guatemala , 0.7876515570472679
+Bananas , Guatemala , 0.786411433763042
+Salt , Myanmar , 0.7854176298338897
+Eggs , Guatemala , 0.7672750625192984
 
 Rice Myanmar: loopt raar door her instelling exchange rate 2012: deze verandering in waarde zie je niet in de lokale prijs
 2: loopt normaal, gaan allebei beetje omhoog
@@ -75,4 +62,11 @@ Rice Myanmar: loopt raar door her instelling exchange rate 2012: deze veranderin
 myanmar eruit!
 
 [('Pork', 0.2628537770057658), ('Bananas', 0.25690829401239773), ('Milk (powder)', 0.2452759120234018), ('Plantains', 0.23253986861070575), ('Coffee', 0.2255160417038179), ('Peas', 0.17719872453338326), ('Tomatoes', 0.10973644994758772), ('Chickpeas', 0.10397197917540794), ('Fonio', 0.10194739297982967),
+
 top avergae R for the product relative to undernourishment, no real strong relations on a bigger scale,
+
+
+
+TODO
+plot exchange rate myanmar
+plot guatemala products

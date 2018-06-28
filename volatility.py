@@ -15,4 +15,13 @@ volatilities = [[['Afghanistan', 5.451762045764935], ['Algeria', 0.2448086105722
 # for vol in sorted(volatilities, key=lambda x: x[1], reverse=True):
 #   print("{0}: {1}".format(vol[0], vol[1]))
 
-plot_geochart("volatility", volatilities, { "labels": ["2012", "2013", "2014"], "label_prepend": "Year: " })
+#plot_geochart("volatility", volatilities, { "labels": ["2012", "2013", "2014"], "label_prepend": "Year: " })
+
+def avg_volatility(volatilities):
+    vollist = []
+    for year in volatilities:
+        for vol in year:
+            vollist.append(vol[1])
+    print(sum(vollist)/len(vollist))
+
+avg_volatility(volatilities)

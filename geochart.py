@@ -1,61 +1,48 @@
 import os
 import webbrowser
-
-<<<<<<< HEAD
-#import imgkit
-=======
-# import imgkit
->>>>>>> 113b832d12e16c817de7b28fe2b957ab466f62cc
-
 from helpers import *
 
-def plot_geochart(name, data, options = {}):
+def plot_geochart(name, data, animated, options = {}):
   f = open("charts/{0}.html".format(name),'w')
 
-  dynamic_data = len(data) > 1
   labels = options["labels"] if "labels" in options.keys() else []
   label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
   framerate = options["framerate"] if "framerate" in options.keys() else 2
 
-  options.update({
-    'library': {
-      'datalessRegionColor': '#f5f5f5',
-      'defaultColor': '#f5f5f5'
-    }
+  if "library" not in options.keys():
+    options["library"] = {}
+  options["library"].update({
+    'backgroundColor': { 'fill': 'transparent' },
+    'datalessRegionColor': '#f5f5f5',
+    'defaultColor': '#f5f5f5'
   })
 
-  if dynamic_data:
+  if animated:
     initial_data = data[0]
     dynamic_js = """
       $(function() {{
-        $play = $('<div class="play" style="display: inline-block; text-align: center; width: 30px; height: 30px; border-radius: 3px; border: 1px solid #ccc">Play</div>');
-        $play.appendTo('.header');
+        $play = $('<a class="play" style="display: inline-block; text-align: center; width: auto; padding: 5px 10px; border-radius: 3px; border: 1px solid #ccc; background: #fff">Play</a>');
+        $play.appendTo($header);
         var framerate = {1};
         var interval = 1000 / framerate;
-
         var states = {0};
         var index = 1;
-
         var intervalObj;
         var playing = false;
-
         var labels = {2};
         var labelPrepend = "{3}";
         if (labels.length > 0) {{
           $label = $('<h3 style="display: inline-block">' + labelPrepend + labels[0] + '</h3>');
-          $label.prependTo('.header');
+          $label.prependTo($header);
         }}
-
         function update_label(index) {{
           if (labels.length > 0) {{
             $label.text(labelPrepend + String(labels[index % labels.length]));
           }}
         }}
-
         function cleanup_chart($chart) {{
           setTimeout(function() {{ if (playing) {{ $chart.remove() }} }}, interval * 7);
         }}
-
         function update_data() {{
           var state = states[index % states.length];
           var $newChart = render_chart(index, state);
@@ -63,7 +50,6 @@ def plot_geochart(name, data, options = {}):
           update_label(index);
           index++;
         }}
-
         $play.click(function() {{
           if (playing) {{
             clearInterval(intervalObj);
@@ -85,29 +71,32 @@ def plot_geochart(name, data, options = {}):
   <head>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
     <script src="../chartkick.js"></script>
-
-
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   </head>
   <body>
-    <div style="width: 100%; height: 40px" class="header"></div>
-    <div id="chart-container" style="width: 80%; height: auto; min-width: 1000px; position: relative"></div>
+    <div class="chart-wrapper" id="{0}">
+      <div style="width: 100%; height: 40px" class="header"></div>
+      <div class="chart-container" style="width: 100%; height: auto; position: relative"></div>
+    </div>
 
     <script>
+      var $wrapper = $('#{0}');
+      var $header = $wrapper.find('.header');
+      var $container = $wrapper.find('.chart-container');
       var options = {2};
 
       function render_chart(index, data) {{
-        var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>').appendTo('#chart-container');
+        var $newChart = $('<div id="chart-' + index + '" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0;"></div>')
+        $newChart.appendTo($container);
+
         new Chartkick.GeoChart("chart-" + String(index), data, options);
         setTimeout(function() {{ $newChart.css("z-index", index); }}, 100);
         return $newChart;
       }}
-
       render_chart(0, {1});
-
       {3}
     </script>
   </body>
