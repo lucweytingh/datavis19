@@ -4,6 +4,8 @@ from bokeh.models import ColumnDataSource
 from bokeh.palettes import Spectral6
 from bokeh.plotting import figure
 from bokeh.transform import factor_cmap
+from bokeh.layouts import gridplot
+
 
 
 def plot_data(data, columns, axes = None, title_appendix = None, blacklist = []):
@@ -39,10 +41,14 @@ def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
   p.vbar(x='bar_names', top='bar_values', width=0.9, source=source,
         line_color='white', fill_color=factor_cmap('bar_names', palette=Spectral6, factors=bar_names))
 
+  p.toolbar.logo = None
+  p.toolbar_location = None
+  p.background_fill_alpha = 0
+  p.border_fill_alpha = 0
   p.xgrid.grid_line_color = None
   p.y_range.start = 0
   p.y_range.end = max(bar_values) * 1.2
   p.yaxis.axis_label = y_axis_name
   p.xaxis.major_label_orientation = math.pi/4
 
-  show(p)
+  show(gridplot([[p]], sizing_mode='stretch_both'))
