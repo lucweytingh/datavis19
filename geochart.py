@@ -9,9 +9,13 @@ def plot_geochart(name, data, animated, options = {}):
   label_prepend = options["label_prepend"] if "label_prepend" in options.keys() else ""
   framerate = options["framerate"] if "framerate" in options.keys() else 2
 
+  options.update({
+    'legend': 'true',
+  })
   if "library" not in options.keys():
     options["library"] = {}
   options["library"].update({
+    'legend': { 'position': 'left' },
     'backgroundColor': { 'fill': 'transparent' },
     'datalessRegionColor': '#f5f5f5',
     'defaultColor': '#f5f5f5'

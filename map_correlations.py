@@ -21,7 +21,7 @@ for country, corrs in country_corrs.items():
   country_data.append([country, corrs_sum, corrs_avg])
   country_geodata.append([country, corrs_avg])
 
-plot_geochart("avg_country_corrs", country_geodata)
+plot_geochart("avg_country_corrs", country_geodata, False)
 
 amount = 10
 
