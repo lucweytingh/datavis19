@@ -248,7 +248,7 @@ def getundernourishment(country):
     return result
 
 def regionundernourishment():
-    plot1 = figure(x_axis_type="datetime", title='region undernourishment', sizing_mode='stretch_both')
+    plot1 = figure(x_axis_type="datetime", title='Ondervoedingsindex per regio', sizing_mode='stretch_both')
     legend = []
     regions = und_data["region"].unique()
     colors = ['#511f8d', '#7eae2b', '#f308cf', '#7a0506', '#6a11cd', '#dfb3b4', '#c2531b', '#3683d0', '#43d7b1', '#c8bf13', '#2afa23', '#60a577', '#aad31d', '#09bdcd', '#d5fdad', '#1ea4a8', '#a7726d', '#4aecb5', '#7d0963', '#2f3d5a']
