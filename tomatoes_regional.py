@@ -95,7 +95,7 @@ def plot_results(data_sets, corr_list):
         data = find_data_set(corr[0], data_sets)
         plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(round(corr[1][1], 2)))
         legend = []
-        colors = ['#e6194b', '#0082c8', '#911eb4', '#3cb44b', '#46f0f0']
+        colors = ['#5c88e0', '#5add70']
         count = 0
         for name in data:
             if name in corr[1][0]:
