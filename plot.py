@@ -29,7 +29,6 @@ def plot_by_item(data, title_appendix = None, blacklist = []):
 def plot_by_market(data, title_appendix = None, blacklist = []):
   plot_data(data, ['country_name', 'market_name', 'item_name'], None, title_appendix, blacklist)
 
-
 def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
 
   output_file('charts/' + plot_name.replace(" ", "_").lower() + ".html")
@@ -43,11 +42,7 @@ def bar_plot(plot_name, y_axis_name, bar_names, bar_values):
   p.xgrid.grid_line_color = None
   p.y_range.start = 0
   p.y_range.end = max(bar_values) * 1.2
-  p.legend.orientation = "horizontal"
-  p.legend.location = "top_center"
   p.yaxis.axis_label = y_axis_name
   p.xaxis.major_label_orientation = math.pi/4
 
   show(p)
-
-plot_by_market(pd_data.filter({"country_name": "South Sudan"}))

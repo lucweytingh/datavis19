@@ -44,7 +44,7 @@ def plot(plot, legend_names):
     plot.yaxis.axis_label = 'Price (usd)'
     legend = Legend(items=legend_names, location=(0, -30))
     plot.add_layout(legend, 'right')
-    show(gridplot([[plot]], sizing_mode='stretch_both'))  # open a browser
+    show(gridplot([[plot]], plot_width=1000, plot_height=600))  # open a browser
 
 
 def plotundernourishment(plot, legend_names):
@@ -207,9 +207,6 @@ def biggestcorrelator(limit):
         obj = ten[i]
         print("<tr><td>" + str(obj[0][1]) + '</td><td>' + str(obj[0][0]) + '</td><td>' + str(obj[1]) + "</td></tr>")
 
-
-
-
 def avgundernourishment(corrlist):
     cum = {}
     for corr in corrlist:
@@ -274,4 +271,4 @@ def regionundernourishment():
         i += 1
     plotundernourishment(plot1,legend)
 
-country_product_plotter("Guatemala")
+regionundernourishment()

@@ -1,6 +1,6 @@
 import os
 import sys
-# from datavis19.init import *
+from datavis19.init import *
 
 # all different items and their normalisations
 items = {'Bread': 'Bread', 'Wheat': 'Wheat', 'Rice (low quality)': 'Rice', 'Wage (qualified labour)': 'Wage (qualified labour)',
@@ -139,10 +139,9 @@ def normalize_items(pd_data, items):
   pd_data['item_id'] = norm_ids
   pd_data['item_name'] = norm_items
 
-# if __name__ == "__main__":
-#   sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
-#   normalize_items(pd_data, items)
-#   pd_data.to_csv('data/data_item_norm.csv', encoding='utf-8', index=False)
+if __name__ == "__main__":
+  sys.path.append(os.path.abspath(os.path.dirname(__file__) + '/' + '../..'))
+  normalize_items(pd_data, items)
+  pd_data.to_csv('data/data_item_norm.csv', encoding='utf-8', index=False)
 
-for key, value in items.items():
-  print(key + '\t\t' + value)
+

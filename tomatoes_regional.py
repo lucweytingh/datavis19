@@ -50,7 +50,7 @@ def plot_results(data_sets, corr_list):
     for corr in corr_list:
         data = find_data_set(corr[0], data_sets)
         plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(round(corr[1][1], 2)), sizing_mode='stretch_both')
-        colors = ['#5c88e0', '#5add70']
+        colors = ['#5c88ff', '#5add70']
         count = 0
         for name in data:
             if name in corr[1][0]:
@@ -58,9 +58,9 @@ def plot_results(data_sets, corr_list):
                     dates, values = split_date_and_values(data[name])
                     if corr[0][1] != 'the world':
                         region = pd_data.filter({'country_name':name})['region_name'].unique()[0]
-                        plot1.line(datetime(dates), values, color=colors[count], legend=name + ' (' + region + ')')
+                        plot1.line(datetime(dates), values, color=colors[count], legend=name + ' (' + region + ')', line_width=2)
                     else:
-                        plot1.line(datetime(dates), values, color=colors[count], legend=name)
+                        plot1.line(datetime(dates), values, color=colors[count], legend=name, line_width=2)
                     count += 1
         plot1.legend.location = "top_right"
         plot(plot1)

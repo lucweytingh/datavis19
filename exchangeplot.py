@@ -35,16 +35,16 @@ def to_exchange_format(list):
 
 
 def add_to_plot(plot, name, dates, values):
-    return plot.line(datetime(dates), values, color='#'+"%06x" % random.randint(0, 0xFFFFFF))
+    return plot.line(datetime(dates), values, color='#1982C4', line_width=2)
 
 def plot(plot, legend_names):
     plot.grid.grid_line_alpha=0.3
-    plot.xaxis.axis_label = 'Date'
-    plot.yaxis.axis_label = 'Rate'
+    plot.xaxis.axis_label = 'Datum'
+    plot.yaxis.axis_label = 'Koers MMK/USD'
     legend = Legend(items=legend_names, location=(0, -30))
     plot.add_layout(legend, 'right')
 
-    show(gridplot([[plot]], plot_width=1000, plot_height=600))  # open a browser
+    show(gridplot([[plot]], sizing_mode='stretch_both'))  # open a browser
 
 def datetime(dates):
     format = [str(x[1])+'-'+add_zero(x[0])+'-01' for x in dates]
@@ -74,19 +74,19 @@ def sort_dates(dates):
                     if dates[0][0][0] < result[i][0][0]:
                         result.insert(i, dates[0])
                         del(dates[0])
-                        break   
+                        break
                 if i == len(result) - 1:
                     result.append(dates[0])
                     del(dates[0])
         return result
-    
+
 def f7(seq):
     seen = set()
     seen_add = seen.add
     return [x for x in seq if not (x in seen or seen_add(x))]
 
 
-plot1 = figure(x_axis_type="datetime", title= 'Exchange Rate MMK/USD')
+plot1 = figure(x_axis_type="datetime", title= 'Wisselkoers Burmese kyat (MMK/USD)', sizing_mode='stretch_both')
 legend = []
 dates = datemaker(pd_data, 'Myanmar')
 datesexc = to_exchange_format(dates)
@@ -96,5 +96,5 @@ data = sort_dates(data)
 dates, data2 = split_date_and_values(data)
 
 legend.append(('MMK',[add_to_plot(plot1,'Myanmar MMK',dates,data2)]))
-plot(plot1,legend) 
+plot(plot1,legend)
 

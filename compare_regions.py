@@ -2,7 +2,7 @@ from init import *
 from bokeh.layouts import gridplot
 from bokeh.plotting import figure, show, output_file
 from bokeh.models import Legend
-#import simplejson
+import simplejson
 
 
 def main():
