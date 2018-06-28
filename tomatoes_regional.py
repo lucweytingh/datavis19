@@ -10,7 +10,7 @@ from bokeh.models import Legend
 
 def main_plot():
     data, item, region = compare(None, None)
-    plot1 = figure(x_axis_type="datetime", title="Average price of " + item.lower() + ' in ' + region)
+    plot1 = figure(x_axis_type="datetime", title="Average price of " + item.lower() + ' in ' + region, sizing_mode='stretch_both')
     legend = []
     colors = ['#5c88e0', '#5add70']
     i = 0
@@ -93,7 +93,7 @@ def gather_data(regions, items):
 def plot_results(data_sets, corr_list):
     for corr in corr_list:
         data = find_data_set(corr[0], data_sets)
-        plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(round(corr[1][1], 2)))
+        plot1 = figure(x_axis_type="datetime", title="Average price of " + corr[0][0].lower() + ':' + ' a correlation of ' + str(round(corr[1][1], 2)), sizing_mode='stretch_both')
         legend = []
         colors = ['#5c88e0', '#5add70']
         count = 0
@@ -187,7 +187,7 @@ def data_in_common(data1, data2):
     return result1, result2
 
 def add_to_plot(plot, dates, values, color):
-    return plot.line(datetime(dates), values, color=color)
+    return plot.line(datetime(dates), values, color=color, line_width=1)
 
 def plot(plot, legend_names):
     plot.toolbar.logo = None
