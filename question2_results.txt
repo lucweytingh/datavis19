@@ -1,0 +1,1524 @@
+Wheat;India and Nepal;0.9635946077549501
+Wheat;Afghanistan and Pakistan;0.8213907293475877
+Wheat;Afghanistan and Nepal;0.7056725451048224
+Wheat;Afghanistan and India;0.6875652976429323
+Wheat;India and Pakistan;-0.06957976738456981
+Rice;India and Nepal;0.9286624655536494
+Rice;Bangladesh and Nepal;0.8232749852001706
+Rice;India and Pakistan;0.8105638103476213
+Rice;Nepal and Pakistan;0.7964691720837025
+Rice;Bangladesh and India;0.7739287005398617
+Rice;Afghanistan and Pakistan;0.7466519319562023
+Rice;Bangladesh and Pakistan;0.6979792489275864
+Rice;Nepal and Sri Lanka;0.6938615675484746
+Rice;India and Sri Lanka;0.6898025133480948
+Rice;Pakistan and Sri Lanka;0.6699017670009989
+Rice;Bangladesh and Sri Lanka;0.6341912612757521
+Rice;Afghanistan and India;0.47443681493077
+Rice;Afghanistan and Nepal;0.36423726253349364
+Rice;Afghanistan and Bangladesh;0.30266339014680893
+Rice;Afghanistan and Sri Lanka;0.28311365293280033
+Diesel;Pakistan and Sri Lanka;0.9309218734890257
+Diesel;Afghanistan and Pakistan;0.9178531727137462
+Diesel;Afghanistan and Sri Lanka;0.8570055697582134
+Sugar;India and Sri Lanka;0.5198210162209504
+Sugar;India and Pakistan;0.022781164271216812
+Sugar;Pakistan and Sri Lanka;-0.48243086846943295
+Lentils;Bangladesh and India;0.8269418357994378
+Lentils;Bangladesh and Pakistan;0.81208593257676
+Lentils;India and Pakistan;0.584036788653303
+Wheat flour;Pakistan and Sri Lanka;0.8703408354568518
+Wheat flour;Bangladesh and Sri Lanka;0.6903672134793749
+Wheat flour;Bangladesh and Pakistan;0.47299906440160083
+Wheat flour;India and Pakistan;0.2635187026556854
+Wheat flour;Bangladesh and India;0.06966164540153554
+Wheat flour;India and Sri Lanka;0.06600166244592771
+Oil (palm);Bangladesh and India;0.95159841486979
+Bread;Iraq and Syrian Arab Republic;0.9134575176854896
+Bread;Djibouti and Lebanon;0.6288696108027028
+Bread;Iraq and Jordan;0.1522556017654643
+Bread;Jordan and Syrian Arab Republic;0.15079107575787087
+Bread;Djibouti and Jordan;0.06629604317295851
+Bread;Jordan and Lebanon;0.04074741664648134
+Bread;Jordan and State of Palestine;-0.09570176427546782
+Bread;Lebanon and Syrian Arab Republic;-0.7177445306832235
+Bread;Iraq and Lebanon;-0.8322380510863564
+Bread;Djibouti and Iraq;-0.8453891668221915
+Rice;Jordan and Syrian Arab Republic;0.6760833536018357
+Rice;Iraq and Syrian Arab Republic;0.6009415346676032
+Rice;Iraq and Jordan;0.5794361031338072
+Rice;Djibouti and Egypt;0.48742249471632965
+Rice;Jordan and Yemen;0.36742360811655567
+Rice;Djibouti and Lebanon;0.3281423373675172
+Rice;Iran  (Islamic Republic of) and Yemen;0.24889689756402647
+Rice;Jordan and Lebanon;0.22366733213757806
+Rice;State of Palestine and Egypt;0.17520191822331616
+Rice;Jordan and State of Palestine;0.0872163801672803
+Rice;Iran  (Islamic Republic of) and Jordan;0.048830295125172854
+Rice;Iraq and Egypt;0.04422751528517662
+Rice;Iraq and Lebanon;0.04345701963873889
+Rice;Iran  (Islamic Republic of) and State of Palestine;-0.06943575986665465
+Rice;Iran  (Islamic Republic of) and Lebanon;-0.21670125862021883
+Rice;Lebanon and Egypt;-0.25567012572313025
+Rice;Djibouti and Iran  (Islamic Republic of);-0.2951716267316983
+Rice;Iran  (Islamic Republic of) and Egypt;-0.3130612824261118
+Rice;Iran  (Islamic Republic of) and Iraq;-0.39384261352832545
+Rice;Lebanon and Syrian Arab Republic;-0.44433917602256406
+Rice;Djibouti and Iraq;-0.5323082449877355
+Rice;Yemen and Egypt;-0.5390568393289993
+Rice;Jordan and Egypt;-0.5998166366821246
+Rice;Djibouti and Jordan;-0.7012805234192614
+Rice;Djibouti and Yemen;-0.8601447238136577
+Beans;Jordan and Lebanon;0.4722098022870653
+Beans;Djibouti and Yemen;0.3984929121310634
+Beans;Djibouti and Lebanon;0.3242704025868556
+Beans;Jordan and Yemen;0.15881588830306295
+Beans;Lebanon and Yemen;0.09592278890332501
+Beans;Djibouti and Jordan;-0.016293773810530626
+Beans;Jordan and Egypt;-0.21866025527014377
+Beans;Djibouti and Egypt;-0.31677698864501935
+Beans;Lebanon and Egypt;-0.39744117293678033
+Beans;Yemen and Egypt;-0.559370048457632
+Potatoes;Yemen and Egypt;0.2887984178525921
+Potatoes;Jordan and Yemen;0.2548240525591545
+Potatoes;Jordan and Egypt;0.2543298958432793
+Eggs;Iran  (Islamic Republic of) and Jordan;0.54741705135143
+Eggs;Jordan and Egypt;0.4588561877682712
+Eggs;Jordan and State of Palestine;0.4427942968180971
+Eggs;Iran  (Islamic Republic of) and Lebanon;0.3924638516079317
+Eggs;Jordan and Lebanon;0.31390099940982136
+Eggs;Iran  (Islamic Republic of) and State of Palestine;0.30311230134478984
+Eggs;Iran  (Islamic Republic of) and Egypt;0.049336946191813426
+Eggs;State of Palestine and Egypt;-0.14964926408167817
+Eggs;Iran  (Islamic Republic of) and Yemen;-0.34494201759520327
+Eggs;Yemen and Egypt;-0.4538070946742676
+Eggs;Lebanon and Egypt;-0.47672787359554936
+Eggs;Jordan and Yemen;-0.503008391160175
+Chicken;Jordan and Egypt;-0.018420153623670856
+Sugar;Jordan and Lebanon;0.9400252688601177
+Sugar;Iraq and Lebanon;0.8822954497502324
+Sugar;Iraq and Jordan;0.8760546149052819
+Sugar;Djibouti and Lebanon;0.7677598869978856
+Sugar;Yemen and State of Palestine;0.6641791530970449
+Sugar;Iran  (Islamic Republic of) and Lebanon;0.5687820547581256
+Sugar;Djibouti and Egypt;0.5638599486725588
+Sugar;Djibouti and Iran  (Islamic Republic of);0.5579219125763756
+Sugar;Iran  (Islamic Republic of) and State of Palestine;0.5446766618208446
+Sugar;Iran  (Islamic Republic of) and Iraq;0.4557824540153461
+Sugar;Iran  (Islamic Republic of) and Egypt;0.3772887100707564
+Sugar;State of Palestine and Egypt;0.35002653787368615
+Sugar;Lebanon and Egypt;0.31234065001428485
+Sugar;Iraq and Egypt;0.22657487047846342
+Sugar;Jordan and State of Palestine;0.22150702319040222
+Sugar;Jordan and Yemen;0.20609042205532838
+Sugar;Jordan and Syrian Arab Republic;0.19213232376150507
+Sugar;Djibouti and Jordan;0.033666947690543673
+Sugar;Iran  (Islamic Republic of) and Jordan;0.012543293188782147
+Sugar;Yemen and Egypt;0.0039272179164261106
+Sugar;Djibouti and Yemen;-0.08362810194307364
+Sugar;Jordan and Egypt;-0.12958282965389648
+Sugar;Iran  (Islamic Republic of) and Yemen;-0.2592493694542665
+Sugar;Lebanon and Yemen;-0.2639895217033231
+Sugar;Iraq and Yemen;-0.35310375642241626
+Sugar;Lebanon and Syrian Arab Republic;-0.6142500784222452
+Sugar;Iraq and Syrian Arab Republic;-0.7129572600856521
+Lentils;Lebanon and Syrian Arab Republic;0.8767327567554334
+Lentils;Iran  (Islamic Republic of) and Lebanon;0.7504745139691236
+Lentils;Jordan and State of Palestine;0.6938775242417041
+Lentils;Jordan and Yemen;0.4742970031732322
+Lentils;Iran  (Islamic Republic of) and Jordan;0.4570013280583487
+Lentils;Iran  (Islamic Republic of) and State of Palestine;0.42693909138705477
+Lentils;Jordan and Lebanon;0.3009743538039447
+Lentils;Jordan and Syrian Arab Republic;0.12793721278073214
+Lentils;Iran  (Islamic Republic of) and Yemen;0.07335165966942538
+Lentils;Iran  (Islamic Republic of) and Egypt;-0.03224086522470822
+Lentils;Lebanon and Egypt;-0.11459007422287783
+Lentils;Jordan and Egypt;-0.4178410715661834
+Lentils;State of Palestine and Egypt;-0.6632105426983267
+Lentils;Yemen and Egypt;-0.7108380931316222
+Pasta;Djibouti and Egypt;0.5759848344182489
+Pasta;Djibouti and Lebanon;0.325337524357674
+Pasta;Lebanon and Egypt;-0.547297628268058
+Tomatoes;Jordan and Egypt;-0.02915685813701169
+Tomatoes;Jordan and Yemen;-0.10970066855510709
+Tomatoes;Lebanon and Egypt;-0.1131278082307747
+Tomatoes;Jordan and Lebanon;-0.20178664207661964
+Tomatoes;Yemen and Egypt;-0.21332669019667733
+Cheese;Jordan and Lebanon;0.019223890227401556
+Onions;Jordan and Egypt;0.015687650814786895
+Onions;Jordan and Yemen;0.0014571735183614202
+Onions;Yemen and Egypt;-0.3745980626313301
+Wheat flour;Iraq and Syrian Arab Republic;0.863843662001288
+Wheat flour;Iraq and Yemen;0.745717470580318
+Wheat flour;Djibouti and Egypt;0.4379313142964123
+Wheat flour;Djibouti and Yemen;0.055261639714479574
+Wheat flour;Yemen and Egypt;-0.5451462750923538
+Wheat flour;Djibouti and Iraq;-0.6765705042667993
+Wheat flour;Iraq and Egypt;-0.886775956656802
+Oil (vegetable);Djibouti and Iran  (Islamic Republic of);0.570917165044429
+Oil (vegetable);Djibouti and Yemen;0.5481870721780511
+Oil (vegetable);Iran  (Islamic Republic of) and Yemen;0.4167000356279877
+Oil (vegetable);Djibouti and Jordan;0.20205949763315859
+Oil (vegetable);Iran  (Islamic Republic of) and Jordan;0.19074788922981675
+Oil (vegetable);Jordan and Yemen;0.049167593691278474
+Beef;Jordan and Egypt;0.1589741695879443
+Beef;Jordan and Lebanon;0.13064369407083753
+Beef;Lebanon and Egypt;-0.28098067048049374
+Garlic;Jordan and Egypt;-0.098202834745122
+Chickpeas;Jordan and State of Palestine;-0.028299753357013565
+Oil (maize);State of Palestine and Egypt;-0.2684561644037862
+Bread;Armenia and Tajikistan;0.7884691406282668
+Bread;Armenia and Turkey;0.5819212662700424
+Bread;Turkey and Ukraine;0.33603032003129746
+Bread;Tajikistan and Turkey;0.300844285735611
+Bread;Tajikistan and Ukraine;0.1519595500046505
+Bread;Armenia and Ukraine;0.12083843143457602
+Bread;Kyrgyzstan and Tajikistan;0.10930401312878857
+Wheat;Kyrgyzstan and Tajikistan;0.7634208262696299
+Rice;Kyrgyzstan and Turkey;0.8843442728205031
+Rice;Tajikistan and Turkey;0.8389620033076397
+Rice;Kyrgyzstan and Tajikistan;0.8199076946388383
+Rice;Tajikistan and Ukraine;0.8035516304963879
+Rice;Kyrgyzstan and Ukraine;0.7892802125421806
+Rice;Turkey and Ukraine;0.7491660150357118
+Rice;Armenia and Turkey;0.7220408828260875
+Rice;Armenia and Kyrgyzstan;0.6630566435592505
+Rice;Armenia and Tajikistan;0.5194216458612041
+Rice;Armenia and Ukraine;0.4288031852525124
+Diesel;Armenia and Ukraine;0.8615778551984998
+Potatoes;Kyrgyzstan and Tajikistan;0.8108121737804362
+Potatoes;Tajikistan and Ukraine;0.7017885125357103
+Potatoes;Kyrgyzstan and Ukraine;0.6548984147589875
+Potatoes;Armenia and Ukraine;0.3574222602815826
+Potatoes;Armenia and Tajikistan;0.3554451702960226
+Potatoes;Armenia and Kyrgyzstan;0.2865537268258602
+Eggs;Tajikistan and Turkey;0.8492347216107298
+Eggs;Kyrgyzstan and Tajikistan;0.7704152631623853
+Eggs;Kyrgyzstan and Turkey;0.7569325119237268
+Eggs;Armenia and Turkey;0.5274646044061226
+Eggs;Armenia and Ukraine;0.5034043792737545
+Eggs;Armenia and Tajikistan;0.48401666127164406
+Eggs;Armenia and Kyrgyzstan;0.4807990126345251
+Eggs;Turkey and Ukraine;0.4736741104179144
+Eggs;Kyrgyzstan and Ukraine;0.4424873292369894
+Eggs;Tajikistan and Ukraine;0.4313334317146698
+Chicken;Tajikistan and Turkey;0.8434589954853599
+Chicken;Kyrgyzstan and Tajikistan;0.8335119542351593
+Chicken;Armenia and Tajikistan;0.8276034277083381
+Chicken;Turkey and Ukraine;0.7938172124685606
+Chicken;Tajikistan and Ukraine;0.7411930675524545
+Chicken;Armenia and Turkey;0.7001894868724837
+Chicken;Armenia and Ukraine;0.5305618682199194
+Sugar;Kyrgyzstan and Tajikistan;0.9463577942741982
+Sugar;Armenia and Kyrgyzstan;0.9458284391146504
+Sugar;Armenia and Tajikistan;0.9197416338704932
+Sugar;Kyrgyzstan and Turkey;0.8794230644226896
+Sugar;Tajikistan and Turkey;0.8607015166503165
+Sugar;Armenia and Turkey;0.7578270758764387
+Sugar;Tajikistan and Ukraine;0.7472844719298014
+Sugar;Kyrgyzstan and Ukraine;0.692702859747251
+Sugar;Turkey and Ukraine;0.5605851591354651
+Sugar;Armenia and Ukraine;0.5198096035342218
+Lentils;Armenia and Turkey;-0.19088796164109328
+Pasta;Armenia and Turkey;0.830044503635634
+Pasta;Turkey and Ukraine;0.7772974690521899
+Pasta;Armenia and Ukraine;0.7626643507294238
+Tomatoes;Armenia and Turkey;-0.14611471017599426
+Carrots;Kyrgyzstan and Tajikistan;0.7520670528287152
+Carrots;Armenia and Kyrgyzstan;0.46956216713378224
+Carrots;Armenia and Ukraine;0.4146469584218382
+Carrots;Kyrgyzstan and Ukraine;0.2868114057888019
+Carrots;Tajikistan and Ukraine;0.23466325811719474
+Carrots;Armenia and Tajikistan;0.19369252306071422
+Onions;Kyrgyzstan and Tajikistan;0.7570559564680802
+Onions;Armenia and Ukraine;0.7070889620940991
+Onions;Armenia and Tajikistan;0.5119269033538544
+Onions;Armenia and Turkey;0.3651870699836659
+Onions;Tajikistan and Turkey;0.25813685037722656
+Onions;Tajikistan and Ukraine;0.23447783433440958
+Onions;Turkey and Ukraine;0.21593953395024015
+Tea;Tajikistan and Turkey;0.028411166216595285
+Tea;Kyrgyzstan and Tajikistan;-0.7151276514558137
+Petrol;Armenia and Ukraine;0.8951812714956706
+Fish;Armenia and Turkey;0.6078339016197689
+Apples;Kyrgyzstan and Turkey;0.6783285021122812
+Apples;Armenia and Kyrgyzstan;0.6723728327047587
+Apples;Armenia and Turkey;0.6087244821222654
+Wheat flour;Georgia and Tajikistan;0.9065904518593845
+Wheat flour;Armenia and Tajikistan;0.8339128662717977
+Wheat flour;Tajikistan and Turkey;0.8322309418458881
+Wheat flour;Tajikistan and Ukraine;0.8203395989083619
+Wheat flour;Kyrgyzstan and Turkey;0.8031291663514201
+Wheat flour;Kyrgyzstan and Ukraine;0.7527509759330346
+Wheat flour;Armenia and Turkey;0.7384357769792447
+Wheat flour;Kyrgyzstan and Tajikistan;0.7039905009017733
+Wheat flour;Armenia and Ukraine;0.7038601259943637
+Wheat flour;Armenia and Kyrgyzstan;0.6597957212813561
+Wheat flour;Turkey and Ukraine;0.5893545471073871
+Wheat flour;Azerbaijan and Tajikistan;-0.212854014419624
+Milk;Kyrgyzstan and Tajikistan;0.6041390501864324
+Milk;Tajikistan and Ukraine;0.2685798408377051
+Milk;Armenia and Tajikistan;0.24574394918160905
+Milk;Kyrgyzstan and Ukraine;0.1582126015333469
+Milk;Armenia and Ukraine;0.08683579421033448
+Milk;Armenia and Kyrgyzstan;0.01863871180764484
+Milk;Turkey and Ukraine;-0.3004406198936792
+Milk;Armenia and Turkey;-0.32233842331778617
+Milk;Kyrgyzstan and Turkey;-0.8512500469998234
+Milk;Tajikistan and Turkey;-0.8932037460710629
+Oil (vegetable);Armenia and Tajikistan;0.8948910509385843
+Pork;Armenia and Ukraine;0.49879849267138715
+Beef;Kyrgyzstan and Tajikistan;0.9572702383258268
+Beef;Tajikistan and Ukraine;0.7993365390981076
+Beef;Kyrgyzstan and Ukraine;0.7745950438676549
+Beef;Armenia and Ukraine;0.7201529924719053
+Beef;Armenia and Kyrgyzstan;0.6794689700085
+Beef;Armenia and Tajikistan;0.527923828971686
+Cabbage;Armenia and Tajikistan;0.6676572624533404
+Cabbage;Kyrgyzstan and Tajikistan;0.5765072064708212
+Cabbage;Kyrgyzstan and Ukraine;0.5037243450365981
+Cabbage;Armenia and Ukraine;0.49982879615767367
+Cabbage;Tajikistan and Ukraine;0.4588720726339091
+Cabbage;Armenia and Kyrgyzstan;0.4501284218158041
+Cucumbers;Armenia and Turkey;0.7763137280175301
+Salt;Tajikistan and Turkey;0.8119993291331759
+Oil (sunflower);Kyrgyzstan and Turkey;0.26332999786951655
+Oil (sunflower);Turkey and Ukraine;0.25376893933655664
+Oil (sunflower);Kyrgyzstan and Ukraine;-0.01530107305134714
+Lamb;Kyrgyzstan and Tajikistan;0.9322555777823737
+Lamb;Kyrgyzstan and Turkey;0.47283799172451063
+Lamb;Tajikistan and Turkey;0.29926548443254514
+Bread;Guinea and Kenya;0.5416677600962775
+Bread;Kenya and Nigeria;0.5301692565229743
+Bread;Lesotho and Nigeria;0.21567202892283002
+Bread;Kenya and Lesotho;-0.015757840764388586
+Bread;Gambia and Lesotho;-0.044772636103094704
+Wheat;Ethiopia and Sudan;0.8764910367374548
+Wheat;Ethiopia and Mauritania;0.5356544277977169
+Wheat;Guinea-Bissau and Mauritania;0.4204990400611838
+Wheat;Ethiopia and Rwanda;0.36350417669126867
+Wheat;Ethiopia and Guinea-Bissau;0.2908091761056156
+Wheat;Mauritania and Rwanda;0.288489642259185
+Wheat;Guinea-Bissau and Rwanda;0.14427456215739323
+Rice;Cape Verde and Mali;0.9228718936147623
+Rice;Mali and Mozambique;0.9225392740359121
+Rice;Benin and Mozambique;0.9072734590070939
+Rice;Cote d'Ivoire and Mali;0.905750847928806
+Rice;Cape Verde and Chad;0.9018356330931749
+Rice;Burkina Faso and Mali;0.9016370688268811
+Rice;Cape Verde and Mozambique;0.8961829610704212
+Rice;Benin and Cape Verde;0.89316186245092
+Rice;Chad and Mali;0.8886627412140357
+Rice;Mali and Senegal;0.8712751370567271
+Rice;Benin and Mali;0.8707485470798209
+Rice;Cote d'Ivoire and Mozambique;0.8685712427180822
+Rice;Cape Verde and Cote d'Ivoire;0.8549317341071313
+Rice;Chad and Mozambique;0.8482451049649887
+Rice;Burkina Faso and Senegal;0.8475671383165563
+Rice;Cape Verde and Senegal;0.8419583039028229
+Rice;Chad and Cote d'Ivoire;0.8418231043284143
+Rice;Benin and Cote d'Ivoire;0.8404886185704135
+Rice;Burkina Faso and Mozambique;0.839428210645461
+Rice;Mali and Niger;0.837715302392439
+Rice;Cape Verde and Gambia;0.8278276987366701
+Rice;Cote d'Ivoire and Niger;0.8201500968303582
+Rice;Burkina Faso and Chad;0.8172090768534425
+Rice;Benin and Burkina Faso;0.8127746198785261
+Rice;Mozambique and Senegal;0.8112687806748232
+Rice;Democratic Republic of the Congo and Mozambique;0.8044445446085484
+Rice;Cote d'Ivoire and Senegal;0.7975374817513614
+Rice;Swaziland and Zambia;0.789446285469235
+Rice;Chad and Senegal;0.7867338816620981
+Rice;Chad and Niger;0.7661798349021184
+Rice;Cote d'Ivoire and Guinea;0.7555925778880211
+Rice;Niger and Nigeria;0.7533524152102138
+Rice;Niger and Senegal;0.7488827707870677
+Rice;Benin and Chad;0.7455669470184042
+Rice;Congo and Guinea-Bissau;0.7397792005702793
+Rice;Burkina Faso and Cote d'Ivoire;0.7391175035231383
+Rice;Mozambique and Niger;0.7376575689141638
+Rice;Mozambique and United Republic of Tanzania;0.7264853999733937
+Rice;Benin and Zambia;0.7252435296600882
+Rice;Liberia and Mozambique;0.7239957371848911
+Rice;Cape Verde and United Republic of Tanzania;0.7053892048503673
+Rice;Benin and Senegal;0.7040060450728305
+Rice;Liberia and United Republic of Tanzania;0.7029895459031646
+Rice;Guinea-Bissau and Niger;0.6995282850495936
+Rice;Democratic Republic of the Congo and United Republic of Tanzania;0.699397633675768
+Rice;Cape Verde and Madagascar;0.6904421299925353
+Rice;Rwanda and Swaziland;0.684693630444431
+Rice;Burkina Faso and Central African Republic;0.6837693888394427
+Rice;Democratic Republic of the Congo and Mali;0.6686845875130852
+Rice;Congo and Niger;0.6643298760248759
+Rice;Malawi and Zambia;0.6641583017174898
+Rice;Benin and Congo;0.6641330292771952
+Rice;Guinea-Bissau and Mali;0.6635362013206826
+Rice;Central African Republic and Niger;0.6564540672259213
+Rice;Benin and Niger;0.6544942459055837
+Rice;Benin and Guinea-Bissau;0.6411351881268857
+Rice;Senegal and Zambia;0.6260851772463828
+Rice;Nigeria and Zambia;0.6179243606131891
+Rice;Mali and United Republic of Tanzania;0.6162009677147376
+Rice;Rwanda and United Republic of Tanzania;0.6115356535691496
+Rice;Cote d'Ivoire and Guinea-Bissau;0.6099882508213582
+Rice;Chad and Congo;0.6082840397241753
+Rice;Chad and Guinea-Bissau;0.6004929558928218
+Rice;Chad and Democratic Republic of the Congo;0.5962140027306689
+Rice;Congo and Nigeria;0.595056176888842
+Rice;Mozambique and Zambia;0.5947614160315685
+Rice;Mozambique and Swaziland;0.587183230764974
+Rice;Swaziland and United Republic of Tanzania;0.5825529391953205
+Rice;Democratic Republic of the Congo and Niger;0.580536137179944
+Rice;Cote d'Ivoire and Democratic Republic of the Congo;0.5798172598306011
+Rice;Democratic Republic of the Congo and Rwanda;0.570924564385274
+Rice;Benin and Liberia;0.5706496004367351
+Rice;Benin and Democratic Republic of the Congo;0.5702357795220581
+Rice;Mali and Zambia;0.5691947636866818
+Rice;Democratic Republic of the Congo and Swaziland;0.5671872604670813
+Rice;Madagascar and Zambia;0.5653718264483095
+Rice;Liberia and Mali;0.5626777963907328
+Rice;Liberia and Rwanda;0.5613515766274836
+Rice;Mozambique and Rwanda;0.5578331538934715
+Rice;Chad and United Republic of Tanzania;0.5542126345577183
+Rice;Benin and United Republic of Tanzania;0.5537645535753862
+Rice;Guinea-Bissau and Mozambique;0.5513122520631615
+Rice;Congo and Mali;0.5489460763170895
+Rice;Chad and Zambia;0.5379454487978276
+Rice;Democratic Republic of the Congo and Guinea-Bissau;0.5322963454888424
+Rice;Chad and Liberia;0.5299415716594437
+Rice;Congo and Guinea;0.5297851279847832
+Rice;Benin and Swaziland;0.5295132898854782
+Rice;Niger and Zambia;0.5282559673548116
+Rice;Central African Republic and Nigeria;0.5271558206469981
+Rice;Cameroon and Central African Republic;0.524277290890678
+Rice;Cameroon and Zambia;0.5226728387658055
+Rice;Congo and Democratic Republic of the Congo;0.5224494003994375
+Rice;Congo and Mozambique;0.5202800421144493
+Rice;Liberia and Swaziland;0.518621849709922
+Rice;Mali and Swaziland;0.5141746983099179
+Rice;Guinea-Bissau and Zambia;0.5074333811312646
+Rice;Democratic Republic of the Congo and Nigeria;0.5065391524403161
+Rice;Malawi and Swaziland;0.5038223553380246
+Rice;Democratic Republic of the Congo and Guinea;0.5015180451684325
+Rice;Guinea-Bissau and Senegal;0.5004822970104288
+Rice;Mali and Rwanda;0.4999678180577173
+Rice;Congo and Senegal;0.4986567621744074
+Rice;Mauritania and Senegal;0.48952815301816177
+Rice;Cote d'Ivoire and Liberia;0.4888649444077878
+Rice;Burundi and Rwanda;0.4813876274348863
+Rice;Gambia and Liberia;0.4778956563378972
+Rice;Cote d'Ivoire and United Republic of Tanzania;0.47134573307645755
+Rice;Guinea-Bissau and Nigeria;0.46928564533252726
+Rice;Burkina Faso and Nigeria;0.46451847344835706
+Rice;Central African Republic and Democratic Republic of the Congo;0.4620302702170661
+Rice;Burundi and United Republic of Tanzania;0.4574528098366349
+Rice;Madagascar and Nigeria;0.45476006581124206
+Rice;Chad and Swaziland;0.4518235852845985
+Rice;Gambia and Ghana;0.4475665574864182
+Rice;Cote d'Ivoire and Zambia;0.4467020359529766
+Rice;Madagascar and Senegal;0.44594716418701535
+Rice;Congo and Cote d'Ivoire;0.43218561376271347
+Rice;Benin and Malawi;0.4291784446865377
+Rice;Nigeria and Senegal;0.42773809028529874
+Rice;Democratic Republic of the Congo and Zambia;0.4262918839504164
+Rice;Mauritania and Rwanda;0.42571944008135404
+Rice;Congo and Madagascar;0.42406584709653133
+Rice;Chad and Rwanda;0.4229960369201697
+Rice;Ghana and Liberia;0.4228743648664776
+Rice;Benin and Cameroon;0.41968911070995696
+Rice;Democratic Republic of the Congo and Senegal;0.41768174907128797
+Rice;Guinea-Bissau and Mauritania;0.41635764809933795
+Rice;Chad and Mauritania;0.41539459337817736
+Rice;Burundi and Liberia;0.40914540809121924
+Rice;Cameroon and Chad;0.4086492066527567
+Rice;Gambia and Mauritania;0.4061309149304638
+Rice;Cameroon and Swaziland;0.39850387671310045
+Rice;Cameroon and Nigeria;0.3886870132107658
+Rice;Guinea and Swaziland;0.3862679690122424
+Rice;Cameroon and Mali;0.3859917427560304
+Rice;Democratic Republic of the Congo and Liberia;0.3779822471383144
+Rice;Cameroon and Senegal;0.3773850217174961
+Rice;Mali and Mauritania;0.3679834013132124
+Rice;Central African Republic and Swaziland;0.36620999034147617
+Rice;Cameroon and Cote d'Ivoire;0.3547962725695157
+Rice;Chad and Nigeria;0.3542010499019781
+Rice;Niger and Swaziland;0.3536315883769244
+Rice;Senegal and United Republic of Tanzania;0.34941640445890276
+Rice;Cote d'Ivoire and Swaziland;0.34398781546513035
+Rice;Congo and Zambia;0.3374368332376034
+Rice;Cameroon and Malawi;0.33232551579264746
+Rice;Cameroon and United Republic of Tanzania;0.33083399625829174
+Rice;Mali and Nigeria;0.32779700468979395
+Rice;Benin and Guinea;0.32193835729044645
+Rice;Cote d'Ivoire and Gambia;0.3186528964259527
+Rice;Burundi and Swaziland;0.31537511428595916
+Rice;Gambia and Mozambique;0.3107757021910049
+Rice;Rwanda and Senegal;0.30905201327673576
+Rice;Malawi and Nigeria;0.3067289947763731
+Rice;Guinea and Rwanda;0.2957198781092167
+Rice;Central African Republic and Guinea-Bissau;0.29317334659455535
+Rice;Cameroon and Democratic Republic of the Congo;0.29188864023383265
+Rice;Malawi and Mozambique;0.29122770053038427
+Rice;Liberia and Senegal;0.2866946292862352
+Rice;Cote d'Ivoire and Madagascar;0.28661083686740474
+Rice;Chad and Gambia;0.28598378002584135
+Rice;Madagascar and Mauritania;0.281547673081548
+Rice;Gambia and Madagascar;0.28057341506521893
+Rice;Mauritania and Nigeria;0.2786376466887277
+Rice;Chad and Madagascar;0.27828826899064996
+Rice;Cameroon and Mozambique;0.26695646017275926
+Rice;Cote d'Ivoire and Mauritania;0.2657173951719073
+Rice;Benin and Gambia;0.26494754140013077
+Rice;Burundi and Mauritania;0.26462809535479664
+Rice;Burundi and Gambia;0.26456798414290256
+Rice;Madagascar and Niger;0.26340527602713176
+Rice;Central African Republic and Chad;0.2626975964642933
+Rice;Liberia and Mauritania;0.26201528193282975
+Rice;Cote d'Ivoire and Rwanda;0.2600772818128484
+Rice;Mauritania and Mozambique;0.259797712716656
+Rice;Mauritania and Niger;0.2552364302356601
+Rice;Gambia and Senegal;0.24810226028419935
+Rice;Central African Republic and Cote d'Ivoire;0.2451339856849817
+Rice;Cameroon and Congo;0.24513007628273129
+Rice;Niger and Rwanda;0.24262018717257286
+Rice;Madagascar and Mali;0.2400127858116193
+Rice;Malawi and Senegal;0.23385127372152825
+Rice;Cameroon and Niger;0.2337794547212511
+Rice;Gambia and Mali;0.23225799132263397
+Rice;United Republic of Tanzania and Zambia;0.2319885484565633
+Rice;Gambia and United Republic of Tanzania;0.23027746427659299
+Rice;Cote d'Ivoire and Nigeria;0.22920245639696543
+Rice;Congo and United Republic of Tanzania;0.22831977850369536
+Rice;Central African Republic and Senegal;0.2218114216074308
+Rice;Cameroon and Rwanda;0.21822020694317606
+Rice;Guinea and Malawi;0.20194576467861783
+Rice;Burundi and Cameroon;0.20156628099682816
+Rice;Malawi and Mali;0.20114131797785775
+Rice;Niger and United Republic of Tanzania;0.19787508043332858
+Rice;Mozambique and Nigeria;0.19681352150297599
+Rice;Central African Republic and Mali;0.19566989110577257
+Rice;Congo and Swaziland;0.19193271621281646
+Rice;Benin and Central African Republic;0.18560216259247114
+Rice;Cameroon and Guinea-Bissau;0.18298374666813835
+Rice;Madagascar and Mozambique;0.1779359036503793
+Rice;Senegal and Swaziland;0.17718558052303882
+Rice;Gambia and Rwanda;0.17176384193632058
+Rice;Ghana and Rwanda;0.1712330152497037
+Rice;Guinea-Bissau and United Republic of Tanzania;0.16988839342387424
+Rice;Rwanda and Zambia;0.15715271615409085
+Rice;Burundi and Mali;0.1506438732142623
+Rice;Liberia and Malawi;0.15032368222319473
+Rice;Cameroon and Liberia;0.14481353622081214
+Rice;Guinea-Bissau and Madagascar;0.14357676330623695
+Rice;Malawi and Niger;0.14057099082019883
+Rice;Chad and Malawi;0.13859133879897884
+Rice;Ghana and Mauritania;0.1259939775628792
+Rice;Guinea-Bissau and Swaziland;0.12544231118890434
+Rice;Cote d'Ivoire and Malawi;0.12394496425443069
+Rice;Nigeria and Swaziland;0.12194662727842202
+Rice;Burundi and Senegal;0.12181652468983152
+Rice;Democratic Republic of the Congo and Mauritania;0.1176323781413057
+Rice;Benin and Madagascar;0.11755790442414238
+Rice;Cameroon and Madagascar;0.1156759259440882
+Rice;Democratic Republic of the Congo and Malawi;0.11254953623604852
+Rice;Malawi and United Republic of Tanzania;0.11003351333094935
+Rice;Guinea and Madagascar;0.10877819187110421
+Rice;Guinea-Bissau and Rwanda;0.10826262764072861
+Rice;Mauritania and United Republic of Tanzania;0.102584991565869
+Rice;Burundi and Malawi;0.10134810596198317
+Rice;Benin and Burundi;0.09633091907382604
+Rice;Liberia and Zambia;0.09584060328166463
+Rice;Guinea-Bissau and Liberia;0.09245866940542662
+Rice;Benin and Nigeria;0.08824261454261348
+Rice;Nigeria and United Republic of Tanzania;0.08408809094497154
+Rice;Burundi and Chad;0.08182829177567515
+Rice;Central African Republic and Mozambique;0.059999803713462134
+Rice;Burundi and Mozambique;0.05645707032260321
+Rice;Benin and Rwanda;0.049876010884543534
+Rice;Burundi and Democratic Republic of the Congo;0.045888583610326016
+Rice;Central African Republic and Rwanda;0.037602691873124545
+Rice;Burundi and Ghana;0.03309547954363451
+Rice;Benin and Mauritania;0.018438193470349543
+Rice;Ethiopia and Mozambique;0.013766979366942059
+Rice;Burundi and Cote d'Ivoire;0.011992012793124068
+Rice;Nigeria and Rwanda;0.008892583414538234
+Rice;Burkina Faso and Madagascar;0.005938396307543874
+Rice;Ghana and Swaziland;0.0022582987352250884
+Rice;Mauritania and Swaziland;-0.003898830544962147
+Rice;Guinea-Bissau and Malawi;-0.026840317409145244
+Rice;Burundi and Zambia;-0.02823159555673569
+Rice;Ethiopia and Nigeria;-0.03485313722781653
+Rice;Guinea and Liberia;-0.0601751889686923
+Rice;Congo and Mauritania;-0.06636142923623231
+Rice;Ethiopia and Senegal;-0.0720723033296461
+Rice;Burundi and Niger;-0.07646011884197727
+Rice;Congo and Malawi;-0.0897797748530423
+Rice;Burundi and Central African Republic;-0.09341139393112814
+Rice;Gambia and Guinea-Bissau;-0.09758338431764955
+Rice;Congo and Liberia;-0.10598538143760391
+Rice;Central African Republic and United Republic of Tanzania;-0.1134967271951166
+Rice;Gambia and Swaziland;-0.11772093489815885
+Rice;Burundi and Madagascar;-0.12236395769019748
+Rice;Ghana and Guinea-Bissau;-0.12246535627368291
+Rice;Ghana and United Republic of Tanzania;-0.12291612607055392
+Rice;Democratic Republic of the Congo and Madagascar;-0.12337154589619012
+Rice;Malawi and Mauritania;-0.13643001987604594
+Rice;Central African Republic and Madagascar;-0.14535783123409846
+Rice;Liberia and Niger;-0.14912607377703377
+Rice;Madagascar and United Republic of Tanzania;-0.1534234198982368
+Rice;Burundi and Nigeria;-0.15512126195800652
+Rice;Congo and Rwanda;-0.1605057230016713
+Rice;Central African Republic and Mauritania;-0.17222999977429665
+Rice;Cameroon and Mauritania;-0.19298112822380678
+Rice;Mauritania and Zambia;-0.2038888705410569
+Rice;Cameroon and Ethiopia;-0.20559285659110152
+Rice;Liberia and Madagascar;-0.20759695292468597
+Rice;Ghana and Mozambique;-0.2222827200513527
+Rice;Central African Republic and Liberia;-0.23918628008502785
+Rice;Gambia and Guinea;-0.24414442124330463
+Rice;Benin and Ghana;-0.25967248944521076
+Rice;Cameroon and Gambia;-0.26593995936595993
+Rice;Chad and Ghana;-0.27066774802416604
+Rice;Democratic Republic of the Congo and Gambia;-0.27611348546380554
+Rice;Ethiopia and Zambia;-0.28775406084586413
+Rice;Burundi and Guinea-Bissau;-0.29435183333140136
+Rice;Democratic Republic of the Congo and Ghana;-0.31539183276733257
+Rice;Cote d'Ivoire and Ghana;-0.3220915822742579
+Rice;Congo and Gambia;-0.3393963758357903
+Rice;Ghana and Mali;-0.3429234508602379
+Rice;Liberia and Nigeria;-0.35187746253017427
+Rice;Burundi and Congo;-0.3545184891769059
+Rice;Ghana and Malawi;-0.36853010170243056
+Rice;Madagascar and Swaziland;-0.37595005320443503
+Rice;Gambia and Nigeria;-0.3793325680702404
+Rice;Gambia and Niger;-0.40587685604929735
+Rice;Cape Verde and Central African Republic;-0.40599419493686634
+Rice;Gambia and Zambia;-0.41296190091705326
+Rice;Gambia and Malawi;-0.42079190515953463
+Rice;Ghana and Senegal;-0.44172174493539235
+Rice;Ghana and Madagascar;-0.4463796134846437
+Rice;Cameroon and Ghana;-0.44669106944865555
+Rice;Congo and Ghana;-0.46931327333776746
+Rice;Ghana and Niger;-0.4871166464536853
+Rice;Central African Republic and Gambia;-0.5011491187013805
+Rice;Central African Republic and Ghana;-0.5312101457253887
+Rice;Ghana and Zambia;-0.538621402010676
+Rice;Madagascar and Rwanda;-0.5626188286047977
+Rice;Ghana and Nigeria;-0.7116559414844482
+Diesel;Democratic Republic of the Congo and South Sudan;0.512368595359963
+Beans;Kenya and United Republic of Tanzania;0.7408633019413806
+Beans;Kenya and Uganda;0.7394576244476309
+Beans;Mozambique and United Republic of Tanzania;0.6952057054954269
+Beans;Benin and Cameroon;0.6708090319363356
+Beans;Benin and Zambia;0.6701617453227922
+Beans;Niger and United Republic of Tanzania;0.6673590494571879
+Beans;Benin and Burkina Faso;0.6653599130493311
+Beans;Swaziland and Zambia;0.6619875359212465
+Beans;Burundi and Mozambique;0.6338764892341605
+Beans;Kenya and Niger;0.6242216740695553
+Beans;Democratic Republic of the Congo and Zambia;0.6128838617723884
+Beans;Cameroon and Democratic Republic of the Congo;0.5822937696474169
+Beans;Burkina Faso and Cameroon;0.5796884395453439
+Beans;Cameroon and Swaziland;0.5715434342500084
+Beans;Benin and Democratic Republic of the Congo;0.5703424580280163
+Beans;Mozambique and Niger;0.5698554158411052
+Beans;Democratic Republic of the Congo and Swaziland;0.5655301870671599
+Beans;Kenya and Mozambique;0.5574092789991797
+Beans;Lesotho and Swaziland;0.5479850847416138
+Beans;Burundi and Niger;0.546087830840313
+Beans;Benin and Niger;0.544596951199514
+Beans;Cameroon and Lesotho;0.5390628774728179
+Beans;Democratic Republic of the Congo and Lesotho;0.5327459577772088
+Beans;Cameroon and Zambia;0.5242149165666489
+Beans;Swaziland and United Republic of Tanzania;0.5237815087712347
+Beans;Rwanda and Swaziland;0.4951307835424724
+Beans;Benin and Lesotho;0.49478155858412554
+Beans;Benin and Swaziland;0.47510171418701747
+Beans;Benin and United Republic of Tanzania;0.4736550264916898
+Beans;Burundi and United Republic of Tanzania;0.4623742935726028
+Beans;Kenya and Rwanda;0.44928063631639803
+Beans;Burundi and Kenya;0.4454741418321093
+Beans;Democratic Republic of the Congo and Guinea;0.43282834473156284
+Beans;Congo and Lesotho;0.4285800815746849
+Beans;Lesotho and Mozambique;0.41853046687864404
+Beans;Congo and Democratic Republic of the Congo;0.41597349178760296
+Beans;Lesotho and Rwanda;0.39769798860566485
+Beans;Mozambique and Swaziland;0.3961977045271113
+Beans;Benin and Kenya;0.39045115195055424
+Beans;Congo and Mozambique;0.3874424103835547
+Beans;Burkina Faso and Zambia;0.3763882855819708
+Beans;Cameroon and Rwanda;0.3609454355677202
+Beans;Congo and Rwanda;0.35600022447768476
+Beans;Mozambique and Zambia;0.354734499931602
+Beans;Burundi and Rwanda;0.34829175025108056
+Beans;United Republic of Tanzania and Zambia;0.33024667565954274
+Beans;Burkina Faso and Democratic Republic of the Congo;0.32986517008400934
+Beans;Malawi and United Republic of Tanzania;0.3136909087828464
+Beans;Benin and Mozambique;0.30371599310222286
+Beans;Democratic Republic of the Congo and Mozambique;0.2925226988056141
+Beans;Benin and Congo;0.2889343647611658
+Beans;Mozambique and Rwanda;0.2863099923190898
+Beans;Niger and Rwanda;0.2802463606357865
+Beans;Benin and Guinea;0.269375842782471
+Beans;Cameroon and Mozambique;0.2692888458122245
+Beans;Lesotho and Zambia;0.26850321016003464
+Beans;Burkina Faso and Swaziland;0.25604760011564615
+Beans;Lesotho and United Republic of Tanzania;0.2524666139423434
+Beans;Democratic Republic of the Congo and Rwanda;0.2511526053708815
+Beans;Rwanda and United Republic of Tanzania;0.2506957984077448
+Beans;Burundi and Uganda;0.24533124333212458
+Beans;Rwanda and Zambia;0.23561434053045027
+Beans;Kenya and Swaziland;0.23278791127867318
+Beans;Malawi and Swaziland;0.22326856677171128
+Beans;Congo and Guinea;0.21578102539552366
+Beans;Democratic Republic of the Congo and Gambia;0.2108728543806098
+Beans;Rwanda and Uganda;0.20882305760822656
+Beans;Swaziland and Uganda;0.19141408251606845
+Beans;Benin and Rwanda;0.18818454866684123
+Beans;Gambia and Mozambique;0.1784664973682362
+Beans;Lesotho and Zimbabwe;0.17226101124414628
+Beans;Burkina Faso and Zimbabwe;0.16997586174894866
+Beans;Benin and Burundi;0.16841865685748164
+Beans;Lesotho and Niger;0.1651217592295026
+Beans;Democratic Republic of the Congo and Niger;0.1521909615222894
+Beans;Gambia and United Republic of Tanzania;0.14737556899604923
+Beans;Kenya and Malawi;0.1441578306557963
+Beans;Malawi and Mozambique;0.13865148229877325
+Beans;Cameroon and Kenya;0.13455801531191278
+Beans;Malawi and Zambia;0.13398994731439315
+Beans;Gambia and South Sudan;0.13072531784513278
+Beans;Cameroon and Congo;0.1276160425422177
+Beans;Cameroon and Uganda;0.1237776223293958
+Beans;Lesotho and Uganda;0.11517894937259707
+Beans;Cameroon and United Republic of Tanzania;0.11033200620885945
+Beans;Burkina Faso and Rwanda;0.10854396552769702
+Beans;Democratic Republic of the Congo and Uganda;0.1073616710310024
+Beans;Gambia and Lesotho;0.09954935711782338
+Beans;Kenya and Zambia;0.09853586266037875
+Beans;Uganda and Zambia;0.09384442899263734
+Beans;Benin and Uganda;0.09086797017629865
+Beans;Burkina Faso and Uganda;0.08712613992921389
+Beans;Mozambique and Uganda;0.08299482590481061
+Beans;Guinea and Uganda;0.07754321746291008
+Beans;Lesotho and Malawi;0.05999970749123128
+Beans;Democratic Republic of the Congo and United Republic of Tanzania;0.05549782017087925
+Beans;Benin and Malawi;0.042654344957310186
+Beans;Burundi and Zambia;0.031832455388869425
+Beans;Burundi and Democratic Republic of the Congo;0.007859392037184882
+Beans;Zimbabwe and South Sudan;0.006805099254088065
+Beans;Cameroon and Malawi;0.00011016219427725888
+Beans;Burkina Faso and Kenya;-0.0012036444377068734
+Beans;Burkina Faso and Lesotho;-0.0012981513798031139
+Beans;Congo and United Republic of Tanzania;-0.0025319018867514193
+Beans;Congo and Zambia;-0.0026670785652113194
+Beans;Malawi and Uganda;-0.003019485706370324
+Beans;Congo and Swaziland;-0.0032675310473012256
+Beans;Kenya and Lesotho;-0.007011620527460884
+Beans;Democratic Republic of the Congo and Kenya;-0.014056589188378144
+Beans;Democratic Republic of the Congo and Malawi;-0.014468512606814416
+Beans;Uganda and United Republic of Tanzania;-0.029993861113471215
+Beans;Burkina Faso and Burundi;-0.03661761288592957
+Beans;Cameroon and Zimbabwe;-0.0465622579337133
+Beans;Burundi and Zimbabwe;-0.04851220524991709
+Beans;Burundi and Malawi;-0.05296398591461614
+Beans;Malawi and South Sudan;-0.05349876544663042
+Beans;Congo and Uganda;-0.0738938303401104
+Beans;Gambia and Uganda;-0.07392449532384528
+Beans;Cameroon and Gambia;-0.07828266232813233
+Beans;Burundi and Swaziland;-0.11559943618144676
+Beans;United Republic of Tanzania and Zimbabwe;-0.11711929718130253
+Beans;Guinea and Swaziland;-0.12668543128674664
+Beans;Burundi and Congo;-0.1336836647871073
+Beans;Burkina Faso and Mozambique;-0.1623570624560344
+Beans;Congo and Kenya;-0.17265457635651885
+Beans;Congo and Malawi;-0.17668424147231554
+Beans;Burkina Faso and South Sudan;-0.1770641489421127
+Beans;Guinea and Malawi;-0.18299391446617727
+Beans;Burkina Faso and Congo;-0.19329768071727724
+Beans;Burkina Faso and Malawi;-0.1971095052875215
+Beans;Zambia and South Sudan;-0.2143477320470055
+Beans;Burkina Faso and United Republic of Tanzania;-0.2285023299833703
+Beans;Gambia and Kenya;-0.2575748508938994
+Beans;Mozambique and Zimbabwe;-0.28219429855156475
+Beans;Guinea and Kenya;-0.2904121125450801
+Beans;Burundi and Cameroon;-0.3641918988568198
+Beans;Burkina Faso and Gambia;-0.42847267690209884
+Beans;Burundi and Lesotho;-0.43799251667338196
+Beans;Uganda and Zimbabwe;-0.45139511649191716
+Potatoes;Kenya and Rwanda;0.31428122822592786
+Chicken;Congo and Democratic Republic of the Congo;0.2231876806325974
+Sugar;Madagascar and Mauritania;0.8683248235073637
+Sugar;Guinea-Bissau and Madagascar;0.8210242780000573
+Sugar;Guinea-Bissau and Mauritania;0.7859897769225971
+Sugar;Democratic Republic of the Congo and Madagascar;0.7612446001366514
+Sugar;Guinea and Madagascar;0.7600124018978528
+Sugar;Democratic Republic of the Congo and Mauritania;0.5577849289820703
+Sugar;Democratic Republic of the Congo and Guinea-Bissau;0.5283591858242207
+Sugar;Democratic Republic of the Congo and Guinea;0.4630035769311209
+Sugar;Democratic Republic of the Congo and Gambia;-0.035255721447816524
+Sugar;Gambia and Mauritania;-0.05391816046559906
+Onions;Cameroon and Gambia;0.011297436635055136
+Onions;Cameroon and Rwanda;-0.3278978488346067
+Petrol;Liberia and South Sudan;0.30136949036659805
+Fish;Cote d'Ivoire and Democratic Republic of the Congo;0.41171522341568284
+Fish;Congo and Democratic Republic of the Congo;-0.11818607891031152
+Fish;Congo and Cote d'Ivoire;-0.6048949730523862
+Wheat flour;Cape Verde and Central African Republic;0.9437632103661489
+Wheat flour;Lesotho and Madagascar;0.9067602553709305
+Wheat flour;Lesotho and Swaziland;0.874025162363283
+Wheat flour;Democratic Republic of the Congo and Madagascar;0.8358313104453378
+Wheat flour;Madagascar and Swaziland;0.8356704494430734
+Wheat flour;Madagascar and Mozambique;0.8353247894040551
+Wheat flour;Lesotho and Mozambique;0.8288875323885818
+Wheat flour;Democratic Republic of the Congo and Mozambique;0.8235037258138284
+Wheat flour;Mozambique and Swaziland;0.7724797236970344
+Wheat flour;Congo and Madagascar;0.7206958950361974
+Wheat flour;Congo and Swaziland;0.6636262157463007
+Wheat flour;Congo and Lesotho;0.6320402106264491
+Wheat flour;Congo and Mozambique;0.6143146392710317
+Wheat flour;Democratic Republic of the Congo and Lesotho;0.5690649028609663
+Wheat flour;Congo and Democratic Republic of the Congo;0.4991001875955003
+Wheat flour;Democratic Republic of the Congo and Rwanda;0.395583833117799
+Wheat flour;Democratic Republic of the Congo and Swaziland;0.32865834444916614
+Wheat flour;Congo and Rwanda;0.14089778680872675
+Wheat flour;Central African Republic and Democratic Republic of the Congo;0.07222431545932076
+Wheat flour;Rwanda and Swaziland;0.06191585538925852
+Wheat flour;Mozambique and Rwanda;-0.11285705613620563
+Wheat flour;Madagascar and Rwanda;-0.1792658479203679
+Wheat flour;Lesotho and Rwanda;-0.33433932808366706
+Wheat flour;Central African Republic and Swaziland;-0.5063762906671848
+Wheat flour;Central African Republic and Rwanda;-0.530367630272497
+Milk;Kenya and Rwanda;0.2461605233395188
+Oil (vegetable);Madagascar and Mozambique;0.9099891002893813
+Oil (vegetable);Madagascar and Mauritania;0.8467741090053654
+Oil (vegetable);Kenya and Mauritania;0.822178784730037
+Oil (vegetable);Kenya and Mozambique;0.7823391068560839
+Oil (vegetable);Mauritania and Mozambique;0.7658058045581071
+Oil (vegetable);Guinea-Bissau and Mauritania;0.7574008004117
+Oil (vegetable);Kenya and Madagascar;0.7504770270754283
+Oil (vegetable);Guinea-Bissau and Mozambique;0.7245639050498026
+Oil (vegetable);Guinea-Bissau and Kenya;0.6714354322322469
+Oil (vegetable);Guinea-Bissau and Madagascar;0.6478337536922237
+Oil (vegetable);Democratic Republic of the Congo and Mauritania;0.601493084814227
+Oil (vegetable);Democratic Republic of the Congo and Mozambique;0.4905925188699505
+Oil (vegetable);Democratic Republic of the Congo and Kenya;0.47676959454790596
+Oil (vegetable);Gambia and South Sudan;0.42918030959020464
+Oil (vegetable);Mauritania and South Sudan;0.35207057941849035
+Oil (vegetable);Guinea-Bissau and South Sudan;0.29484931447101853
+Oil (vegetable);Democratic Republic of the Congo and South Sudan;0.2743994802157482
+Oil (vegetable);Mozambique and Zimbabwe;0.22774711657031932
+Oil (vegetable);Zimbabwe and South Sudan;0.16205686027721103
+Oil (vegetable);Mozambique and South Sudan;0.13859953921299395
+Oil (vegetable);Kenya and South Sudan;0.10829996693593366
+Oil (vegetable);Gambia and Mauritania;-0.3253385322009938
+Oil (vegetable);Gambia and Mozambique;-0.3968915022950971
+Beef;Democratic Republic of the Congo and Guinea;0.657732909434079
+Beef;Cote d'Ivoire and Guinea;0.5656262304754421
+Beef;Congo and Guinea;0.41191259947862835
+Beef;Democratic Republic of the Congo and Rwanda;0.34688931268415846
+Beef;Congo and Democratic Republic of the Congo;0.32588404243052677
+Beef;Cote d'Ivoire and Democratic Republic of the Congo;0.29186023167627445
+Beef;Guinea and Rwanda;0.08696778886865332
+Beef;Cote d'Ivoire and Rwanda;-0.22426661083080174
+Beef;Democratic Republic of the Congo and Gambia;-0.5911263955329737
+Oil (palm);Cote d'Ivoire and Liberia;0.6068370509153699
+Oil (palm);Democratic Republic of the Congo and Guinea;0.5990619893208493
+Oil (palm);Cote d'Ivoire and Guinea-Bissau;0.5909966943818813
+Oil (palm);Democratic Republic of the Congo and Liberia;0.5216669602265722
+Oil (palm);Guinea and Liberia;0.5013026147582997
+Oil (palm);Cote d'Ivoire and Guinea;0.4745248024564406
+Oil (palm);Democratic Republic of the Congo and Nigeria;0.4547035799792781
+Oil (palm);Guinea-Bissau and Liberia;0.4321720993500317
+Oil (palm);Cote d'Ivoire and Democratic Republic of the Congo;0.4008413063860882
+Oil (palm);Democratic Republic of the Congo and Guinea-Bissau;0.31012745710772494
+Oil (palm);Congo and Liberia;0.19017565533426722
+Oil (palm);Congo and Democratic Republic of the Congo;0.17249824161830896
+Oil (palm);Congo and Cote d'Ivoire;0.14868066983922124
+Oil (palm);Democratic Republic of the Congo and Gambia;-0.043841759197168
+Sorghum;Burkina Faso and Mali;0.9209363060517786
+Sorghum;Burkina Faso and Niger;0.8888277857810164
+Sorghum;Niger and Senegal;0.8588426642984549
+Sorghum;Burkina Faso and Chad;0.841625284539067
+Sorghum;Chad and Niger;0.8182970514288603
+Sorghum;Burkina Faso and Senegal;0.8083065175650057
+Sorghum;Burkina Faso and Cameroon;0.7888173140266679
+Sorghum;Mali and Niger;0.7652670275647269
+Sorghum;Chad and Mali;0.7638079122101062
+Sorghum;Mali and Senegal;0.7537079004796461
+Sorghum;Kenya and Sudan;0.7515284317399534
+Sorghum;Cameroon and Senegal;0.7415375427057264
+Sorghum;Chad and Senegal;0.7371140275951924
+Sorghum;Benin and Niger;0.7270870924580977
+Sorghum;Burkina Faso and Sudan;0.7127935792081818
+Sorghum;Benin and Senegal;0.7009104181905638
+Sorghum;Cameroon and Mali;0.7001558865341871
+Sorghum;Cameroon and Niger;0.6981866484927818
+Sorghum;Cameroon and Chad;0.6774547502274133
+Sorghum;Niger and Sudan;0.6574262061416094
+Sorghum;Benin and Burkina Faso;0.6561970585948923
+Sorghum;Benin and Cameroon;0.6356296901065773
+Sorghum;Kenya and Niger;0.6322703593247029
+Sorghum;Cameroon and Nigeria;0.6308238834275719
+Sorghum;Burkina Faso and Kenya;0.6295321308421444
+Sorghum;Mali and Sudan;0.6271770072634616
+Sorghum;Chad and Sudan;0.5826617479091017
+Sorghum;Benin and Chad;0.5825493046610196
+Sorghum;Cameroon and Guinea-Bissau;0.5594806248032232
+Sorghum;Benin and Mali;0.5458898819547834
+Sorghum;Senegal and Sudan;0.5339677863653401
+Sorghum;Guinea-Bissau and Nigeria;0.5301210972464797
+Sorghum;Kenya and Mali;0.5285710851187816
+Sorghum;Ethiopia and Senegal;0.514316440727804
+Sorghum;Chad and Kenya;0.5061604803256848
+Sorghum;Benin and Ethiopia;0.5011431611673512
+Sorghum;Ethiopia and Niger;0.48938728418732286
+Sorghum;Benin and Sudan;0.4875002763088067
+Sorghum;Mali and Mauritania;0.470692759618509
+Sorghum;Kenya and Senegal;0.46606035471727897
+Sorghum;Ethiopia and Kenya;0.45659170020175016
+Sorghum;Cameroon and Mauritania;0.4536498794784271
+Sorghum;Chad and Ethiopia;0.4468396928374989
+Sorghum;Gambia and Senegal;0.44217805856499054
+Sorghum;Burkina Faso and Nigeria;0.4418325547019335
+Sorghum;Mali and Rwanda;0.4384544581717098
+Sorghum;Kenya and Rwanda;0.43325424516541156
+Sorghum;Burkina Faso and Ethiopia;0.42604926231644596
+Sorghum;Mali and Nigeria;0.4239793618568651
+Sorghum;Mauritania and Senegal;0.42351267419442135
+Sorghum;Mauritania and Rwanda;0.42307527764766173
+Sorghum;Benin and Nigeria;0.4106187317574636
+Sorghum;Burkina Faso and Mauritania;0.4093745899481094
+Sorghum;Ethiopia and Sudan;0.4009692648969898
+Sorghum;Burkina Faso and Rwanda;0.39707869816622454
+Sorghum;Benin and Gambia;0.3940324737595217
+Sorghum;Rwanda and Sudan;0.38103505867200704
+Sorghum;Chad and Nigeria;0.37337737270681093
+Sorghum;Niger and Nigeria;0.36529772537744365
+Sorghum;Benin and Kenya;0.3641120184925137
+Sorghum;Mauritania and Nigeria;0.3590391422074009
+Sorghum;Gambia and Kenya;0.34528467601331964
+Sorghum;Gambia and Niger;0.338213596056202
+Sorghum;Ethiopia and Uganda;0.33759945526663004
+Sorghum;Burkina Faso and Gambia;0.33733840364191703
+Sorghum;Ethiopia and Gambia;0.3192333083662767
+Sorghum;Chad and Gambia;0.30637867510277417
+Sorghum;Benin and Mauritania;0.3008361321490639
+Sorghum;Uganda and Sudan;0.3002233450145141
+Sorghum;Ethiopia and Mauritania;0.27836636709886725
+Sorghum;Ethiopia and Mali;0.2764853693293045
+Sorghum;Mauritania and Niger;0.2735847671877672
+Sorghum;Guinea-Bissau and Mauritania;0.2580467946150546
+Sorghum;Gambia and Mali;0.2466748494945938
+Sorghum;Gambia and Sudan;0.2252452618576194
+Sorghum;Guinea-Bissau and Senegal;0.22122229378182012
+Sorghum;Kenya and Uganda;0.2050431905683052
+Sorghum;Cameroon and Kenya;0.20304095415282533
+Sorghum;Rwanda and Uganda;0.18784639221711202
+Sorghum;Chad and Mauritania;0.18496544739923793
+Sorghum;Gambia and Guinea-Bissau;0.15982566080579516
+Sorghum;Guinea-Bissau and Rwanda;0.1563899611990305
+Sorghum;Nigeria and Senegal;0.14798743544756207
+Sorghum;Cameroon and Sudan;0.14707217388126667
+Sorghum;Chad and Zimbabwe;0.14703791634894808
+Sorghum;Benin and Guinea-Bissau;0.08564853126032759
+Sorghum;Zimbabwe and South Sudan;0.08257933146187328
+Sorghum;Guinea-Bissau and Mali;0.07654547766730409
+Sorghum;Cameroon and Rwanda;0.05964197696858711
+Sorghum;Ethiopia and Nigeria;0.03900225206546936
+Sorghum;Ethiopia and Rwanda;0.026543720089415298
+Sorghum;Rwanda and Senegal;0.010873709303971295
+Sorghum;Chad and Guinea-Bissau;0.0037764942323159287
+Sorghum;Burkina Faso and Guinea-Bissau;-0.0024740239731621256
+Sorghum;Benin and Rwanda;-0.022048200654883804
+Sorghum;Gambia and Nigeria;-0.0333645308745563
+Sorghum;Cameroon and Gambia;-0.043847270823026266
+Sorghum;Cameroon and Zimbabwe;-0.047235445135788645
+Sorghum;Kenya and Mauritania;-0.05722858561106803
+Sorghum;Chad and Rwanda;-0.07379133169217075
+Sorghum;Niger and Rwanda;-0.07781465847849996
+Sorghum;Cameroon and Ethiopia;-0.10444370417683993
+Sorghum;Guinea-Bissau and Niger;-0.1086063975393475
+Sorghum;Gambia and Mauritania;-0.14267279374588476
+Sorghum;Burkina Faso and Zimbabwe;-0.17750823266699992
+Sorghum;Gambia and Uganda;-0.17769933238358826
+Sorghum;Nigeria and Sudan;-0.19623218036389986
+Sorghum;Zimbabwe and Sudan;-0.20008159838289744
+Sorghum;Senegal and Zimbabwe;-0.21211084358942664
+Sorghum;Kenya and Nigeria;-0.21399115021753248
+Sorghum;Mauritania and Uganda;-0.23360371283544346
+Sorghum;Mauritania and Sudan;-0.23533574519773998
+Sorghum;Niger and Uganda;-0.24525714240568283
+Sorghum;Nigeria and Rwanda;-0.2787974611689528
+Sorghum;Gambia and Rwanda;-0.2929042309816772
+Sorghum;Nigeria and Zimbabwe;-0.2937713918627766
+Sorghum;Ethiopia and Guinea-Bissau;-0.30105251837674185
+Sorghum;Mali and Zimbabwe;-0.3081493167625426
+Sorghum;Senegal and Uganda;-0.33697705157393093
+Sorghum;Guinea-Bissau and Kenya;-0.3393690936004113
+Sorghum;Uganda and Zimbabwe;-0.36041913592825225
+Sorghum;Mali and Uganda;-0.39495462057670944
+Sorghum;Cameroon and Uganda;-0.39822494369538963
+Sorghum;Guinea-Bissau and Sudan;-0.4317673588772907
+Sorghum;Burkina Faso and Uganda;-0.4439356683184932
+Sorghum;Chad and Uganda;-0.4949266829074115
+Sorghum;Guinea-Bissau and Uganda;-0.554017768458696
+Sorghum;Nigeria and Uganda;-0.6141994079020279
+Sorghum;Benin and Uganda;-0.6838343414274791
+Maize;Burkina Faso and Niger;0.9112696027496421
+Maize;Niger and Senegal;0.8840406688085748
+Maize;Burkina Faso and Mali;0.8727055412060318
+Maize;Malawi and Mozambique;0.8695259920213306
+Maize;Benin and Niger;0.8361208791032
+Maize;Mali and Niger;0.8099341641419473
+Maize;Kenya and Swaziland;0.7984750789737166
+Maize;Burkina Faso and Senegal;0.7859706893950832
+Maize;Mozambique and Zimbabwe;0.7728648070603518
+Maize;Benin and Burkina Faso;0.7683044466367805
+Maize;Burkina Faso and Chad;0.7665328724514449
+Maize;Burkina Faso and Cameroon;0.7637546183008016
+Maize;Mali and Senegal;0.7519438442367171
+Maize;Chad and Niger;0.7496048865215809
+Maize;Kenya and United Republic of Tanzania;0.7322065723558489
+Maize;Malawi and Zimbabwe;0.7286787832218709
+Maize;Benin and Senegal;0.7283385380199084
+Maize;Malawi and Zambia;0.72685321991585
+Maize;Chad and Senegal;0.725923552730999
+Maize;Cameroon and Senegal;0.7236507122516445
+Maize;Chad and Mali;0.7232298369648674
+Maize;Cameroon and Niger;0.7123942359386802
+Maize;Cameroon and Mali;0.7088706399461072
+Maize;Cote d'Ivoire and Kenya;0.7073580283394834
+Maize;Ethiopia and Senegal;0.7008165910453812
+Maize;Ethiopia and Niger;0.6923435656732975
+Maize;Chad and Kenya;0.6891643802837111
+Maize;Burkina Faso and Kenya;0.6841582959406288
+Maize;Mozambique and Zambia;0.6811650091554762
+Maize;Kenya and Niger;0.6781909606021762
+Maize;Kenya and Senegal;0.6747337195150832
+Maize;Benin and Mali;0.6730539449300952
+Maize;Burkina Faso and Ghana;0.672829788227036
+Maize;Senegal and Swaziland;0.6701980933054482
+Maize;Benin and Nigeria;0.6679586829602667
+Maize;Swaziland and United Republic of Tanzania;0.6657620284283968
+Maize;Benin and Cameroon;0.662316334690216
+Maize;Cote d'Ivoire and Swaziland;0.6581833198168147
+Maize;Burkina Faso and Ethiopia;0.6462685486900837
+Maize;Democratic Republic of the Congo and Ethiopia;0.6364702108281675
+Maize;Chad and Cote d'Ivoire;0.6334278751246813
+Maize;Democratic Republic of the Congo and Malawi;0.6306874690893817
+Maize;Guinea-Bissau and Nigeria;0.6187440203751463
+Maize;Kenya and Mali;0.6174289556079159
+Maize;Benin and Ethiopia;0.6159889249407202
+Maize;Cameroon and Central African Republic;0.6102445997223476
+Maize;Burundi and Swaziland;0.6031862002365492
+Maize;Burundi and United Republic of Tanzania;0.5933916129240506
+Maize;Cameroon and Nigeria;0.5921347186532736
+Maize;Cameroon and Kenya;0.5788797258151348
+Maize;Central African Republic and Nigeria;0.5785496590310866
+Maize;Democratic Republic of the Congo and Mozambique;0.5763455202414131
+Maize;Rwanda and United Republic of Tanzania;0.5753149441733449
+Maize;Democratic Republic of the Congo and Nigeria;0.5704003554017775
+Maize;Burundi and Rwanda;0.5694900654254841
+Maize;Burkina Faso and Nigeria;0.5641890568536433
+Maize;Mozambique and United Republic of Tanzania;0.5634550918117632
+Maize;Kenya and Rwanda;0.5511998076856638
+Maize;Chad and Ethiopia;0.5497228105682024
+Maize;Kenya and Uganda;0.5440303721716848
+Maize;Chad and Swaziland;0.5307832815916435
+Maize;Benin and Ghana;0.5299466393014559
+Maize;Mali and Swaziland;0.527905852829327
+Maize;Ethiopia and Kenya;0.5274691579972856
+Maize;Ghana and Mali;0.5273231769977785
+Maize;Ethiopia and Malawi;0.5085319073396186
+Maize;Cameroon and Ethiopia;0.5060013023275952
+Maize;Cameroon and Swaziland;0.5049731307412414
+Maize;Niger and Zambia;0.4960310988874251
+Maize;Ethiopia and Ghana;0.49490966826890787
+Maize;Ethiopia and Mali;0.4934187080514727
+Maize;Senegal and Zambia;0.4865853004111817
+Maize;Mozambique and Senegal;0.48038204811832075
+Maize;Niger and United Republic of Tanzania;0.4800526264239359
+Maize;Cote d'Ivoire and United Republic of Tanzania;0.47916086093874677
+Maize;Benin and Democratic Republic of the Congo;0.47534546332436506
+Maize;Democratic Republic of the Congo and Rwanda;0.4679306388432271
+Maize;Niger and Swaziland;0.4647975583215799
+Maize;Guinea-Bissau and Senegal;0.4596793251885514
+Maize;Malawi and Niger;0.4581193301778564
+Maize;Guinea-Bissau and Niger;0.45363754114056287
+Maize;Burundi and Kenya;0.4526630314497223
+Maize;Burkina Faso and Swaziland;0.4505939496472434
+Maize;Mali and Nigeria;0.45019136313410674
+Maize;Niger and Nigeria;0.44866255398286886
+Maize;Mozambique and Swaziland;0.4469232531275344
+Maize;Mozambique and Niger;0.44556797310882845
+Maize;Burkina Faso and Cote d'Ivoire;0.44547354486953594
+Maize;Cote d'Ivoire and Zimbabwe;0.4452423322842488
+Maize;Benin and Uganda;0.4445122696834282
+Maize;Benin and Chad;0.4440963848708943
+Maize;Ethiopia and Mozambique;0.44348729081774574
+Maize;Cameroon and Guinea-Bissau;0.44229764213230893
+Maize;Cameroon and Rwanda;0.4258016171042441
+Maize;Burkina Faso and United Republic of Tanzania;0.42540362137154963
+Maize;Mozambique and Rwanda;0.4202616215103699
+Maize;Ghana and Nigeria;0.4133670247919583
+Maize;Ghana and Senegal;0.4087546299045585
+Maize;Cote d'Ivoire and Senegal;0.40763321777977535
+Maize;Benin and Kenya;0.40369670452444406
+Maize;Chad and Ghana;0.4036825240902981
+Maize;Malawi and United Republic of Tanzania;0.40327738984617967
+Maize;Senegal and United Republic of Tanzania;0.39920825201949817
+Maize;Cameroon and Ghana;0.3986674528529094
+Maize;Democratic Republic of the Congo and Niger;0.39806654520101764
+Maize;Malawi and Senegal;0.39688433158463354
+Maize;Benin and Guinea-Bissau;0.38844715956538256
+Maize;Burkina Faso and Mozambique;0.3877454842082191
+Maize;United Republic of Tanzania and Zimbabwe;0.3861989518462863
+Maize;Democratic Republic of the Congo and Zambia;0.38606362539632133
+Maize;United Republic of Tanzania and Zambia;0.38592400386682035
+Maize;Central African Republic and Ghana;0.3849187985689761
+Maize;Cote d'Ivoire and Mali;0.38337414570209694
+Maize;Chad and Mozambique;0.38180751322698114
+Maize;Rwanda and Zimbabwe;0.3762415559767099
+Maize;Mali and Rwanda;0.3740485324675224
+Maize;Cote d'Ivoire and Niger;0.37133104945613626
+Maize;Ethiopia and Nigeria;0.36568881476214354
+Maize;Burkina Faso and Malawi;0.3639284379707084
+Maize;Niger and Rwanda;0.3626141758050525
+Maize;Ghana and Niger;0.35843343154429336
+Maize;Democratic Republic of the Congo and Ghana;0.35807320389093605
+Maize;Burkina Faso and Zambia;0.3558350135208558
+Maize;Rwanda and Senegal;0.3522506697182888
+Maize;Cameroon and Democratic Republic of the Congo;0.34860071499907463
+Maize;Benin and Malawi;0.34280915873609963
+Maize;Burkina Faso and Rwanda;0.3420562885018604
+Maize;Gambia and Guinea-Bissau;0.3394197312953115
+Maize;Ethiopia and Swaziland;0.33799648331694315
+Maize;Uganda and United Republic of Tanzania;0.3378426289753825
+Maize;Benin and Zambia;0.3361636115762283
+Maize;Chad and Malawi;0.33375028182775746
+Maize;Cameroon and Chad;0.3324333367206542
+Maize;Benin and Mozambique;0.3318462079232977
+Maize;Chad and Zambia;0.3288964158676609
+Maize;Central African Republic and Guinea-Bissau;0.328759140775632
+Maize;Gambia and Niger;0.3280060867840571
+Maize;Mali and United Republic of Tanzania;0.32630241806358207
+Maize;Kenya and Mozambique;0.32464446679370346
+Maize;Burkina Faso and Democratic Republic of the Congo;0.3202658299979094
+Maize;Cote d'Ivoire and Mozambique;0.31970456255794544
+Maize;Ethiopia and United Republic of Tanzania;0.31870221794255965
+Maize;Nigeria and Zambia;0.3065574143553999
+Maize;Democratic Republic of the Congo and Zimbabwe;0.2995053286193718
+Maize;Benin and United Republic of Tanzania;0.29571487898044085
+Maize;Mali and Zambia;0.28510662652130253
+Maize;Burkina Faso and Gambia;0.28397144699703536
+Maize;Burkina Faso and Guinea-Bissau;0.2833810497165698
+Maize;Guinea-Bissau and Mali;0.275918452879044
+Maize;Chad and United Republic of Tanzania;0.272529119959253
+Maize;Gambia and Senegal;0.27232067373254853
+Maize;Malawi and Swaziland;0.27134479508517934
+Maize;Mali and Mozambique;0.2711473572733307
+Maize;Ethiopia and Zambia;0.27074663273231786
+Maize;Guinea-Bissau and Zambia;0.27052784918077216
+Maize;Ethiopia and Uganda;0.2666826886386785
+Maize;Burundi and Cote d'Ivoire;0.26621195439693013
+Maize;Ethiopia and Rwanda;0.2655169432367186
+Maize;Ethiopia and Zimbabwe;0.26277591570037023
+Maize;Cote d'Ivoire and Ethiopia;0.26183682509119816
+Maize;Swaziland and Uganda;0.2592772253320153
+Maize;Ghana and Kenya;0.25344362863599224
+Maize;Chad and Rwanda;0.24991102694857953
+Maize;Burundi and Uganda;0.2480881236115938
+Maize;Democratic Republic of the Congo and Senegal;0.24709895407624538
+Maize;Democratic Republic of the Congo and Guinea-Bissau;0.24622571293118814
+Maize;Benin and Swaziland;0.2447086332267196
+Maize;Niger and Uganda;0.24453998674951433
+Maize;Benin and Gambia;0.2379954424957457
+Maize;Malawi and Mali;0.23705943658563816
+Maize;Malawi and Rwanda;0.23625589334104055
+Maize;Democratic Republic of the Congo and Mali;0.23396614713842862
+Maize;Central African Republic and Kenya;0.2287173031529941
+Maize;Gambia and Mali;0.22866900397067438
+Maize;Central African Republic and Democratic Republic of the Congo;0.21571049770485493
+Maize;Cameroon and Uganda;0.2117470108985009
+Maize;Rwanda and Uganda;0.20336101994311073
+Maize;Kenya and Malawi;0.20254008452124725
+Maize;Rwanda and Zambia;0.20161250391440147
+Maize;Swaziland and Zambia;0.20054612937900942
+Maize;Central African Republic and Uganda;0.19171611610164674
+Maize;Malawi and Nigeria;0.18781457195953327
+Maize;Nigeria and Uganda;0.18704533322223915
+Maize;Nigeria and Senegal;0.18456518084422732
+Maize;Burundi and Mozambique;0.18298846828759519
+Maize;Central African Republic and United Republic of Tanzania;0.18250439848105568
+Maize;Ghana and Guinea-Bissau;0.17876179443025064
+Maize;Burundi and Zimbabwe;0.17678537355394258
+Maize;Central African Republic and Rwanda;0.1729756463764535
+Maize;Benin and Central African Republic;0.1697831003301603
+Maize;Ghana and Uganda;0.16344927921555724
+Maize;Burkina Faso and Uganda;0.1633070602768417
+Maize;Burkina Faso and Central African Republic;0.16203587082733045
+Maize;Benin and Cote d'Ivoire;0.1618271844143817
+Maize;Gambia and Swaziland;0.16076150087779092
+Maize;Gambia and Nigeria;0.1551992847096328
+Maize;Ethiopia and Guinea-Bissau;0.14917699312692087
+Maize;Nigeria and Rwanda;0.14754166561168092
+Maize;Mali and Uganda;0.14495460467591578
+Maize;Chad and Guinea-Bissau;0.13965954366678543
+Maize;Rwanda and Swaziland;0.13741100221878152
+Maize;Ghana and Rwanda;0.13373835498200048
+Maize;Zambia and Zimbabwe;0.1292561839695649
+Maize;Kenya and Zambia;0.12652682301185902
+Maize;Cote d'Ivoire and Ghana;0.12203580368432254
+Maize;Kenya and Zimbabwe;0.11940373311017269
+Maize;Gambia and United Republic of Tanzania;0.11921561743088764
+Maize;Democratic Republic of the Congo and United Republic of Tanzania;0.11337034225444918
+Maize;Cote d'Ivoire and Malawi;0.10825249492584998
+Maize;Democratic Republic of the Congo and Kenya;0.10682678936220717
+Maize;Central African Republic and Gambia;0.10647086263041709
+Maize;Cote d'Ivoire and Rwanda;0.10466843917610316
+Maize;Gambia and Kenya;0.1033252634512402
+Maize;Chad and Nigeria;0.10037457943958139
+Maize;Chad and Democratic Republic of the Congo;0.09172802490386764
+Maize;Chad and Gambia;0.09023198569052472
+Maize;Burundi and Mali;0.08986715043962902
+Maize;Ethiopia and Gambia;0.08927769249886679
+Maize;Cameroon and Cote d'Ivoire;0.08873754795364278
+Maize;Central African Republic and Ethiopia;0.08325054320249513
+Maize;Central African Republic and Cote d'Ivoire;0.08264507140223942
+Maize;Guinea-Bissau and Rwanda;0.08214242817857967
+Maize;Gambia and Zambia;0.08192335868948261
+Maize;Mozambique and Nigeria;0.0793366859728603
+Maize;Burundi and Malawi;0.07360343336812769
+Maize;Chad and Zimbabwe;0.07068326561322774
+Maize;Cameroon and Gambia;0.06472334153637187
+Maize;Central African Republic and Niger;0.06153102484919957
+Maize;Burundi and Niger;0.06140678286013635
+Maize;Senegal and Uganda;0.05646844359371322
+Maize;Benin and Rwanda;0.04962614609110131
+Maize;Cote d'Ivoire and Gambia;0.04840329849655545
+Maize;Nigeria and United Republic of Tanzania;0.03814076764598754
+Maize;Central African Republic and Mali;0.036781304492392336
+Maize;Cameroon and United Republic of Tanzania;0.035379747781934014
+Maize;Kenya and Nigeria;0.03376125350863573
+Maize;Burundi and Cameroon;0.03160914591247476
+Maize;Cote d'Ivoire and Zambia;0.027045187216918565
+Maize;Swaziland and Zimbabwe;0.018432324418701903
+Maize;Burundi and Ethiopia;0.015407674450764165
+Maize;Ghana and Malawi;0.014608272782888853
+Maize;Burkina Faso and Burundi;0.014054984486749742
+Maize;Ghana and Swaziland;0.012279603964077406
+Maize;Democratic Republic of the Congo and Uganda;0.010268252447387558
+Maize;Uganda and Zambia;0.008141540738676895
+Maize;Gambia and Uganda;0.006584327687415192
+Maize;Burundi and Senegal;0.0004384331484870187
+Maize;Ghana and Mozambique;2.8547829645006124e-05
+Maize;Chad and Uganda;-0.002055721481825049
+Maize;Burundi and Chad;-0.008050073921641282
+Maize;Ghana and Zimbabwe;-0.02114132973345371
+Maize;Burundi and Zambia;-0.02214441841602233
+Maize;Gambia and Mozambique;-0.03117552248873579
+Maize;Gambia and Rwanda;-0.03164212712824644
+Maize;Gambia and Malawi;-0.037228476617391676
+Maize;Burundi and Central African Republic;-0.05952944964283016
+Maize;Guinea-Bissau and Uganda;-0.06153075117365797
+Maize;Gambia and Ghana;-0.07286167215696547
+Maize;Cameroon and Zambia;-0.0732455584481094
+Maize;Guinea-Bissau and Malawi;-0.08622160396438226
+Maize;Guinea-Bissau and Kenya;-0.09969522415214566
+Maize;Central African Republic and Malawi;-0.10544105107573438
+Maize;Central African Republic and Chad;-0.10815003172352522
+Maize;Burundi and Gambia;-0.11312681720959808
+Maize;Cote d'Ivoire and Uganda;-0.14416047481801508
+Maize;Benin and Burundi;-0.15632549326287506
+Maize;Senegal and Zimbabwe;-0.1575738238037035
+Maize;Burkina Faso and Zimbabwe;-0.1595086348663061
+Maize;Ghana and United Republic of Tanzania;-0.16070092443195846
+Maize;Central African Republic and Zambia;-0.17274896237220985
+Maize;Central African Republic and Zimbabwe;-0.1892101324112804
+Maize;Central African Republic and Senegal;-0.1898863087008579
+Maize;Central African Republic and Mozambique;-0.19046070197711593
+Maize;Benin and Zimbabwe;-0.1936075340535239
+Maize;Uganda and Zimbabwe;-0.20382942324807754
+Maize;Democratic Republic of the Congo and Gambia;-0.21033628766970733
+Maize;Guinea-Bissau and Mozambique;-0.21884443694974223
+Maize;Cote d'Ivoire and Guinea-Bissau;-0.22691930235836627
+Maize;Ghana and Zambia;-0.24606482776123909
+Maize;Central African Republic and Swaziland;-0.24870478158393725
+Maize;Niger and Zimbabwe;-0.2509523415372496
+Maize;Burundi and Democratic Republic of the Congo;-0.25265630679917017
+Maize;Mali and Zimbabwe;-0.25639170118145965
+Maize;Nigeria and Zimbabwe;-0.25913137083465376
+Maize;Cote d'Ivoire and Nigeria;-0.2623655060560241
+Maize;Malawi and Uganda;-0.26706870713334374
+Maize;Nigeria and Swaziland;-0.2720926143271883
+Maize;Guinea-Bissau and United Republic of Tanzania;-0.2976742948546578
+Maize;Cote d'Ivoire and Democratic Republic of the Congo;-0.3153151600754452
+Maize;Burundi and Ghana;-0.3454494841030412
+Maize;Cameroon and Malawi;-0.3460415708651305
+Maize;Guinea-Bissau and Swaziland;-0.3532353220500788
+Maize;Cameroon and Mozambique;-0.3545687509922727
+Maize;Mozambique and Uganda;-0.36497537050959283
+Maize;Burundi and Nigeria;-0.40243468600181836
+Maize;Gambia and Zimbabwe;-0.4139922698962278
+Maize;Burundi and Guinea-Bissau;-0.4665958226611718
+Maize;Cameroon and Zimbabwe;-0.48762140421783057
+Maize;Democratic Republic of the Congo and Swaziland;-0.490727482337055
+Maize;Guinea-Bissau and Zimbabwe;-0.505342918541828
+Cassava meal;Benin and Zambia;0.06778432134008819
+Millet;Burkina Faso and Mali;0.9255139262329853
+Millet;Burkina Faso and Niger;0.922862312535674
+Millet;Benin and Niger;0.8818045110373337
+Millet;Burkina Faso and Senegal;0.8552290855967277
+Millet;Niger and Senegal;0.8485290947189004
+Millet;Benin and Burkina Faso;0.8194829063747137
+Millet;Burkina Faso and Chad;0.8056901353424542
+Millet;Mali and Niger;0.8002801531399989
+Millet;Chad and Niger;0.7826330944804578
+Millet;Chad and Senegal;0.7702521064439566
+Millet;Burkina Faso and Sudan;0.745581428218253
+Millet;Chad and Mali;0.7454169261892766
+Millet;Mali and Senegal;0.7429830975525327
+Millet;Benin and Senegal;0.6951686364810977
+Millet;Benin and Chad;0.6741601351810361
+Millet;Benin and Nigeria;0.6740282887954386
+Millet;Benin and Sudan;0.6527357020772735
+Millet;Niger and Sudan;0.6472490508189234
+Millet;Mali and Sudan;0.6306437858371968
+Millet;Niger and Uganda;0.5999203191500795
+Millet;Benin and Mali;0.5926311367059469
+Millet;Chad and Sudan;0.5873123321226196
+Millet;Central African Republic and Nigeria;0.5839657635810729
+Millet;Benin and Gambia;0.5398221382813769
+Millet;Senegal and Sudan;0.5149640839051401
+Millet;Guinea-Bissau and Nigeria;0.5130376789244961
+Millet;Burkina Faso and Uganda;0.45803640522129585
+Millet;Mali and Nigeria;0.4263085619119679
+Millet;Senegal and Zambia;0.4236614680577168
+Millet;Niger and Nigeria;0.40925019940586727
+Millet;Mali and Uganda;0.3977251550304575
+Millet;Chad and Nigeria;0.39432393828700996
+Millet;Gambia and Senegal;0.377338364198726
+Millet;Nigeria and Senegal;0.3587769953122684
+Millet;Senegal and Uganda;0.3554031078744474
+Millet;Uganda and Sudan;0.34963719806686877
+Millet;Niger and Zambia;0.33154725068001334
+Millet;Guinea-Bissau and Senegal;0.329705527479141
+Millet;Chad and Zambia;0.32222678636154906
+Millet;Burkina Faso and Gambia;0.2935883748563197
+Millet;Chad and Gambia;0.26802607195658157
+Millet;Gambia and Nigeria;0.2642841284765493
+Millet;Burkina Faso and Nigeria;0.24528578935522563
+Millet;Central African Republic and Guinea-Bissau;0.2404759061706602
+Millet;Nigeria and Zambia;0.24008536643010067
+Millet;Gambia and Niger;0.23383531760991796
+Millet;Nigeria and Uganda;0.22025608463620916
+Millet;Gambia and Guinea-Bissau;0.16535024586910863
+Millet;Central African Republic and Senegal;0.16089011393559413
+Millet;Benin and Guinea-Bissau;0.15791350113275177
+Millet;Gambia and Mali;0.15697692796235388
+Millet;Chad and Guinea-Bissau;0.12958041220698166
+Millet;Central African Republic and Gambia;0.10980566539330125
+Millet;Uganda and Zambia;0.08477418804504931
+Millet;Gambia and Sudan;0.08189074944257473
+Millet;Guinea-Bissau and Niger;0.05492132004423219
+Millet;Guinea-Bissau and Mali;0.04214311314782274
+Millet;Central African Republic and Chad;0.02925509755956288
+Millet;Benin and Central African Republic;0.002753695249239108
+Millet;Burkina Faso and Guinea-Bissau;-0.005784086339251347
+Millet;Central African Republic and Mali;-0.01112263296692909
+Millet;Guinea-Bissau and Uganda;-0.020491044594866847
+Millet;Central African Republic and Niger;-0.029847922106782544
+Millet;Chad and Uganda;-0.0567288041713858
+Millet;Burkina Faso and Central African Republic;-0.0663680406863085
+Millet;Gambia and Uganda;-0.11753286814701462
+Millet;Zambia and Sudan;-0.2246570038331155
+Millet;Nigeria and Sudan;-0.26684595106239284
+Millet;Burkina Faso and Zambia;-0.2699326386285419
+Millet;Mali and Zambia;-0.28632289916760645
+Millet;Guinea-Bissau and Sudan;-0.3825665354925399
+Millet;Central African Republic and Sudan;-0.46673372338990127
+Cassava flour;Democratic Republic of the Congo and Mozambique;0.5574857611254898
+Cassava flour;Congo and Democratic Republic of the Congo;0.5036418638031257
+Cassava flour;Rwanda and Uganda;0.4704589034919718
+Cassava flour;Congo and Uganda;0.14112792165099608
+Cassava flour;Democratic Republic of the Congo and Uganda;0.1262486360650081
+Cassava flour;Burundi and Uganda;0.09873370769034617
+Cassava flour;Burundi and Democratic Republic of the Congo;0.07384210637471103
+Cassava flour;Democratic Republic of the Congo and Rwanda;-0.15797307680042239
+Cassava flour;Mozambique and Uganda;-0.20778288972069442
+Cassava flour;Burundi and Rwanda;-0.21662740823765994
+Cassava flour;Burundi and Congo;-0.2896201768642099
+Cassava flour;Burundi and Mozambique;-0.5398800957562264
+Sweet potatoes;Burundi and Rwanda;-0.28697202903532715
+Groundnuts;Congo and South Sudan;0.8088436720422584
+Groundnuts;Cameroon and Nigeria;0.6092776765280284
+Groundnuts;Mozambique and Zambia;0.5638134111440635
+Groundnuts;Malawi and Mozambique;0.4987649558378167
+Groundnuts;Cameroon and Congo;0.4278121504906478
+Groundnuts;Gambia and Malawi;0.29788946304154523
+Groundnuts;Malawi and South Sudan;0.269009873254978
+Groundnuts;Gambia and Mozambique;0.2393040225790972
+Groundnuts;Nigeria and South Sudan;0.23331949155796033
+Groundnuts;Gambia and Zambia;0.2134634349286621
+Groundnuts;Cameroon and Rwanda;0.16332175418236397
+Groundnuts;Congo and Malawi;0.13795416579311928
+Groundnuts;Malawi and Zambia;0.10503166190309213
+Groundnuts;Mozambique and Rwanda;0.010298928979132984
+Groundnuts;Cameroon and Malawi;-0.002457455689592806
+Groundnuts;Mozambique and Nigeria;-0.008482489401005416
+Groundnuts;Nigeria and Zambia;-0.050835169129691236
+Groundnuts;Cameroon and Mozambique;-0.1807359143668734
+Groundnuts;Cameroon and Zambia;-0.2594686185104399
+Groundnuts;Cameroon and Gambia;-0.36289370539751736
+Groundnuts;Zambia and South Sudan;-0.3794560154693832
+Groundnuts;Rwanda and South Sudan;-0.3867797614146306
+Groundnuts;Congo and Mozambique;-0.39735394609697966
+Groundnuts;Congo and Zambia;-0.5523515641794983
+Peas;Cameroon and Lesotho;0.582528370717931
+Peas;Cameroon and Rwanda;-0.0766555179009454
+Peas;Lesotho and Rwanda;-0.2044130936659344
+Cassava;Democratic Republic of the Congo and Liberia;0.6275450421625988
+Cassava;Congo and Rwanda;0.5995094666259989
+Cassava;Central African Republic and Congo;0.5742126916063294
+Cassava;Ghana and Rwanda;0.5307591421188657
+Cassava;Liberia and Rwanda;0.4991729463978679
+Cassava;Central African Republic and Democratic Republic of the Congo;0.475219111127473
+Cassava;Congo and Liberia;0.45846535472598243
+Cassava;Congo and Democratic Republic of the Congo;0.4288393466017214
+Cassava;Congo and Ghana;0.27778708055880796
+Cassava;Democratic Republic of the Congo and Rwanda;0.24830368934091404
+Cassava;Cameroon and Democratic Republic of the Congo;0.22986663160191217
+Cassava;Cameroon and Cote d'Ivoire;0.12463455940706833
+Cassava;Cameroon and Ghana;0.12342061116162706
+Cassava;Central African Republic and Cote d'Ivoire;0.11686909420007557
+Cassava;Ghana and Liberia;0.04738144180893159
+Cassava;Congo and South Sudan;-0.01542033405490975
+Cassava;Democratic Republic of the Congo and Ghana;-0.07099952854416672
+Cassava;Central African Republic and Rwanda;-0.10421318711165353
+Cassava;Cote d'Ivoire and Democratic Republic of the Congo;-0.11682407111635344
+Cassava;Congo and Cote d'Ivoire;-0.14730164500504164
+Cassava;Central African Republic and Ghana;-0.15104719666320982
+Cassava;Cote d'Ivoire and Ghana;-0.21336377934126588
+Cassava;Cote d'Ivoire and Rwanda;-0.2479437885181535
+Cassava;Central African Republic and Liberia;-0.36396098535682003
+Cassava;Cote d'Ivoire and Liberia;-0.6115730883152655
+Goat;Democratic Republic of the Congo and Rwanda;0.1941531063286084
+Maize flour;Rwanda and Uganda;0.7821714612263765
+Maize flour;Democratic Republic of the Congo and Uganda;0.5731259975261978
+Maize flour;Democratic Republic of the Congo and Rwanda;0.49070448998302196
+Plantains;Democratic Republic of the Congo and Ghana;-0.06795431517912265
+Cocoa;Cote d'Ivoire and Liberia;0.16283126101889814
+Salt;Guinea-Bissau and Guinea;0.5941022767884089
+Salt;Guinea and Swaziland;0.48379107570015645
+Salt;Guinea-Bissau and Swaziland;0.3497522025314286
+Salt;Democratic Republic of the Congo and Gambia;0.022157622663818287
+Salt;Democratic Republic of the Congo and Guinea-Bissau;-0.019675706648315305
+Salt;Democratic Republic of the Congo and Guinea;-0.059099086110699126
+Salt;Democratic Republic of the Congo and Swaziland;-0.17753723811252453
+Sugar (brown);Mozambique and Swaziland;0.4069119245289642
+Oil (sunflower);Lesotho and Swaziland;0.9609214871032998
+Yam;Cote d'Ivoire and Ghana;0.4990409331616354
+Yam;Ghana and Nigeria;-0.02214783527050305
+Maize meal;Lesotho and Mozambique;0.6307016477637023
+Maize meal;Mozambique and Zambia;0.5506791253904508
+Maize meal;Democratic Republic of the Congo and Mozambique;0.5268647893182082
+Maize meal;Democratic Republic of the Congo and Lesotho;0.410824998210786
+Maize meal;Mozambique and Swaziland;0.39839923413281114
+Maize meal;Lesotho and Swaziland;0.3730809654715317
+Maize meal;Democratic Republic of the Congo and Swaziland;0.2855130022361202
+Maize meal;Lesotho and Zambia;0.27151675868085445
+Maize meal;Swaziland and Zambia;0.2287975707543726
+Maize meal;Democratic Republic of the Congo and Zambia;0.1260071910988534
+Cowpeas;Liberia and Mozambique;0.22261294277917784
+Bread;Bolivia and Guatemala;0.3220399994614021
+Rice;El Salvador and Guatemala;0.9061125505860826
+Rice;Guatemala and Haiti;0.8246178875440251
+Rice;El Salvador and Haiti;0.8228601426873912
+Rice;El Salvador and Peru;0.6732117767231321
+Rice;Bolivia and Guatemala;0.5804022991123651
+Rice;Haiti and Peru;0.5669862278742651
+Rice;Guatemala and Peru;0.5486140675074348
+Rice;Bolivia and El Salvador;0.1856571234426579
+Rice;Bolivia and Peru;-0.03169099637299279
+Rice;Bolivia and Haiti;-0.19665370794175926
+Beans;El Salvador and Guatemala;0.4562038040695077
+Beans;Colombia and Haiti;0.3050288139500263
+Beans;Guatemala and Haiti;0.29945192167521867
+Beans;Colombia and Guatemala;0.24558476219183778
+Beans;Colombia and El Salvador;0.17940267944022992
+Beans;El Salvador and Haiti;-0.06921437377140907
+Potatoes;Bolivia and Peru;0.6716128691224337
+Potatoes;Bolivia and Guatemala;0.5034165440938159
+Potatoes;Guatemala and Peru;0.4550125791821016
+Potatoes;Colombia and Guatemala;0.38691329974782507
+Potatoes;Colombia and Peru;0.33873885788805896
+Potatoes;Bolivia and Colombia;-0.04962923312738615
+Eggs;Colombia and Guatemala;-0.012909820254976367
+Chicken;Guatemala and Peru;0.7165261693678189
+Chicken;Colombia and Peru;0.5207465414090584
+Chicken;Colombia and Guatemala;0.2654953465497492
+Chicken;Bolivia and Colombia;0.17297830985275267
+Chicken;Bolivia and Peru;0.12602718249049957
+Chicken;Bolivia and Guatemala;0.12343806318506907
+Sugar;Colombia and Peru;0.6567931472325723
+Sugar;Guatemala and Peru;0.3705452750048732
+Sugar;Colombia and Guatemala;-0.22880190674711612
+Tomatoes;Colombia and Guatemala;-0.5093660740357916
+Onions;Colombia and Guatemala;0.2837378492671113
+Wheat flour;Colombia and Haiti;0.7150952592071808
+Wheat flour;Haiti and Peru;0.6495530649666951
+Wheat flour;Colombia and Peru;0.33359761178837954
+Milk;Colombia and Guatemala;-0.8467719674938132
+Oil (vegetable);Haiti and Peru;0.8250173525192694
+Oil (vegetable);Colombia and Haiti;0.6334953460995494
+Oil (vegetable);Colombia and Peru;0.6166363270103716
+Oil (vegetable);Guatemala and Peru;0.40618751509094814
+Oil (vegetable);Colombia and Guatemala;-0.15500102917457295
+Oil (vegetable);Guatemala and Haiti;-0.8732718804231488
+Beef;Bolivia and Guatemala;0.6891015896303031
+Beef;Colombia and Guatemala;0.48411545441300785
+Beef;Bolivia and Colombia;0.33781620436166754
+Maize;El Salvador and Guatemala;0.8791224187831103
+Maize;Colombia and Peru;0.7548695883743098
+Maize;Colombia and Guatemala;0.6121882174251195
+Maize;Guatemala and Peru;0.49984416157740247
+Maize;Colombia and El Salvador;0.3910901769302658
+Maize;El Salvador and Peru;0.19583401515722376
+Plantains;Colombia and Guatemala;-0.5191486912374185
+Coffee;Colombia and Guatemala;-0.6756293738513675
+Rice;Indonesia and Philippines;0.7363788968824956
+Rice;Philippines and Timor-Leste;0.7353882755665988
+Rice;Cambodia and Philippines;0.590487687896242
+Rice;Cambodia and Indonesia;0.5611524699437801
+Rice;Lao People's Democratic Republic and Philippines;0.5133446641735818
+Rice;Lao People's Democratic Republic and Timor-Leste;0.32567987130316767
+Rice;Lao People's Democratic Republic and Myanmar;0.2802287361779661
+Rice;Cambodia and Myanmar;-8.830238240258367e-05
+Rice;Cambodia and Lao People's Democratic Republic;-0.3114683575496756
+Rice;Myanmar and Timor-Leste;-0.37075874275570797
+Rice;Indonesia and Lao People's Democratic Republic;-0.4292935727360779
+Rice;Indonesia and Myanmar;-0.5638223280148342
+Rice;Cambodia and Timor-Leste;-0.5663019568158222
+Rice;Myanmar and Philippines;-0.7555721024930161
+Rice;Indonesia and Timor-Leste;-0.7910120497099121
+Diesel;Lao People's Democratic Republic and Myanmar;0.7441751102554238
+Eggs;Indonesia and Philippines;0.3178602957152017
+Eggs;Lao People's Democratic Republic and Timor-Leste;0.24705373050630958
+Eggs;Indonesia and Lao People's Democratic Republic;0.0463275387600787
+Eggs;Indonesia and Timor-Leste;-0.08101396539490713
+Chicken;Myanmar and Philippines;0.30087557682767
+Chicken;Indonesia and Myanmar;0.2926500095467685
+Chicken;Lao People's Democratic Republic and Timor-Leste;0.15533684562306202
+Chicken;Indonesia and Philippines;0.08975566171544368
+Chicken;Indonesia and Timor-Leste;-0.3017246157812549
+Chicken;Lao People's Democratic Republic and Philippines;-0.3587911605901875
+Chicken;Indonesia and Lao People's Democratic Republic;-0.40405174158705237
+Oil (vegetable);Indonesia and Timor-Leste;0.26859351538690535
+Pork;Myanmar and Philippines;0.24954063418221745
+Pork;Lao People's Democratic Republic and Philippines;-0.13125554925421104
+Beef;Indonesia and Philippines;0.4457401090838988
+Beef;Indonesia and Lao People's Democratic Republic;-0.04314483553399451
+Beef;Myanmar and Philippines;-0.28764993559087004
+Beef;Indonesia and Myanmar;-0.3513770852274965
+Beef;Lao People's Democratic Republic and Philippines;-0.6148176416971366
+Oil (palm);Lao People's Democratic Republic and Myanmar;0.17397225644961622
